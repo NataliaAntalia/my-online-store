@@ -105,7 +105,7 @@ import i18n from './i18n';
 import { supabaseUrl, supabaseAnonKey } from "./supabaseClient";
 import { Box } from "@mui/material";
 import {Footer} from "./components/Footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Routes, Route, HashRouter} from "react-router-dom";
 import { FunPlaceholder } from "./components/pages/FunPlaceholder/FunPlaceholder";
 import {FunPlaceholderDelivery} from "./components/pages/FunPlaceholderDelivery/FunPlaceholderDelivery";
 import {FunPlaceholderPayment} from "./components/pages/FunPlaceholderPayment/FunPlaceholderPayment";
@@ -159,7 +159,7 @@ function App() {
     return (
         <CartProvider>
             <I18nextProvider i18n={i18n}>
-                <Router>
+                <HashRouter>
                     <Header />
                     <Routes>
                         <Route path="/" element={
@@ -185,7 +185,7 @@ function App() {
 
                     </Routes>
                 <Footer/>
-                </Router>
+                </HashRouter >
             </I18nextProvider>
         </CartProvider>
     );

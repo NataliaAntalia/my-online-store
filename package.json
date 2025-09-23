@@ -2,6 +2,7 @@
   "name": "cake-landing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Natalia.github.io/my-online-store",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.14.0",
@@ -32,6 +33,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
