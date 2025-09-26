@@ -133,25 +133,13 @@ export default function LoginPage() {
 
             <Box sx={{display:"block", gap:"4px" }}>
                 <Button variant="contained" color="primary" sx={{backgroundColor: "#3b5898", width: 175, height: 60, minWidth: 0, padding: 1, mr: 0.5 }}>
-                    <img
-                        src="/icons/facebook.svg"
-                        alt="facebook-icon"
-                        style={{ width: '24px', height: '24px' }}
-                    />
+                    F
                 </Button>
                 <Button variant="contained" sx={{ backgroundColor: "#4184f2", width: 175, height: 60, minWidth: 0, padding: 1, mr: 0.5 }}>
-                    <img
-                        src="/icons/google.svg"
-                        alt="google-icon"
-                        style={{ width: '24px', height: '24px' }}
-                    />
+                    G
                 </Button>
                 <Button variant="contained" sx={{ backgroundColor: "#5a78a5", width: 175, height: 60, minWidth: 0, padding: 1}}>
-                    <img
-                        src="/icons/vk.svg"
-                        alt="vk-icon"
-                        style={{ width: '24px', height: '24px' }}
-                    />
+                    VK
                 </Button>
             </Box>
         </Box>

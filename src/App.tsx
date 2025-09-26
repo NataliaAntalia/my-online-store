@@ -94,7 +94,6 @@
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import MySlider from "./components/Slider/Slider";
 import Header from "./components/Header/Header";
 import { CartProvider } from "./components/Shop/CartContext";
 import { ProductList } from "./components/Shop/ProductList";
@@ -113,6 +112,7 @@ import {FunPlaceholderBonuses} from "./components/pages/FunPlaceholderBonuses/Fu
 import CategoryPage from "./components/pages/CategoryPage/CategoryPage";
 import SubcategoryPage from "./components/pages/SubcategoryPage/SubcategoryPage";
 import LoginPage from "@/components/pages/LoginPage/LoginPage";
+import {MySlider} from "@/components/Slider/Slider";
 
 interface Product {
     id: string;

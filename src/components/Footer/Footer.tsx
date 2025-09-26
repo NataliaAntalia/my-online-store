@@ -9,6 +9,7 @@ import AndroidIcon from "@mui/icons-material/Android";
 
 
 
+
 const socialLinks = [
     { icon: InstagramIcon, url: "https://instagram.com" },
     { icon: FacebookIcon, url: "https://facebook.com" },
@@ -155,8 +156,8 @@ export const Footer: React.FC = () => {
                         </Typography>
                         <Box sx={{ display: "flex", gap: 2 }}>
                             <Box sx={{ display: "flex", gap: 1 }}>
-                                <img src="/icons/visa.svg" alt="Visa" height={56} />
-                                <img src="/icons/mastercard.svg" alt="Mastercard" height={56} />
+                                <img src="" alt=""/>
+                                <img src="" alt=""/>
                             </Box>
                         </Box>
                     </Grid>

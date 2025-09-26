@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 
-const MySlider = () => {
+export const MySlider = () => {
     const { i18n } = useTranslation();
     const [slides, setSlides] = useState<string[]>([]);
 
@@ -21,10 +21,14 @@ const MySlider = () => {
     const totalSlides = 16;
 
     useEffect(() => {
+        const baseUrl =
+            "https://tfzosqloquobjmszssig.supabase.co/storage/v1/object/public/banners";
+
         const newSlides = Array.from({ length: totalSlides }, (_, i) => {
             const number = String(i + 1).padStart(2, "0");
-            return `/img/slides/${i18n.language}/slide_summer-sale_2025-${number}.webp`;
+            return `${baseUrl}/${i18n.language}/slide_summer-sale_2025-${number}.webp`;
         });
+
         setSlides(newSlides);
     }, [i18n.language]);
 
@@ -33,13 +37,14 @@ const MySlider = () => {
             <Slider {...settings}>
                 {slides.map((src, i) => (
                     <div key={i}>
-                        <img src={src} alt={`Slide ${i + 1}`} />
+                        <img
+                            src={src}
+                            alt={`Slide ${i + 1}`}
+                            style={{ width: "100%", height: "auto" }}
+                        />
                     </div>
                 ))}
             </Slider>
         </div>
-
     );
 };
-
-export default MySlider;
