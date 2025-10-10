@@ -1,0 +1,36 @@
+.appBarWrapper {
+    flex-grow: 1;
+}
+
+.customAppBar {
+    background-color: #EAEFF6FF !important;
+    color: black !important;
+    box-shadow: none !important;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.menuButton {
+    margin-right: 8px;
+}
+
+.catalogTitle {
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .catalogTitle {
+        display: none;
+    }
+}
+
+.subcategoryBox {
+    white-space: normal;
+    word-break: break-word;
+    min-width: 150px;
+}
+

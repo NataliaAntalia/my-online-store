@@ -156,8 +156,8 @@ export const Footer: React.FC = () => {
                         </Typography>
                         <Box sx={{ display: "flex", gap: 2 }}>
                             <Box sx={{ display: "flex", gap: 1 }}>
-                                <img src="" alt=""/>
-                                <img src="" alt=""/>
+                                <img src="/my-online-store/icons/visa.png" alt="visa_logo" height={20}  />
+                                <img src="/my-online-store/icons/master.svg" alt="master_logo" height={20}/>
                             </Box>
                         </Box>
                     </Grid>

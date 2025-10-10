@@ -1,0 +1,10 @@
+.cartContainer {
+    width: 350px;
+    padding: 16px;
+}
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}

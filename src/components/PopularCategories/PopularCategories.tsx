@@ -11,7 +11,7 @@ type Category = { id: number,name: string; image_url: string };
 export default function PopularCategories() {
     const { t } = useTranslation();
 
-const [categories, setCategories] = React.useState<Category[]>([]);
+    const [categories, setCategories] = React.useState<Category[]>([]);
 
     useEffect(() => {
         const fetchCategories = async () => {

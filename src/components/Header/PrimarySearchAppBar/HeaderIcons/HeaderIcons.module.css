@@ -1,0 +1,11 @@
+.iconSection{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconSvg{
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}

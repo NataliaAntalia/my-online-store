@@ -6,7 +6,7 @@ import {Box} from "@mui/material";
 export default function UnderConstructionPage() {
     return (
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 1370, margin: "auto"}}>
-            <Box sx={{width: "700px", height: "700px", display: "flex", alignItems: "center",flexDirection: "column"  }}>
+            <Box sx={{display: "flex", alignItems: "center",flexDirection: "column"  }}>
 
             {/* Заголовок */}
             <motion.h1
@@ -20,8 +20,8 @@ export default function UnderConstructionPage() {
 
             {/* Изображение */}
             <motion.img
-                style={{marginBottom:"40px"}}
-                src="/img/Converted.png" // сюда положи твою картинку
+                style={{marginBottom:"40px", width:500}}
+                src="/my-online-store/img/developer.webp" // сюда положи твою картинку
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, type: "spring", stiffness: 150 }}
@@ -39,5 +39,8 @@ export default function UnderConstructionPage() {
         </div>
     );
 }
+
+
+// width: "700px", height: "auto",
 
 

@@ -1,0 +1,20 @@
+.appBar {
+    background-color: transparent !important;;
+    box-shadow: none;
+}
+
+.logo {
+    display: flex;
+    width: 250px;
+    height: 60px;
+    padding-right: 15px;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+.navLinks {
+    flex-grow: 1;
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .navLinks {
+        display: none;
+    }
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    cursor: pointer;
+}

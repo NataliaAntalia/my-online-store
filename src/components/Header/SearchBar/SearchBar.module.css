@@ -1,0 +1,9 @@
+.searchContainer {
+    flex-grow: 1;
+    margin: 0 30px;
+}
+
+.searchBox {
+    width: 100% ;
+    border-radius: 4px;
+}

@@ -2,14 +2,18 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import {Typography} from "@mui/material";
-import {catalogSections} from "../../Header/PrimarySearchAppBar";
 import {Link, useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
+import {RootState} from "@/store";
+
+
 
 
 export default function FullBorderedGrid() {
     const {categoryKey} = useParams();
     const {t} = useTranslation();
+    const catalogSections = useSelector((state: RootState) => state.catalog.sections);
     const category = catalogSections.find(
         (c) => c.key.split(".")[1] === categoryKey
     );
@@ -34,11 +38,11 @@ export default function FullBorderedGrid() {
                         borderColor: 'divider',
                         transition: '0.2s',
                         '&:hover': {
-                             boxShadow: 3,
+                            boxShadow: 3,
                             transform: 'scale(1.02)',
-                          zIndex: 1,
+                            zIndex: 1,
                             position: 'relative',
-                             backgroundColor: '#fff',
+                            backgroundColor: '#fff',
                         },
                     },
                 }}

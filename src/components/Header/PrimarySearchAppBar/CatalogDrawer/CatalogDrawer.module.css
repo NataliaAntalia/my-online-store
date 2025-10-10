@@ -1,0 +1,58 @@
+.drawerContainer {
+    width: 1400px;
+    height: 622px;
+    display: flex;
+}
+
+.drawerLeftColumn {
+    min-width: 150px;
+    word-break: break-word;
+    border-right: 1px solid #ccc;
+}
+
+.drawerRightColumn {
+    flex-grow: 1;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.subcategoryBox {
+    white-space: normal;
+    word-break: break-word;
+    min-width: 150px;
+}
+
+.linkReset{
+    text-decoration: none;
+    color: inherit;
+}
+
+.subcategoryTitle {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subcategoryChildren {
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.noChildren {
+    font-style: italic;
+    color: #888;
+}
+.moreButton {
+    justify-content: flex-start;
+    padding: 0;
+    min-width: 0;
+    text-transform: none;
+    font-size: 14px;
+}
+.noSubcategories {
+    color: #888;
+    grid-column: 1 / -1;
+}
