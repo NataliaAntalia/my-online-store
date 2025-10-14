@@ -1,0 +1,45 @@
+.container {
+    max-width: 1370px;
+    margin: 24px auto;
+    padding: 0 8px;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.grid {
+    --Grid-borderWidth: 1px !important;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: var(--Grid-borderWidth) solid rgba(0, 0, 0, 0.12) !important;
+    border-left: var(--Grid-borderWidth) solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.gridItem {
+    border-right: var(--Grid-borderWidth) solid rgba(0, 0, 0, 0.12) !important;
+    border-bottom: var(--Grid-borderWidth) solid rgba(0, 0, 0, 0.12) !important;
+    transition: 0.2s;
+    min-height: 272px;
+}
+
+.gridItem:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
+    z-index: 1;
+    position: relative;
+    background-color: #fff;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .grid,
+    .gridItem {
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+}
+
+
+

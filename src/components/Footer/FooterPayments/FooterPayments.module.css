@@ -1,0 +1,13 @@
+.footerPayments {
+    display: flex;
+    gap: 16px;
+}
+
+.footerPaymentIcons {
+    display: flex;
+    gap: 8px;
+}
+
+.footerPaymentIcon {
+    height: 20px;
+}

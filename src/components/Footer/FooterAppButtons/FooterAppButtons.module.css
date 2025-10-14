@@ -1,0 +1,48 @@
+.footerStoreButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.storeButton {
+    text-transform: none;
+    background-color: #272727 !important;
+    transition: 0.3s;
+    display: flex;
+    align-items: stretch;
+    padding: 2px 8px;
+    min-width: auto;
+}
+
+.storeButton:hover {
+    color: #ff4081;
+    transform: scale(1.05);
+}
+
+.storeButtonIcon {
+    display: flex;
+    align-items: stretch;
+    margin-right: 4px;
+}
+
+.storeIcon {
+    font-size: 1.8rem;
+}
+
+.storeButtonText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.storeButtonSubtext {
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.storeButtonMaintext {
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 500;
+}

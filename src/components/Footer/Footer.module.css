@@ -1,0 +1,21 @@
+.footer {
+    background-color: #f5f7fa;
+    padding-top: 16px;
+    margin-top: 64px;
+}
+
+.footerTitle {
+    font-weight: bold !important;
+    color: #434343;
+}
+
+.footerSocials {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.footerCopyright {
+    margin-top: 48px;
+    color: rgba(0, 0, 0, 0.6);
+}

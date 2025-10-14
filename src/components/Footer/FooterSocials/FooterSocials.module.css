@@ -1,0 +1,22 @@
+.footerSocials {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.footerSocialButton {
+    padding-bottom: 5px;
+    padding-left: 0;
+    color: #272727 !important;
+    transition: 0.3s;
+}
+
+.footerSocialButton:hover {
+    color: #ff4081 !important;
+    transform: scale(1.2);
+}
+
+.footerSocialIcon {
+    font-size: 1.875rem;
+    line-height: 1;
+}

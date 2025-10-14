@@ -16,7 +16,7 @@ import {FunPlaceholderDelivery} from "./components/pages/FunPlaceholderDelivery/
 import {FunPlaceholderPayment} from "./components/pages/FunPlaceholderPayment/FunPlaceholderPayment";
 import {FunPlaceholderBonuses} from "./components/pages/FunPlaceholderBonuses/FunPlaceholderBonuses";
 import CategoryPage from "./components/pages/CategoryPage/CategoryPage";
-import SubcategoryPage from "./components/pages/SubcategoryPage/SubcategoryPage";
+import SubcategoryPage from "@/components/pages/ElementPage/ElementPage";
 import LoginPage from "@/components/pages/LoginPage/LoginPage";
 import {MySlider} from "@/components/Slider/Slider";
 

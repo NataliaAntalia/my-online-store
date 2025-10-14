@@ -1,0 +1,9 @@
+.footerLink {
+    display: block;
+    color: inherit !important;
+    margin-bottom: 4px;
+    text-decoration: none !important;
+}
+.footerLink:hover {
+    text-decoration: underline !important;
+}
