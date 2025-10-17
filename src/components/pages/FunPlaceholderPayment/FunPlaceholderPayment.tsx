@@ -1,43 +1,17 @@
-// FunPlaceholderPayment.tsx
 import React from "react";
 import {FunPlaceholderProps} from "../FunPlaceholder/FunPlaceholder";
+import s from './FunPlaceholderPayment.module.css'
 
-export const FunPlaceholderPayment: React.FC<FunPlaceholderProps> = ({ title = "Оплата" }) => {
+export const FunPlaceholderPayment: React.FC<FunPlaceholderProps> = ({title = "Оплата"}) => {
     return (
-        <div style={{
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            background: "#fef9ef",
-            fontFamily: "'Tahoma', sans-serif",
-            color: "#d35400",
-            textAlign: "center",
-        }}>
+        <div className={s.pageContainer}>
             <div>
-                <h1 style={{ fontSize: "3rem", marginBottom: "20px", animation: "slideIn 1s forwards" }}>{title}</h1>
-                <p style={{ fontSize: "1.2rem", marginBottom: "40px" }}>
+                <h1 className={s.title}>{title}</h1>
+                <p className={s.subtitle}>
                     Оплата будет доступна совсем скоро!
                 </p>
-                <div style={{
-                    width: "50px",
-                    height: "50px",
-                    backgroundColor: "#d35400",
-                    borderRadius: "10px",
-                    animation: "bounce 1s infinite alternate",
-                    margin: "0 auto",
-                }} />
+                <div className={s.bounceBox}/>
             </div>
-            <style>{`
-                @keyframes slideIn {
-                    from { transform: translateY(-50px); opacity: 0; }
-                    to { transform: translateY(0); opacity: 1; }
-                }
-                @keyframes bounce {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-20px); }
-                }
-            `}</style>
         </div>
     );
 };

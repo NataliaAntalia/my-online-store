@@ -1,0 +1,39 @@
+.pageContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 8px dashed #1e3c72;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

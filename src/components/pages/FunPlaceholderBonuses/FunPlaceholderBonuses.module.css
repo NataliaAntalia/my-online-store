@@ -1,0 +1,84 @@
+.pageContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #f5f7fa, #c3cfe2);
+    font-family: 'Courier New', monospace;
+    color: #34495e;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.dotsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #34495e;
+    border-radius: 50%;
+}
+
+@keyframes dotBounce {
+    from {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes dot1 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes dot2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes dot3 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.dot1 {
+    animation: dot1 1s infinite alternate;
+}
+
+.dot2 {
+    animation: dot2 1s infinite alternate;
+}
+
+.dot3 {
+    animation: dot3 1s infinite alternate;
+}
