@@ -10,13 +10,13 @@ import {useEffect, useMemo, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppDispatch, RootState} from '@/store';
 import {fetchCatalog} from '@/store/catalogSlice';
-import {useCart} from '@/components/Shop/CartContext';
 import s from './PrimarySearchAppBar.module.css';
 import {CatalogDrawer} from '@/components/Header/PrimarySearchAppBar/CatalogDrawer/CatalogDrawer';
 import {HeaderIcons} from "@/components/Header/PrimarySearchAppBar/HeaderIcons/HeaderIcons";
 import {SearchBar} from "@/components/Header/SearchBar/SearchBar";
 import {MobileMenu} from "@/components/Header/PrimarySearchAppBar/MobileMenu/MobileMenu";
 import {DrawersRenderer} from "@/components/Header/PrimarySearchAppBar/DrawersRenderer/DrawersRenderer";
+import {useCart} from "@/components/Shop/CartContext/useCart";
 
 
 export default function PrimarySearchAppBar() {

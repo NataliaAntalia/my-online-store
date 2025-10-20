@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Card, CardContent, CardMedia, Typography, Button, IconButton, Box } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -8,9 +6,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { v4 as uuidv4 } from "uuid";
-import { useCart } from "./CartContext";
-import { ReactComponent as Compare } from "../../img/compare.svg";
+import { ReactComponent as Compare } from "../../../img/compare.svg";
 import { useTranslation } from "react-i18next";
+import {useCart} from "@/components/Shop/CartContext/useCart";
 
 interface ProductCardProps {
     product: {

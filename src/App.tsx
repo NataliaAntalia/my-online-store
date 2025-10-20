@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import { CartProvider } from "./components/Shop/CartContext";
-import { ProductList } from "./components/Shop/ProductList";
+import { CartProvider } from "./components/Shop/CartContext/CartContext";
+import { ProductList } from "./components/Shop/ProductList/ProductList";
 import PopularCategories from "./components/PopularCategories/PopularCategories";
 import './i18n';
 import { I18nextProvider } from 'react-i18next';

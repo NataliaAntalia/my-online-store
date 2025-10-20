@@ -1,0 +1,22 @@
+.categoriesSection {
+    padding: 32px;
+}
+
+.categoriesGrid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 600px) {
+    .categoriesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .categoriesGrid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
