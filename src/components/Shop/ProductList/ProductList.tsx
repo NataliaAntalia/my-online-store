@@ -1,34 +1,24 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import { ProductCard } from "../ProductCard/ProductCard";
-import { useTranslation } from "react-i18next";
+import {Box, Typography} from "@mui/material";
+import {ProductCard} from "../ProductCard/ProductCard";
+import {useTranslation} from "react-i18next";
+import s from './ProductList.module.css'
+import {ProductListProps} from "@/components/Shop/ProductList/types";
 
-interface Product {
-    id: string;
-    name: string;
-    image_url: string;
-    price: number;
-    cashback: number;
-    currency: string;
-    rating: number;
-}
 
-interface ProductListProps {
-    titleKey: string; // ключ для перевода заголовка
-    products: Product[];
-}
 
-export const ProductList: React.FC<ProductListProps> = ({ titleKey, products }) => {
-    const { t } = useTranslation();
+export const ProductList: React.FC<ProductListProps> = ({titleKey, products}) => {
+    const {t} = useTranslation();
 
     return (
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <Typography sx={{ mt: "50px", mb: "8px" }} variant="h4">{t(titleKey)}</Typography>
-            <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+        <Box className={s.categorySection}>
+            <Typography className={s.categoryTitle} variant="h4">
+                {t(titleKey)}
+            </Typography>
+            <Box className={s.productList}>
                 {Array.isArray(products) && products.map(product => (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product}/>
                 ))}
-
             </Box>
         </Box>
     );

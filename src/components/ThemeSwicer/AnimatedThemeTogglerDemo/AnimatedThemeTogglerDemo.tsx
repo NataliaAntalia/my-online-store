@@ -1,9 +1,11 @@
 import {AnimatedThemeToggler} from "@/components/ThemeSwicer/AnimatedThemeToogler/AnimatedThemeToggler";
+import {Box} from "@mui/material";
+import s from './AnimatedThemeTogglerDemo.module.css'
 
 export function AnimatedThemeTogglerDemo() {
     return (
-        <div style={{paddingRight: '30px'}}>
+        <Box className={s.box}>
             <AnimatedThemeToggler/>
-        </div>
+        </Box>
     );
 }

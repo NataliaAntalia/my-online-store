@@ -1,50 +1,42 @@
-import React, { useEffect, useState } from "react";
-import Slider, { Settings } from "react-slick";
+import React, {useEffect, useState} from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
+import {Box} from "@mui/material";
+import s from './Slider.module.css'
+import {sliderSettings} from "@/components/Slider/sliderSettings";
+import {BANNERS_BASE_URL, TOTAL_SLIDES} from "@/components/Slider/constants";
 
 export const MySlider = () => {
-    const { i18n } = useTranslation();
+    const {i18n} = useTranslation();
     const [slides, setSlides] = useState<string[]>([]);
 
-    const settings: Settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
+    const getSlideUrls = (language: string, total: number): string[] => {
+        const baseUrl = BANNERS_BASE_URL;
+        return Array.from({length: total}, (_, i) => {
+            const number = String(i + 1).padStart(2, "0");
+            return `${baseUrl}/${language}/slide_summer-sale_2025-${number}.webp`;
+        });
     };
 
-    const totalSlides = 16;
-
     useEffect(() => {
-        const baseUrl =
-            "https://tfzosqloquobjmszssig.supabase.co/storage/v1/object/public/banners";
-
-        const newSlides = Array.from({ length: totalSlides }, (_, i) => {
-            const number = String(i + 1).padStart(2, "0");
-            return `${baseUrl}/${i18n.language}/slide_summer-sale_2025-${number}.webp`;
-        });
-
-        setSlides(newSlides);
+        setSlides(getSlideUrls(i18n.language, TOTAL_SLIDES));
     }, [i18n.language]);
 
     return (
-        <div style={{ marginTop: "30px" }}>
-            <Slider {...settings}>
+        <Box className={s.sliderWrapper}>
+            <Slider {...sliderSettings}>
                 {slides.map((src, i) => (
-                    <div key={i}>
+                    <Box key={i}>
                         <img
                             src={src}
                             alt={`Slide ${i + 1}`}
-                            style={{ width: "100%", height: "auto" }}
+                            className={s.slideImage}
                         />
-                    </div>
+                    </Box>
                 ))}
             </Slider>
-        </div>
+        </Box>
     );
 };

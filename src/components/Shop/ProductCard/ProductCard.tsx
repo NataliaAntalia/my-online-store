@@ -1,32 +1,20 @@
-import React from "react";
-import { Card, CardContent, CardMedia, Typography, Button, IconButton, Box } from "@mui/material";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import StarIcon from "@mui/icons-material/Star";
-import { v4 as uuidv4 } from "uuid";
-import { ReactComponent as Compare } from "../../../img/compare.svg";
-import { useTranslation } from "react-i18next";
+import React, {useState} from "react";
+import {Card, CardContent, CardMedia, Typography} from "@mui/material";
+import {v4 as uuidv4} from "uuid";
+import {useTranslation} from "react-i18next";
 import {useCart} from "@/components/Shop/CartContext/useCart";
+import s from './ProductCard.module.css'
+import {RatingStars} from "@/components/Shop/ProductCard/RatingStars/RatingStars";
+import {ProductInfo} from "@/components/Shop/ProductCard/ProductInfo/ProductInfo";
+import {ProductActions} from "@/components/Shop/ProductCard/ProductActions/ProductActions";
+import {ProductCardProps} from "@/components/Shop/ProductCard/types";
 
-interface ProductCardProps {
-    product: {
-        id: string;
-        name: string;
-        image_url: string;
-        price: number;
-        cashback: number;
-        currency: string;
-        rating: number;
-    };
-}
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-    const { addToCart, favorites, toggleFavorite, comparison, toggleComparison } = useCart();
-    const [rating, setRating] = React.useState(product.rating);
-    const [hover, setHover] = React.useState(0);
-    const { t } = useTranslation();
+export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
+    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison} = useCart();
+    const [rating, setRating] = useState(product.rating);
+    const [hover, setHover] = useState(0);
+    const {t} = useTranslation();
 
     const handleAddToCart = () => {
         addToCart({
@@ -38,8 +26,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         });
     };
 
+    const mappedProduct = React.useMemo(() => ({
+        id: product.id,
+        name: t(product.name),
+        price: product.price,
+        cashback: product.cashback,
+        image: product.image_url,
+    }), [product, t]);
+
+
     return (
-        <Card sx={{ maxWidth: 260, margin: '7px' }}>
+        <Card className={s.card}>
             <CardMedia
                 component="img"
                 height="200"
@@ -48,60 +45,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             />
             <CardContent>
                 <Typography variant="subtitle1">{t(product.name)}</Typography>
-
-                <Box sx={{ display: "flex", mb: 1 }}>
-                    {[...Array(5)].map((_, i) => {
-                        const starValue = i + 1;
-                        return (
-                            <IconButton
-                                key={i}
-                                size="small"
-                                onClick={() => setRating(starValue)}
-                                onMouseEnter={() => setHover(starValue)}
-                                onMouseLeave={() => setHover(0)}
-                            >
-                                {starValue <= (hover || rating) ? (
-                                    <StarIcon sx={{ color: "#fbc02d" }} />
-                                ) : (
-                                    <StarBorderIcon sx={{ color: "#fbc02d" }} />
-                                )}
-                            </IconButton>
-                        );
-                    })}
-                </Box>
-
-                <Typography variant="h6">
-                    {product.price.toLocaleString()} {product.currency}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {t('cashback')}: {product.cashback} {product.currency}
-                </Typography>
-
-                <Box sx={{ display: "flex", justifyContent: "space-between", mt: 1 }}>
-                    <Button
-                        variant="contained"
-                        startIcon={<ShoppingCartIcon />}
-                        onClick={handleAddToCart}
-                    >
-                        {t('addToCart')}
-                    </Button>
-
-                    <IconButton onClick={() => toggleFavorite({ ...product, name: t(product.name), image: product.image_url })}>
-                        {favorites.find(f => f.id === product.id) ? (
-                            <FavoriteIcon sx={{ color: '#fd3579' }} />
-                        ) : (
-                            <FavoriteBorderIcon />
-                        )}
-                    </IconButton>
-
-                    <IconButton onClick={() => toggleComparison({ ...product, name: t(product.name), image: product.image_url })}>
-                        {comparison.find(c => c.id === product.id) ? (
-                            <Compare width={24} height={24} style={{ fill: "blue" }} />
-                        ) : (
-                            <Compare width={24} height={24} />
-                        )}
-                    </IconButton>
-                </Box>
+                <RatingStars
+                    rating={rating}
+                    onClick={setRating}
+                    onMouseLeave={setHover}
+                    onMouseEnter={() => setHover(0)}
+                    hover={hover}/>
+                <ProductInfo
+                    price={product.price}
+                    currency={product.currency}
+                    cashback={product.cashback}
+                    t={t}
+                />
+                <ProductActions product={mappedProduct}
+                                handleAddToCart={handleAddToCart}
+                                favorites={favorites}
+                                toggleFavorite={toggleFavorite}
+                                toggleComparison={toggleComparison}
+                                t={t}
+                                comparison={comparison}/>
             </CardContent>
         </Card>
     );

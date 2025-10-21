@@ -1,0 +1,8 @@
+.ratingContainer {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.star {
+    color: #fbc02d;
+}
