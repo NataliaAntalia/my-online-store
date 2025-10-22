@@ -1,16 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-
-export interface Product {
-    id: string;
-    name: string;
-    price: number;
-    cashback: number;
-    image: string;
-}
-
-interface CartState {
-    cart: Product[];
-}
+import {CartState, Product} from "@/store/types";
 
 const initialState: CartState = {
     cart: [],

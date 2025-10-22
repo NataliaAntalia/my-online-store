@@ -1,5 +1,3 @@
-// types/index.ts
-
 import './i18n';
 export interface Product {
     name: string;

@@ -1,11 +1,11 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Product } from './cartSlice';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Product} from "@/store/types";
 
 interface ComparisonState {
     comparison: Product[];
 }
 
-const initialState: ComparisonState = { comparison: [] };
+const initialState: ComparisonState = {comparison: []};
 
 const comparisonSlice = createSlice({
     name: 'comparison',
@@ -23,5 +23,5 @@ const comparisonSlice = createSlice({
     },
 });
 
-export const { toggleComparison, clearComparison } = comparisonSlice.actions;
+export const {toggleComparison, clearComparison} = comparisonSlice.actions;
 export default comparisonSlice.reducer;

@@ -1,40 +1,14 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {drawersConfig} from "@/config/drawerConfig";
+import {DrawerState} from "@/store/types";
 
-interface DrawerConfig {
-    id: string;
-    title: string;
-    emptyMessage: string;
-    open: boolean;
-}
 
-interface DrawerState {
-    drawers: DrawerConfig[];
-}
 
 const initialState: DrawerState = {
-    drawers: [
-        {
-            id: 'cart',
-            title: 'cart',
-            emptyMessage: 'cart_empty',
-            open: false,
-        },
-        {
-            id: 'favorites',
-            title: 'favorites',
-            emptyMessage: 'favorites_empty',
-            open: false,
-        },
-        {
-            id: 'comparison',
-            title: 'comparison',
-            emptyMessage: 'comparison_empty',
-            open: false,
-        },
-    ],
+    drawers: drawersConfig,
 };
 
- const drawerSlice = createSlice({
+const drawerSlice = createSlice({
     name: 'drawers',
     initialState,
     reducers: {
@@ -47,5 +21,5 @@ const initialState: DrawerState = {
     },
 });
 
-export const { setDrawerOpen } = drawerSlice.actions;
+export const {setDrawerOpen} = drawerSlice.actions;
 export default drawerSlice.reducer;

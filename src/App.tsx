@@ -7,7 +7,6 @@ import PopularCategories from "./components/PopularCategories/PopularCategories"
 import './i18n';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
-import { supabaseUrl, supabaseAnonKey } from "./supabaseClient";
 import { Box } from "@mui/material";
 import {Footer} from "./components/Footer/Footer";
 import {Routes, Route, HashRouter} from "react-router-dom";
@@ -19,44 +18,18 @@ import CategoryPage from "./components/pages/CategoryPage/CategoryPage";
 import SubcategoryPage from "@/components/pages/ElementPage/ElementPage";
 import LoginPage from "@/components/pages/LoginPage/LoginPage";
 import {MySlider} from "@/components/Slider/Slider";
-
-interface Product {
-    id: string;
-    name: string;
-    image_url: string;
-    price: number;
-    cashback: number;
-    currency: string;
-    rating: number;
-    category: string;
-}
+import {fetchProducts, Product} from "@/api/products";
 
 function App() {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        const fetchProducts = async () => {
-            const headers = {
-                'apikey': supabaseAnonKey,
-                'Authorization': `Bearer ${supabaseAnonKey}`,
-                'Accept': 'application/json',
-            };
-
-            try {
-                const res = await fetch(`${supabaseUrl}/rest/v1/products`, { headers });
-                const data = await res.json();
-                console.log("Fetched products:", data); // <-- проверяем здесь
-                setProducts(data);
-            } catch (error) {
-                console.error("Error fetching products:", error);
-            }
-        };
-
-        fetchProducts();
+        fetchProducts()
+            .then(setProducts)
+            .catch(err => console.error("Error fetching products:", err));
     }, []);
 
 
-    // фильтруем продукты для разных секций
 
     const newProducts = products.filter(p => p.category === 'new');
     const discountedProducts = products.filter(p => p.category === 'discounted');
@@ -70,7 +43,6 @@ function App() {
                     <Routes>
                         <Route path="/" element={
                             <Box sx={{ maxWidth: 1370, mx: "auto", px: 2 }}>
-
                                 <MySlider />
                                 <ProductList titleKey="newProducts" products={newProducts} />
                                 <ProductList titleKey="discountedProducts" products={discountedProducts} />

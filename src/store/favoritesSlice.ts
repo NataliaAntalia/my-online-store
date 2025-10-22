@@ -1,9 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Product} from './cartSlice';
+import {FavoritesState, Product} from "@/store/types";
 
-interface FavoritesState {
-    favorites: Product[];
-}
+
 
 const initialState: FavoritesState = {favorites: []};
 
