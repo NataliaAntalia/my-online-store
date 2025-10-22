@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/my-online-store/static/css/main.bd291062.css",
-    "main.js": "/my-online-store/static/js/main.2e0a0412.js",
+    "main.css": "/my-online-store/static/css/main.0de6cd2d.css",
+    "main.js": "/my-online-store/static/js/main.434ed850.js",
     "static/js/48.dd1444b2.chunk.js": "/my-online-store/static/js/48.dd1444b2.chunk.js",
     "static/js/453.2ff1845c.chunk.js": "/my-online-store/static/js/453.2ff1845c.chunk.js",
     "static/media/logo.png": "/my-online-store/static/media/logo.7c08e6ef086eff942582.png",
-    "static/media/compare.svg": "/my-online-store/static/media/compare.65fef27d999280c148b3586401e28eaf.svg",
+    "static/media/logo_white.png": "/my-online-store/static/media/logo_white.c998a387fc2b6bf483a2.png",
+    "static/media/compare.svg": "/my-online-store/static/media/compare.5b1ef24c9ad4a9bbacdeb6d2a8d42be6.svg",
     "static/media/slick.svg": "/my-online-store/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/my-online-store/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/my-online-store/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/user.svg": "/my-online-store/static/media/user.9a64dda3a877ea5e1d9d6905ca546add.svg",
-    "static/media/shop.svg": "/my-online-store/static/media/shop.d2320833f9c03162d3199a918b15e350.svg",
+    "static/media/user.svg": "/my-online-store/static/media/user.3fa506300278ce6922d3632cb485fe34.svg",
+    "static/media/shop.svg": "/my-online-store/static/media/shop.faf23a3b2e6dcd4e785281dc396774a8.svg",
     "static/media/slick.woff": "/my-online-store/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/like.svg": "/my-online-store/static/media/like.be125e729072322be7b45cc113e5ac25.svg",
+    "static/media/like.svg": "/my-online-store/static/media/like.6094c5ca50c3a4d36f183584f50b7876.svg",
     "index.html": "/my-online-store/index.html",
-    "main.bd291062.css.map": "/my-online-store/static/css/main.bd291062.css.map",
-    "main.2e0a0412.js.map": "/my-online-store/static/js/main.2e0a0412.js.map",
+    "main.0de6cd2d.css.map": "/my-online-store/static/css/main.0de6cd2d.css.map",
+    "main.434ed850.js.map": "/my-online-store/static/js/main.434ed850.js.map",
     "48.dd1444b2.chunk.js.map": "/my-online-store/static/js/48.dd1444b2.chunk.js.map",
     "453.2ff1845c.chunk.js.map": "/my-online-store/static/js/453.2ff1845c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd291062.css",
-    "static/js/main.2e0a0412.js"
+    "static/css/main.0de6cd2d.css",
+    "static/js/main.434ed850.js"
   ]
 }
