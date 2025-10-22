@@ -1,12 +1,12 @@
 .footer {
-    background-color: #f5f7fa;
+    background-color: var(--header-footer-bg);
     padding-top: 16px;
     margin-top: 64px;
 }
 
 .footerTitle {
     font-weight: bold !important;
-    color: #434343;
+    color: #dddddd;
 }
 
 .footerSocials {
@@ -17,5 +17,5 @@
 
 .footerCopyright {
     margin-top: 48px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color);
 }

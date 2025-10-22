@@ -7,7 +7,7 @@
 .footerSocialButton {
     padding-bottom: 5px;
     padding-left: 0;
-    color: #272727 !important;
+    color: var(--text-color) !important;
     transition: 0.3s;
 }
 

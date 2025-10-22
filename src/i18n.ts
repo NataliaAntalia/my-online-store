@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import {initReactI18next} from 'react-i18next';
 
 i18n
     .use(initReactI18next)
@@ -7,7 +7,7 @@ i18n
         resources: {
             ru: {
                 translation: {
-                    promotion:'Акции',
+                    promotion: 'Акции',
                     delivery: 'Доставка',
                     payment: 'Оплата',
                     bonuses: 'Бонусы',
@@ -30,33 +30,10 @@ i18n
                     newProducts: "Новинки",
                     discountedProducts: "Снизилась цена",
                     topProducts: "Топ продаж",
-
                     popularCategories: 'Популярные категории',
-                    clothes: 'Одежда',
-                    shoes: 'Обувь',
-                    accessories: 'Аксессуары',
-                    // electronics: 'Электроника',
-                    books: 'Книги',
-                    sport: 'Спорт',
-
                     profile_login: "Войти в профиль",
                     catalog: {
-
-
                         title: "Каталог товаров",
-                        electronics: "Электроника",
-                        appliances: "Бытовая техника",
-                        home_garden: "Дом и сад",
-                        construction: "Строительство и ремонт",
-                        pet_supplies: "Товары для животных",
-                        sports: "Спорт",
-                        outdoor: "Активный отдых и туризм",
-                        hobbies: "Хобби и творчество",
-                        kids: "Детские товары",
-                        autoparts: "Автотовары",
-                        beauty: "Красота и здоровье",
-                        fashion: "Fashion",
-                        business: "Товары для бизнеса"
 
                     }
                 }
@@ -88,36 +65,17 @@ i18n
                     topProducts: "Cele mai vândute",
 
                     popularCategories: 'Categorii populare',
-                    clothes: 'Îmbrăcăminte',
-                    shoes: 'Încălțăminte',
-                    accessories: 'Accesorii',
-                    electronics: 'Electronice',
-                    books: 'Cărți',
-                    sport: 'Sport',
                     profile_login: "Autentificare în profil",
                     catalog: {
                         title: "Catalog de produse",
-                        electronics: "Electronică",
-                        appliances: "Electrocasnice",
-                        home_garden: "Casă și grădină",
-                        construction: "Construcții și reparații",
-                        pet_supplies: "Produse pentru animale",
-                        sports: "Sport",
-                        outdoor: "Activități în aer liber și turism",
-                        hobbies: "Hobby și creație",
-                        kids: "Produse pentru copii",
-                        autoparts: "Produse auto",
-                        beauty: "Frumusețe și sănătate",
-                        fashion: "Fashion",
-                        business: "Produse pentru afaceri"
                     }
                 }
             }
 
         },
-        lng: 'ru', // язык по умолчанию
+        lng: 'ru',
         fallbackLng: 'ru',
-        interpolation: { escapeValue: false },
+        interpolation: {escapeValue: false},
         keySeparator: '.',
 
     });

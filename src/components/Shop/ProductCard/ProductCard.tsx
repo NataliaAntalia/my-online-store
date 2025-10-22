@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Card, CardContent, CardMedia, Typography} from "@mui/material";
 import {v4 as uuidv4} from "uuid";
 import {useTranslation} from "react-i18next";
-import {useCart} from "@/components/Shop/CartContext/useCart";
+import {useCart} from "@/hooks/useCart";
 import s from './ProductCard.module.css'
 import {RatingStars} from "@/components/Shop/ProductCard/RatingStars/RatingStars";
 import {ProductInfo} from "@/components/Shop/ProductCard/ProductInfo/ProductInfo";

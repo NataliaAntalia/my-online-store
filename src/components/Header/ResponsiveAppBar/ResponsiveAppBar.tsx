@@ -12,17 +12,33 @@ import {PhoneDropdown} from "@/components/Header/ResponsiveAppBar/PhoneDropdown/
 import {LangSwitcher} from "@/components/Header/ResponsiveAppBar/LangSwitcher/LangSwitcher";
 import {
     LANGUAGES,
-    LOGO_PATH,
+    LOGO_PATH, LOGO_PATH_DARK,
     MAIN_NUMBER,
     OTHER_NUMBERS, PAGES,
     WORKING_HOURS
 } from "@/components/Header/ResponsiveAppBar/constants";
+import {useEffect, useState} from "react";
 
 
 export function ResponsiveAppBar() {
 
     const {t, i18n} = useTranslation();
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
+
+    useEffect(() => {
+        const updateTheme = () => {
+            const dark = document.documentElement.classList.contains('dark');
+            setIsDarkMode(dark);
+        };
+        updateTheme();
+        const observer = new MutationObserver(updateTheme);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const currentLogo = isDarkMode ? LOGO_PATH_DARK : LOGO_PATH;
 
     return (
         <AppBar position="static" className={s.appBar}>
@@ -31,7 +47,7 @@ export function ResponsiveAppBar() {
                     <RouterLink to="/">
                         <Box
                             component="img"
-                            src={LOGO_PATH}
+                            src={currentLogo}
                             alt="Logo"
                             className={s.logo}
                         />

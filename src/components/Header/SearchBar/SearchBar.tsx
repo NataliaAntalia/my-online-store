@@ -8,7 +8,7 @@ import s from './SearchBar.module.css'
 const Search = styled('div')(({theme}) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: '#ffffff',
+    backgroundColor: 'var(--search-bg)',
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
@@ -22,11 +22,11 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#888888',
+    color: 'var(--search-icon)',
 }));
 
 const StyledInputBase = styled(InputBase)(({theme}) => ({
-    color: 'inherit',
+    color: 'var(--search-text)',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,

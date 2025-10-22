@@ -4,7 +4,7 @@
     height: 26px;
     border-radius: 16px;
     overflow: hidden;
-    background-color: #e0e0e0; /* grey.200 */
+    background-color: var(--lang-bg); /* grey.200 */
     position: relative;
     cursor: pointer;
 }
@@ -16,13 +16,13 @@
     justify-content: center;
     padding: 4px; /* px:0.5, py:0.5 -> 4px */
     background-color: transparent;
-    color: #757575; /* grey.600 */
+    color: var(--lang-text); /* grey.600 */
     font-weight: bold;
     font-size: 1rem;
     transition: background-color 0.2s;
 }
 
 .langOption.active {
-    background-color: #fd3579 !important;
-    color: white;
+    background-color: var(--lang-active-bg) !important;
+    color: var(--lang-active-text);
 }

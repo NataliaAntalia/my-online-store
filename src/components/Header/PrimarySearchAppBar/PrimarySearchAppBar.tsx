@@ -16,7 +16,7 @@ import {HeaderIcons} from "@/components/Header/PrimarySearchAppBar/HeaderIcons/H
 import {SearchBar} from "@/components/Header/SearchBar/SearchBar";
 import {MobileMenu} from "@/components/Header/PrimarySearchAppBar/MobileMenu/MobileMenu";
 import {DrawersRenderer} from "@/components/Header/PrimarySearchAppBar/DrawersRenderer/DrawersRenderer";
-import {useCart} from "@/components/Shop/CartContext/useCart";
+import {useCart} from "@/hooks/useCart";
 
 
 export default function PrimarySearchAppBar() {

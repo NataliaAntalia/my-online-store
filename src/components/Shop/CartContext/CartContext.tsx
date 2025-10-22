@@ -1,9 +1,9 @@
 import React, {createContext} from "react";
 import {CartContextType} from "@/components/Shop/CartContext/types";
-import {useAppDispatch, useAppSelector} from "@/components/Shop/CartContext/hooks";
 import {addToCart, removeFromCart} from "@/store/cartSlice";
 import {toggleFavorite} from "@/store/favoritesSlice";
 import {toggleComparison} from "@/store/comparisonSlice";
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxHooks";
 
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);

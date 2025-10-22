@@ -3,8 +3,8 @@
 }
 
 .customAppBar {
-    background-color: #EAEFF6FF !important;
-    color: black !important;
+    background-color: var(--header-footer-bg) !important;
+    color: var(--text-color) !important;
     box-shadow: none !important;
 }
 

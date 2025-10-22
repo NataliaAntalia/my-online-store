@@ -2,11 +2,12 @@
     flex-grow: 0;
     padding-right: 8px;
     position: relative;
+    /*color: var(--text-color) !important;*/
 
 }
 
 .mainNumberButton {
-    color: black !important;
+    color: var(--text-color) !important;
     text-transform: none;
     display: flex;
     align-items: center;
@@ -16,6 +17,7 @@
     padding-left: 0;
     font-size: 16px !important;
 }
+
 
 .dropdownIcon {
     transition: 0.2s;

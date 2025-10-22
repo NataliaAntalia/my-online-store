@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import {Link} from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import {setDrawerOpen} from "@/store/drawerSlice";
-import { AppDispatch } from "@/store"; // импорт типа
+import { AppDispatch } from "@/store";
 import { ReactComponent as UserIcon } from '../../../../img/user.svg';
 import { ReactComponent as Balance } from '../../../../img/compare.svg';
 import { ReactComponent as Like } from '../../../../img/like.svg';
