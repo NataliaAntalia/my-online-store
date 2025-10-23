@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useTranslation} from 'react-i18next';
-import {useEffect, useMemo, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppDispatch, RootState} from '@/store';
 import {fetchCatalog} from '@/store/catalogSlice';
@@ -39,6 +39,8 @@ export default function PrimarySearchAppBar() {
     }, [catalogStatus, dispatch]);
 
     const sectionsToShow = catalogSections;
+    const burgerRef = useRef<HTMLButtonElement | null>(null);
+
 
 
     const drawerDataMap = useMemo(() => ({
@@ -59,7 +61,7 @@ export default function PrimarySearchAppBar() {
                             color="inherit"
                             aria-label="open catalog"
                             onClick={() => setOpenCatalog(true)}
-                            className={s.menuButton}
+                            ref={burgerRef}
                         >
                             <MenuIcon/>
                         </IconButton>
@@ -97,6 +99,7 @@ export default function PrimarySearchAppBar() {
                 onClose={() => setOpenCatalog(false)}
                 expandedSubcategories={expandedSubcategories}
                 activeSection={activeSection}
+                anchorEl={burgerRef.current}
             />
             <DrawersRenderer drawers={drawers} drawerDataMap={drawerDataMap}/>
 

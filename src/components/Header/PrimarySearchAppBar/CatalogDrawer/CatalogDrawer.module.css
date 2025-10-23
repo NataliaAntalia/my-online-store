@@ -1,7 +1,9 @@
 .drawerContainer {
-    width: 1400px;
-    height: 622px;
+    width: 1100px;
+    min-height: 400px;
+    height: auto;
     display: flex;
+
 }
 
 .drawerLeftColumn {
@@ -12,30 +14,30 @@
 
 .drawerRightColumn {
     flex-grow: 1;
+    max-width: 900px;
     padding: 16px;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.subcategoryBox {
-    white-space: normal;
-    word-break: break-word;
-    min-width: 150px;
+    gap: 8px;
 }
 
 .linkReset{
     text-decoration: none;
     color: inherit;
 }
+.linkReset:hover {
+    color: #2479f3;
+    text-decoration: underline;
+}
+
+
 
 .subcategoryTitle {
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: bold !important;
+    margin-bottom: 4px !important;
 }
 
 .subcategoryChildren {
-    padding-left: 8px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -49,8 +51,9 @@
     justify-content: flex-start;
     padding: 0;
     min-width: 0;
-    text-transform: none;
+    text-transform: none !important;
     font-size: 14px;
+    width: 30px;
 }
 .noSubcategories {
     color: #888;

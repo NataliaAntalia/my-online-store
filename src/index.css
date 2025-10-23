@@ -7,9 +7,9 @@
     --search-text: #272727;
     --search-icon: #c6c6c6;
     --icon-color: #1b1b1b;
-  --lang-bg: #e0e0e0;           /* фон неактивной кнопки */
-  --lang-text: #757575;         /* текст неактивной кнопки */
-  --lang-active-bg: #fd3579;    /* фон активной кнопки */
+  --lang-bg: #bcbcbc;
+  --lang-text: #5c5c5c;
+  --lang-active-bg: #fd3579;
   --lang-active-text: #ffffff;
 }
 
@@ -24,7 +24,7 @@
     --icon-color: #e8e8e8;
   --lang-bg: #303030;
   --lang-text: #dddddd;
-  --lang-active-bg: #fd3579;   /* можно оставить тот же яркий цвет */
+  --lang-active-bg: #fd3579;
   --lang-active-text: #ffffff;
 
 }
