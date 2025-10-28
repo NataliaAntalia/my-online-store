@@ -1,23 +1,16 @@
-import {Product as CartProduct} from "@/components/Shop/CartContext/types";
+import {Product} from "@/store/types";
 
 export type ProductCardProps = {
-    product: {
-        id: string;
-        name: string;
-        image_url: string;
-        price: number;
-        cashback: number;
-        currency: string;
-        rating: number;
-    };
+    product:Product;
+    showRemoveButton?: boolean;
 }
 
 export type ProductActionsProps = {
-    product: CartProduct & { image_url?: string };
-    favorites: CartProduct[];
-    comparison: CartProduct[];
-    toggleFavorite: (product: CartProduct) => void;
-    toggleComparison: (product: CartProduct) => void;
+    product: Product & { image_url?: string };
+    favorites: Product[];
+    comparison: Product[];
+    toggleFavorite: (product: Product) => void;
+    toggleComparison: (product: Product) => void;
     handleAddToCart: () => void;
     t: (key: string) => string;
 }

@@ -7,10 +7,12 @@
     --search-text: #272727;
     --search-icon: #c6c6c6;
     --icon-color: #1b1b1b;
-  --lang-bg: #bcbcbc;
-  --lang-text: #5c5c5c;
-  --lang-active-bg: #fd3579;
-  --lang-active-text: #ffffff;
+    --lang-bg: #bcbcbc;
+    --lang-text: #5c5c5c;
+    --lang-active-bg: #fd3579;
+    --lang-active-text: #ffffff;
+    --drawer-bg: #ffffff;
+    --drawer-text: #272727;
 }
 
 .dark {
@@ -22,10 +24,12 @@
     --search-text: #dddddd;
     --search-icon: #bbbbbb;
     --icon-color: #e8e8e8;
-  --lang-bg: #303030;
-  --lang-text: #dddddd;
-  --lang-active-bg: #fd3579;
-  --lang-active-text: #ffffff;
+    --lang-bg: #303030;
+    --lang-text: #dddddd;
+    --lang-active-bg: #fd3579;
+    --lang-active-text: #ffffff;
+    --drawer-bg: #2a2a2a;
+    --drawer-text: #e0e0e0;
 
 }
 

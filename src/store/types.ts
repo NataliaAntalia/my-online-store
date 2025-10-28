@@ -1,9 +1,11 @@
 export interface Product {
     id: string;
     name: string;
+    image_url: string;
     price: number;
     cashback: number;
-    image: string;
+    currency: string;
+    rating: number;
 }
 
 export interface CartState {

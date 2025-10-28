@@ -51,12 +51,15 @@ export const CatalogDrawer: React.FC<CatalogDrawerProps> = ({
             placement="bottom-start"
             transition
             modifiers={[
-                { name: 'offset', options: { offset: [0, 8] } }, // немного отступа вниз
+                { name: 'offset', options: { offset: [0, 8] } },
             ]}
         >
             {({ TransitionProps }) => (
                 <Fade {...TransitionProps} timeout={150}>
-                    <Paper elevation={3}>
+                    <Paper elevation={3}  sx={{
+                        backgroundColor: 'var(--drawer-bg)',
+                        color: 'var(--drawer-text)',
+                    }}>
                         <ClickAwayListener onClickAway={onClose}>
                         <Box className={s.drawerContainer}>
                             <Box className={s.drawerLeftColumn}>

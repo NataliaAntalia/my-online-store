@@ -7,6 +7,9 @@ import { FunPlaceholderBonuses } from "@/components/pages/FunPlaceholderBonuses/
 import CategoryPage from "@/components/pages/CategoryPage/CategoryPage";
 import SubcategoryPage from "@/components/pages/ElementPage/ElementPage";
 import LoginPage from "@/components/pages/LoginPage/LoginPage";
+import {CartPage} from "@/components/pages/CartPage/CartPage";
+import {FavoritesPage} from "@/components/pages/FavoritesPage/FavoritesPage";
+import {ComparisonPage} from "@/components/pages/ComparisonPage/ComparisonPage";
 
 export function AppRoutes() {
     return (
@@ -20,6 +23,9 @@ export function AppRoutes() {
             <Route path="/subcategory/:subcategoryName" element={<SubcategoryPage />} />
             <Route path="/profile" element={<LoginPage />} />
             <Route path="*" element={<FunPlaceholder />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/comparison" element={<ComparisonPage />} />
         </Routes>
     );
 }

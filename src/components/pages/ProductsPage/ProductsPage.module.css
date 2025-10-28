@@ -1,0 +1,54 @@
+
+.container {
+    min-height: 50vh;
+    width: 77.8%;
+    /*background-color: #d8d8d8;*/
+    display: flex;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+
+.textContainer {
+    padding: 24px;
+
+}
+
+
+.title {
+    display: flex;
+    margin: 20px 220px ! important;
+
+
+}
+
+.emptyText {
+    font-size: 1rem;
+    color: #888;
+}
+
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;         /* контейнер занимает всю ширину */
+        padding: 16px;       /* можно уменьшить padding для мобильных */
+    }
+    .title{
+        margin:16px ! important;
+    }
+}
+
+@media (min-width: 1050px) and (max-width: 1499px) {
+    .container {
+        width: 100%;
+    }
+    .title{
+        margin:16px ! important;
+    }
+}

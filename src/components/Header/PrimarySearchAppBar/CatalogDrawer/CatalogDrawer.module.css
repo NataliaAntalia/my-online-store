@@ -3,6 +3,8 @@
     min-height: 400px;
     height: auto;
     display: flex;
+    color: var(--drawer-text);
+
 
 }
 
@@ -45,7 +47,7 @@
 
 .noChildren {
     font-style: italic;
-    color: #888;
+    color: var(--text-secondary);;
 }
 .moreButton {
     justify-content: flex-start;
@@ -56,6 +58,6 @@
     width: 30px;
 }
 .noSubcategories {
-    color: #888;
+    color: var(--text-secondary);
     grid-column: 1 / -1;
 }
