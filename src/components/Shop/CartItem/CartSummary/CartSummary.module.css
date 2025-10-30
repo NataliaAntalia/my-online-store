@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+    width: 444px;
+    height: 235px;
+
+}
+
+.containerPrice{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 0 ;
+    padding: 20px 15px;
+}
+
+.text{
+    font-weight: bold !important;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px;
+}
+
+.button1{
+    background-color: #a93f64!important;
+    color: white !important;
+    width: 403px;
+    height: 45px;
+}
+
+.button2{
+    border: 1px solid #cacaca!important;
+    width: 403px;
+    height: 45px;
+}
+
+.containerButton{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    /*margin :15px 0 0 ;*/
+    /*padding: 25px 20px;*/
+}
+
+
+

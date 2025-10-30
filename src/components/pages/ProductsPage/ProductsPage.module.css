@@ -2,18 +2,21 @@
 .container {
     min-height: 50vh;
     width: 77.8%;
-    /*background-color: #d8d8d8;*/
+    /*background-color: #ffffff;*/
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 20px auto;
     border-radius: 8px;
     box-sizing: border-box;
 
 }
 
-.textContainer {
-    padding: 24px;
-
+.button{
+    color: #fb3578 !important;
+    text-transform: none !important;
 }
+
 
 
 .title {
@@ -36,8 +39,8 @@
 
 @media (max-width: 1024px) {
     .container {
-        width: 100%;         /* контейнер занимает всю ширину */
-        padding: 16px;       /* можно уменьшить padding для мобильных */
+        width: 100%;
+        padding: 16px;
     }
     .title{
         margin:16px ! important;

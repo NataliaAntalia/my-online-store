@@ -1,11 +1,8 @@
-import React from 'react';
-import {ProductsPage} from "@/components/pages/ProductsPage/ProductsPage";
-import {useCart} from "@/hooks/useCart";
+import React from "react";
+import {CartList} from "@/components/Shop/CartList/CartList";
 
 export const CartPage = () => {
-    const {cart} = useCart();
-    return <ProductsPage products={cart} titleKey={'cart'} emptyTextKey={'cart_empty'} showRemoveButton={true}/>;
+
+    return <CartList />
+
 };
-
-
-

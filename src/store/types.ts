@@ -6,6 +6,7 @@ export interface Product {
     cashback: number;
     currency: string;
     rating: number;
+    quantity?: number;
 }
 
 export interface CartState {
