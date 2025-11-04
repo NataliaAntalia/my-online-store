@@ -4,14 +4,15 @@
     background-color: #fbfbfb;
     width: 444px;
     height: 235px;
+    border-radius: 8px;
 
 }
 
 .containerPrice{
     display: flex;
     justify-content: space-between;
-    margin: 16px 0 0 ;
-    padding: 20px 15px;
+    margin: 8px 0 0 ;
+    padding: 15px 25px;
 }
 
 .text{
@@ -21,7 +22,7 @@
 .divider {
     height: 1px;
     background-color: #ccc;
-    margin: 10px;
+    margin: 20px;
 }
 
 .button1{

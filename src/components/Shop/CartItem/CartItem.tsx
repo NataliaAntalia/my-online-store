@@ -7,7 +7,6 @@ import {useCart} from "@/hooks/useCart";
 import {useTranslation} from "react-i18next";
 import {QuantityCounter} from "@/components/Shop/CartItem/QuantityCounter/QuantityCounter";
 import {PinkCheckbox} from "@/components/Shop/CartList/CartList";
-import {CartSummary} from "@/components/Shop/CartItem/CartSummary/CartSummary";
 
 export type CartItemProps = {
     product: Product;

@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import {Product} from "@/store/types";
 import Button from "@mui/material/Button";
 import s from './CartSummary.module.css'
+import {useNavigate} from "react-router-dom";
 
 type CartSummaryType ={
     products:Product[];
@@ -19,6 +20,12 @@ export const CartSummary = ({products,checkedItems}:CartSummaryType) => {
             .reduce((sum, p) => sum + p.price * (p.quantity ?? 1), 0);
     }, [products, checkedItems]);
 
+     const navigate = useNavigate();
+
+     const handleGoHome = () => {
+         navigate("/profile");
+     };
+
     return (
         <Box className={s.container}>
             <Box className={s.containerPrice}>
@@ -27,7 +34,7 @@ export const CartSummary = ({products,checkedItems}:CartSummaryType) => {
             </Box>
             <Box className={s.divider}/>
             <Box className={s.containerButton}>
-            <Button className={s.button1}>Перейти к оформлению</Button>
+            <Button className={s.button1} onClick={handleGoHome}>Перейти к оформлению</Button>
             <Button className={s.button2}>Купить в 1 клик</Button>
             </Box>
         </Box>

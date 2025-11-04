@@ -6,6 +6,7 @@ import s from "../../../../src/components/pages/ProductsPage/ProductsPage.module
 import stiles from 'components/Shop/CartItem/CartItem.module.css'
 import {styled} from "@mui/material/styles";
 import {CartSummary} from "@/components/Shop/CartItem/CartSummary/CartSummary";
+import {EmptyCart} from "@/components/Shop/CartList/EmptyCart/EmptyCart";
 
 
 export const PinkCheckbox = styled(Checkbox)({
@@ -39,6 +40,10 @@ export const CartList = () => {
     const handleMasterCheckbox = () => {
         handleSelectAll();
     };
+    if (cart.length === 0) {
+        return <EmptyCart/>;
+    }
+
 
     return (
         <Box>
@@ -58,8 +63,7 @@ export const CartList = () => {
                 </Button>
             </Box>
             <Box className={s.container}>
-
-
+            <Box className={s.containerCheckbox} >
                 {cart.length === 0 ? (
                     <Typography className={s.emptyText}>Корзина пуста</Typography>
                 ) : (
@@ -73,12 +77,14 @@ export const CartList = () => {
                     ))
                 )}
 
+
+            </Box>
                 {cart.length > 0 && (
-                    <Box mt={4}>
+                    <Box marginTop={-9.5}>
                         <CartSummary products={cart} checkedItems={selectedIds} />
                     </Box>
                 )}
             </Box>
         </Box>
-            );
-            }
+    );
+}

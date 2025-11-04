@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.cartEmptyIco {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    translate: 0 80%;
+    background-color: #fbfbfb;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 167px;
+    gap: 35px;
+    background-color: #fdfdfd;
+    padding: 60px 30px 40px;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+.text {
+    font-size: 18px !important;
+}
+
+.button {
+    width: 200px;
+    height: 40px;
+    background-color: #a93f64 !important;
+    color: white !important;
+}
+
+
+
