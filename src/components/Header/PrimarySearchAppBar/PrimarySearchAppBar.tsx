@@ -81,11 +81,13 @@ export default function PrimarySearchAppBar() {
                         placeholder={'Search'}
                         inputProps={{'aria-label': 'search'}}/>
                     <HeaderIcons
+                        comparisonCount={comparison.length}
                         favoritesCount={favorites.length}
                         cartCount={cart.length}
                         dispatch={dispatch}/>
                 </Toolbar>
             </AppBar>
+            <DrawersRenderer drawerDataMap={drawerDataMap} drawers={drawers} />
             <MobileMenu
                 mobileMoreAnchorEl={mobileMoreAnchorEl}
                 onClose={() => setMobileMoreAnchorEl(null)}
@@ -101,9 +103,6 @@ export default function PrimarySearchAppBar() {
                 activeSection={activeSection}
                 anchorEl={burgerRef.current}
             />
-            {/*<DrawersRenderer drawers={drawers} drawerDataMap={drawerDataMap}/>*/}
-
-
         </Box>
     );
 }

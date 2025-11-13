@@ -9,5 +9,18 @@
 }
 
 .compareActive {
-    fill: blue;
+    color: #fd3579 !important; /* розовый цвет */
 }
+
+
+.actionButton {
+    background-color: #eaeff6 !important;
+    color: #1b1b1b !important;
+}
+
+.inCartActive {
+    background-color: #a83f63 !important;
+    color: #fff !important;
+}
+
+

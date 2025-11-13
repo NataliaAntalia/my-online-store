@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Card, CardContent, CardMedia, Typography} from "@mui/material";
-import {v4 as uuidv4} from "uuid";
 import {useTranslation} from "react-i18next";
 import {useCart} from "@/hooks/useCart";
 import s from './ProductCard.module.css'
@@ -10,17 +9,24 @@ import {ProductActions} from "@/components/Shop/ProductCard/ProductActions/Produ
 import {ProductCardProps} from "@/components/Shop/ProductCard/types";
 import IconButton from "@mui/material/IconButton";
 import {Trash2} from "lucide-react";
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxHooks";
+import {setRating} from "@/store/ratingsSlice";
 
 
 export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButton = false}) => {
-    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison, removeFromCart} = useCart();
-    const [rating, setRating] = useState(product.rating);
+    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison, removeFromCart } = useCart();
     const [hover, setHover] = useState(0);
     const {t} = useTranslation();
+    const dispatch = useAppDispatch();
+    const rating = useAppSelector(state => state.ratings[product.id] || 0);
+
+    const handleRatingChange = (value: number) => {
+        dispatch(setRating({ id: product.id, rating: value }));
+    };
 
     const handleAddToCart = () => {
         addToCart({
-            id: uuidv4(),
+            id: product.id,
             image_url: product.image_url,
             name: t(product.name),
             price: product.price,
@@ -44,7 +50,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButt
                 <Typography variant="subtitle1">{t(product.name)}</Typography>
                 <RatingStars
                     rating={rating}
-                    onClick={setRating}
+                    onClick={handleRatingChange}
                     onMouseLeave={setHover}
                     onMouseEnter={() => setHover(0)}
                     hover={hover}/>
@@ -60,7 +66,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButt
                                 toggleFavorite={toggleFavorite}
                                 toggleComparison={toggleComparison}
                                 t={t}
-                                comparison={comparison}/>
+                                comparison={comparison}
+                />
 
                 {showRemoveButton && (
                     <IconButton

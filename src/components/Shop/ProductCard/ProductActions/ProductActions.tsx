@@ -6,6 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import {ReactComponent as Compare} from "../../../../img/compare.svg";
 import s from './ProductActions.module.css';
 import {ProductActionsProps} from "@/components/Shop/ProductCard/types";
+import {useCart} from "@/hooks/useCart";
 
 
 export const ProductActions: React.FC<ProductActionsProps> = ({
@@ -18,6 +19,8 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
                                                                   t
                                                               }) => {
 
+    const {cart} = useCart();
+    const isInCart = cart.some(item => String(item.id) === String(product.id));
 
     const actions = [
         {
@@ -32,7 +35,7 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
             isActive: comparison.some(c => c.id === product.id),
             onClick: () => toggleComparison({...product, name: t(product.name)}),
             activeIcon: <Compare width={24} height={24} className={s.compareActive}/>,
-            inactiveIcon: <Compare width={24} height={24}/>,
+            inactiveIcon: <Compare width={24} height={24} />,
         }
     ];
 
@@ -42,8 +45,9 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
                 variant="contained"
                 startIcon={<ShoppingCartIcon/>}
                 onClick={handleAddToCart}
+                className={`${s.actionButton} ${isInCart ? s.inCartActive : ''}`}
             >
-                {t('addToCart')}
+                {isInCart ? t('В корзине') : t('addToCart')}
             </Button>
 
 
