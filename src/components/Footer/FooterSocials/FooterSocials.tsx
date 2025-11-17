@@ -7,12 +7,15 @@ import s from "./FooterSocials.module.css";
 type SocialLinksType = {
     icon: React.ElementType,
     url: string,
+    hoverColor: string;
 }
 
 type FooterSocialsType = {
     title: string,
     links: SocialLinksType[],
 }
+
+
 
 export const FooterSocials = ({title, links}: FooterSocialsType) => {
     return (
@@ -21,7 +24,7 @@ export const FooterSocials = ({title, links}: FooterSocialsType) => {
                 {title}
             </Typography>
             <Box className={s.footerSocials}>
-                {links.map(({icon: Icon, url}, idx) => (
+                {links.map(({icon: Icon, url, hoverColor}, idx) => (
                     <IconButton
                         key={idx}
                         component="a"
@@ -29,6 +32,11 @@ export const FooterSocials = ({title, links}: FooterSocialsType) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={s.footerSocialButton}
+                        sx={{
+                            '&:hover': {
+                                color: `${hoverColor} !important`,
+                            }
+                        }}
                     >
                         <Icon className={s.footerSocialIcon}/>
                     </IconButton>

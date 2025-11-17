@@ -20,7 +20,9 @@ export const PasswordToggleIcon = ({onClick, showPassword}:PasswordToggleIconTyp
                     edge="end"
                     size="small"
                 >
-                    {showPassword ? <VisibilityOff fontSize="small"/> : <Visibility fontSize="small"/>}
+                    {showPassword ?
+                        <VisibilityOff fontSize="small" sx={{ color: "var(--icon-color-eye-diss)" }}/>
+                        : <Visibility fontSize="small" sx={{ color: "var(--icon-color)" }}/>}
                 </IconButton>
             </InputAdornment>
     );

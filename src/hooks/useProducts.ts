@@ -9,7 +9,6 @@ export function useProducts() {
         fetchProducts()
             .then(setProducts)
             .catch(err => {
-                console.error("Error fetching products:", err);
                 setError(err.message);
             });
     }, []);

@@ -4,5 +4,5 @@
 }
 
 .star {
-    color: #fbc02d;
+    color: var(--star-color);
 }

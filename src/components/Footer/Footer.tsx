@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
 
                     <Grid item xs={12} sm={6} md={3} {...({} as any)}>
                         <FooterAppButtons title={"Загрузите наше приложение"} buttons={buttons}/>
-                        <FooterSocials title={"Мы в социальных сетях"} links={socialLinks}/>
+                        <FooterSocials  title={"Мы в социальных сетях"} links={socialLinks}/>
                         <FooterPayments title={"Принимаем к оплате"} images={images}/>
                     </Grid>
                 </Grid>

@@ -6,10 +6,10 @@ import AppleIcon from "@mui/icons-material/Apple";
 import AndroidIcon from "@mui/icons-material/Android";
 
 export const socialLinks = [
-    {icon: InstagramIcon, url: "https://instagram.com"},
-    {icon: FacebookIcon, url: "https://facebook.com"},
-    {icon: YouTubeIcon, url: "https://youtube.com"},
-    {icon: MusicNoteIcon, url: "https://tiktok.com"},
+    {icon: InstagramIcon, url: "https://instagram.com", hoverColor: "#E1306C"},
+    {icon: FacebookIcon, url: "https://facebook.com",hoverColor: "#1877F2"},
+    {icon: YouTubeIcon, url: "https://youtube.com", hoverColor: "#FF0000"},
+    {icon: MusicNoteIcon, url: "https://tiktok.com", hoverColor: "#FE2C55"},
 ];
 
 

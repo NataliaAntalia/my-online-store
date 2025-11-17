@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    background-color: #fbfbfb;
+    background-color: var(--card-bg-color);
     width: 444px;
     height: 235px;
     border-radius: 8px;
@@ -16,6 +16,7 @@
 }
 
 .text{
+    color: var(--text-color);
     font-weight: bold !important;
 }
 
@@ -36,6 +37,7 @@
     border: 1px solid #cacaca!important;
     width: 403px;
     height: 45px;
+    color: var(--text-color) !important;
 }
 
 .containerButton{
@@ -43,8 +45,7 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    /*margin :15px 0 0 ;*/
-    /*padding: 25px 20px;*/
+
 }
 
 

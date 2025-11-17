@@ -1,6 +1,12 @@
+
 .card {
     max-width: 260px;
     margin: 7px;
+    background-color: var(--card-bg-color) !important;
+}
+
+.text{
+    color: var(--text-color);
 }
 
 

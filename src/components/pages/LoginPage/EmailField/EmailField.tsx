@@ -1,6 +1,7 @@
 import React, {ChangeEvent} from 'react';
 import {TextField} from "@mui/material";
-import s from '../LoginPage.module.css'
+import {inputSX} from "@/components/pages/LoginPage/inputStyles";
+
 
 type EmailFieldType = {
     value: string;
@@ -9,16 +10,16 @@ type EmailFieldType = {
 
 
 export const EmailField = ({value, onChange}: EmailFieldType) => {
-    const handleChange=(e:ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => onChange(e.target.value)
+    const handleChange = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => onChange(e.target.value)
     return (
         <TextField
             label="Ваш E-mail"
             type="email"
             fullWidth
             margin="normal"
-            className={s.inputField}
             value={value}
             onChange={handleChange}
+            sx={inputSX}
         />
     );
 };

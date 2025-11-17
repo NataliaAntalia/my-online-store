@@ -41,14 +41,17 @@ export const CartItem: React.FC<CartItemProps> = ({product, checked, onToggleSel
             <Box className={s.actions}>
                 <IconButton onClick={() => toggleFavorite(product)}>
                     <Heart
-                        size={20}
+                        width={24}
+                        height={24}
+                        // size={20}
                         fill={isFavorite ? "#fb3578" : "none"}
-                        color={isFavorite ? "#f93577" : "#555"}
+                        color={isFavorite ? "#f93577" : "#9e9e9e"}
                     />
                 </IconButton>
 
                 <IconButton onClick={() => removeFromCart(product.id)}>
-                    <Trash2 size={20}/>
+                    <Trash2 color={"#9e9e9e"} width={24}
+                            height={24} />
                 </IconButton>
             </Box>
         </Box>

@@ -28,15 +28,14 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
             isActive: favorites.some(f => f.id === product.id),
             onClick: () => toggleFavorite({...product, name: t(product.name)}),
             activeIcon: <FavoriteIcon className={s.favorite}/>,
-            inactiveIcon: <FavoriteBorderIcon/>,
+            inactiveIcon: <FavoriteBorderIcon className={s.favoriteNon}/>,
         },
         {
             key: 'compare',
             isActive: comparison.some(c => c.id === product.id),
             onClick: () => toggleComparison({...product, name: t(product.name)}),
-            activeIcon: <Compare width={24} height={24} className={s.compareActive}/>,
-            inactiveIcon: <Compare width={24} height={24} />,
-        }
+            icon: <Compare width={24} height={24}/>,
+        },
     ];
 
     return (
@@ -51,9 +50,14 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
             </Button>
 
 
-            {actions.map(({key, isActive, onClick, activeIcon, inactiveIcon}) => (
-                <IconButton key={key} onClick={onClick}>
-                    {isActive ? activeIcon : inactiveIcon}
+            {actions.map(({key, isActive, onClick, activeIcon, inactiveIcon, icon}) => (
+                <IconButton
+                    key={key}
+                    onClick={onClick}
+                    sx={{
+                        color: isActive ? 'var(--lang-active-bg)' : 'var(--icon-color)'
+                    }}>
+                    {icon ? icon : (isActive ? activeIcon : inactiveIcon)}
                 </IconButton>
             ))}
 

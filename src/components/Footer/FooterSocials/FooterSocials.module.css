@@ -7,12 +7,11 @@
 .footerSocialButton {
     padding-bottom: 5px;
     padding-left: 0;
-    color: var(--text-color) !important;
+    color: var(--text-color)!important;
     transition: 0.3s;
 }
 
 .footerSocialButton:hover {
-    color: #ff4081 !important;
     transform: scale(1.2);
 }
 

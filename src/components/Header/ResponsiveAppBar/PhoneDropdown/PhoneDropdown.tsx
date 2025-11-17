@@ -51,7 +51,7 @@ export const PhoneDropdown = ({mainNumber, otherNumbers, workingHours}: PhoneDro
                 <Box className={s.divider}/>
 
                 <Box className={s.workingHours}>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" >
                         {workingHours}
                     </Typography>
                 </Box>

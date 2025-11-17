@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import { AppDispatch } from "@/store";
 import { ReactComponent as UserIcon } from '../../../../img/user.svg';
-import { ReactComponent as Balance } from '../../../../img/compare.svg';
+import { ReactComponent as Balance } from '../../../../img/compare_header.svg';
 import { ReactComponent as Like } from '../../../../img/like.svg';
 import { ReactComponent as Shop } from '../../../../img/shop.svg';
 import s from './HeaderIcons.module.css';

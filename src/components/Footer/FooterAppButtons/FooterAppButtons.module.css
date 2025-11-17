@@ -1,48 +1,61 @@
 .footerStoreButtons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 16px;
 }
 
 .storeButton {
-    text-transform: none;
-    background-color: #272727 !important;
-    transition: 0.3s;
-    display: flex;
-    align-items: stretch;
-    padding: 2px 8px;
-    min-width: auto;
+    background-color: #000000 !important;
+    color: white;
+    width: 130px ;
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 5px;
+    min-width: 130px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
 }
 
 .storeButton:hover {
-    color: #ff4081;
-    transform: scale(1.05);
+    color: #fb3578 !important;
 }
 
-.storeButtonIcon {
+.contentWrapper {
     display: flex;
-    align-items: stretch;
-    margin-right: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
 }
 
 .storeIcon {
-    font-size: 1.8rem;
+    font-size: 24px !important;
+    display: flex;
+    align-items: center;
 }
 
 .storeButtonText {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    line-height: 1;
 }
 
 .storeButtonSubtext {
-    font-size: 0.75rem;
-    line-height: 1;
+    font-size: 9px !important;
+    font-weight: 400;
+    line-height: 1.1 !important;
+    opacity: 0.8;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
 }
 
 .storeButtonMaintext {
-    font-size: 0.9rem;
-    line-height: 1;
-    font-weight: 500;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }

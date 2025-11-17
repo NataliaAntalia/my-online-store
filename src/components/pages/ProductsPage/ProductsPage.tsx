@@ -22,10 +22,7 @@ export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton
                 {t(titleKey)}
             </Typography>
             <Box className={s.container}>
-
                 <Box className={s.textContainer}>
-
-
                     {products.length === 0 ? (
                         <Typography className={s.emptyText}>{t(emptyTextKey)}</Typography>
                     ) : (

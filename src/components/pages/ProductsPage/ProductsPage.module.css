@@ -30,8 +30,15 @@
 
 
 .emptyText {
-    font-size: 1rem;
-    color: #888;
+    margin-left: 10px !important;
+    color: var(--color-empty-text);
+    background-color: var(--bg-empty-text);
+    border-radius: 5px;
+    width: 1259px;
+    height: 48px;
+    display: flex;          /* включаем flex */
+    align-items: center;
+    padding-left: 12px;
 }
 
 .productsList {

@@ -5,5 +5,11 @@ import {ProductsPage} from "@/components/pages/ProductsPage/ProductsPage";
 
 export const FavoritesPage = () => {
     const { favorites } = useCart();
-    return <ProductsPage products={favorites} titleKey="favorites" emptyTextKey="favorites_empty" />;
+    return (
+    <ProductsPage
+        products={favorites}
+        titleKey="favorites"
+        emptyTextKey="favorites_empty"
+    />
+)
 };

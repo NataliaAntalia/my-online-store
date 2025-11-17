@@ -9,29 +9,6 @@
     text-align: left;
 }
 
-.inputField .MuiOutlinedInput-root {
-    height: 46px;
-    padding: 0;
-}
-
-.inputField .MuiOutlinedInput-input {
-    padding: 12px 14px;
-    box-sizing: border-box;
-    color: #555;
-}
-
-
-.inputField .MuiInputLabel-root {
-    color: #555 ;
-}
-
-.inputField .MuiInputLabel-root.Mui-focused {
-    color: #555;
-}
-
-.inputAdornment {
-    margin-right: 4px;
-}
 
 
 

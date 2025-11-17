@@ -14,14 +14,14 @@ import {setRating} from "@/store/ratingsSlice";
 
 
 export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButton = false}) => {
-    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison, removeFromCart } = useCart();
+    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison, removeFromCart} = useCart();
     const [hover, setHover] = useState(0);
     const {t} = useTranslation();
     const dispatch = useAppDispatch();
     const rating = useAppSelector(state => state.ratings[product.id] || 0);
 
     const handleRatingChange = (value: number) => {
-        dispatch(setRating({ id: product.id, rating: value }));
+        dispatch(setRating({id: product.id, rating: value}));
     };
 
     const handleAddToCart = () => {
@@ -37,7 +37,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButt
     };
 
 
-
     return (
         <Card className={s.card}>
             <CardMedia
@@ -47,7 +46,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButt
                 alt={t(product.name)}
             />
             <CardContent>
-                <Typography variant="subtitle1">{t(product.name)}</Typography>
+                <Typography variant="subtitle1" className={s.text}>{t(product.name)}</Typography>
                 <RatingStars
                     rating={rating}
                     onClick={handleRatingChange}
@@ -76,7 +75,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, showRemoveButt
                         aria-label="Удалить из корзины"
                         size="small"
                     >
-                        <Trash2 size={20} />
+                        <Trash2 size={20}/>
                     </IconButton>
                 )}
             </CardContent>

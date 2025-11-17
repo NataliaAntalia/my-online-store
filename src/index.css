@@ -2,7 +2,7 @@
     --bg-color: #e4e3e3;
     --header-footer-bg: #dadada;
     --text-color: #272727;
-    --text-secondary: rgba(0, 0, 0, 0.6);
+    --text-secondary: rgba(23, 23, 23, 0.6);
     --search-bg: #eaeaea;
     --search-text: #272727;
     --search-icon: #c6c6c6;
@@ -13,6 +13,25 @@
     --lang-active-text: #ffffff;
     --drawer-bg: #ffffff;
     --drawer-text: #272727;
+    --bg-color-card: #e3e3e3;
+    --bg-color-card-text: #c1c1c1;
+    --bg-color-empty-cart: #fbfbfb;
+    --input-color: #a1a1a1;
+    --input-text-color: #353535;
+    --icon-color-eye-diss: #555555;
+    --card-bg-color: #fdfdfd;
+    --favorite-border-color: #0e0e0e;
+    --star-color: #ffb600;
+    --button-bg-color: #eaeff6;
+    --button-text-color: #1b1b1b;
+    --bg-color-caunter:#eaeff6 ;
+    --bg-empty-text: #ffdbe6;
+    --color-empty-text: #888;
+    --divider-color: #888;
+    --drop-down-bg: #e4e3e3;
+    --bg-hover: #f5f5f5;
+
+
 }
 
 .dark {
@@ -30,6 +49,21 @@
     --lang-active-text: #ffffff;
     --drawer-bg: #2a2a2a;
     --drawer-text: #e0e0e0;
+    --bg-color-card: #656565;
+    --bg-color-card-text: #353535;
+    --bg-color-empty-cart: #303030;
+    --input-color: #b3b3b3;
+    --input-text-color: #a5a5a5;
+    --card-bg-color: rgba(99, 99, 99, 0.4);
+    --favorite-border-color: #e8e8e8;
+    --button-bg-color: rgba(27, 27, 27, 0.89);
+    --button-text-color: #979797;
+    --bg-color-caunter: rgb(80, 80, 80);
+    --bg-empty-text: #fdcedc;
+    --color-empty-text: #272727;
+    --divider-color: #cacaca;
+    --drop-down-bg: #494949;
+    --bg-hover: #3a3a3a;
 
 }
 

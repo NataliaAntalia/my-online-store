@@ -1,12 +1,11 @@
 .footer {
     background-color: var(--header-footer-bg);
-    padding-top: 16px;
-    margin-top: 64px;
+    padding-top: 50px;
 }
 
 .footerTitle {
     font-weight: bold !important;
-    color: #dddddd;
+    color: var(--text-color);
 }
 
 .footerSocials {

@@ -55,6 +55,7 @@ export const CartList = () => {
                             checked={isAllSelected}
                             onChange={handleMasterCheckbox}
                         />
+
                     }
                     label=""
                 />

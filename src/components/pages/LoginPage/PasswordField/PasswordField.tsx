@@ -1,7 +1,7 @@
 import React from 'react';
 import {TextField} from "@mui/material";
 import {PasswordToggleIcon} from "@/components/pages/LoginPage/PasswordField/PasswordToggleIcon";
-import s from './PasswordField.module.css'
+import {inputSX} from "@/components/pages/LoginPage/inputStyles";
 
 type PasswordFieldType = {
     showPassword: boolean,
@@ -27,13 +27,13 @@ export const PasswordField = ({showPassword, password, onChange, onClick}: Passw
             fullWidth
             value={password}
             margin="normal"
-            className={s.inputField}
             onChange={handleChange}
             InputProps={{
                 endAdornment: (
                     <PasswordToggleIcon onClick={togglePassword} showPassword={showPassword}/>
                 ),
             }}
+            sx={inputSX}
         />
     );
 };

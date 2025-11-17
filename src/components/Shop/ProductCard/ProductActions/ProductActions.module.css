@@ -5,17 +5,29 @@
 }
 
 .favorite {
-    color: #fd3579;
+    color: var(--lang-active-bg);
 }
 
-.compareActive {
-    color: #fd3579 !important; /* розовый цвет */
+.favoriteNon {
+    color: var(--favorite-border-color);
+}
+
+.icon {
+    color: var(--icon-color);
+    transition: color 0.2s ease;
+}
+
+.IconButton-root:has(.icon) .icon:active,
+.comparison-active .icon,
+.IconButton-root[aria-pressed="true"] .icon,
+.actions .MuiIconButton-root:has(svg[class*="icon"]):active .icon {
+    color: var(--lang-active-bg) !important;
 }
 
 
 .actionButton {
-    background-color: #eaeff6 !important;
-    color: #1b1b1b !important;
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color) !important;
 }
 
 .inCartActive {
