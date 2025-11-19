@@ -17,9 +17,19 @@ import {SearchBar} from "@/components/Header/SearchBar/SearchBar";
 import {MobileMenu} from "@/components/Header/PrimarySearchAppBar/MobileMenu/MobileMenu";
 import {DrawersRenderer} from "@/components/Header/PrimarySearchAppBar/DrawersRenderer/DrawersRenderer";
 import {useCart} from "@/hooks/useCart";
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
+import logoMobile from '../../../img/logo_mobile.png'
+import {LANGUAGES, LOGO_PATH_DARK, MAIN_NUMBER, PAGES} from "@/components/Header/ResponsiveAppBar/constants";
 
 
-export default function PrimarySearchAppBar() {
+
+type PrimarySearchAppBarType = {
+    isMobile: boolean;
+}
+
+export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) {
+    const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const dispatch = useDispatch<AppDispatch>();
     const catalogSections = useSelector((state: RootState) => state.catalog.sections);
@@ -71,22 +81,53 @@ export default function PrimarySearchAppBar() {
                             component="div"
                             className={s.catalogTitle}
                             onClick={() => setOpenCatalog(true)}
+                            sx={{ display: isMobile ? 'none' : 'block' }}
                         >
                             {t('catalog.title')}
                         </Typography>
                     </Box>
+                    {isMobile && (
+                        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+                             <img src={logoMobile} alt="Logo" style={{ height: 40, width: 50 }} />
+                        </Box>
+                    )}
+                    {!isMobile && (
                     <SearchBar
                         onChange={setSearchQuery}
                         value={searchQuery}
                         placeholder={'Search'}
                         inputProps={{'aria-label': 'search'}}/>
+                        )}
+                    <Box sx={{ display: 'flex' }}>
+                        {/* Иконка поиска для мобильного */}
+                        {isMobile && (
+                            <IconButton
+                                size="large"
+                                color="inherit"
+                                aria-label="open search"
+                                onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
+                            >
+                                {isMobileSearchOpen ? <CloseIcon /> : <SearchIcon />}
+                            </IconButton>
+                        )}
                     <HeaderIcons
-                        comparisonCount={comparison.length}
-                        favoritesCount={favorites.length}
+                        isMobile={isMobile}
+                        comparisonCount={isMobile ? 0 : comparison.length}
+                        favoritesCount={isMobile ? 0 : favorites.length}
                         cartCount={cart.length}
                         dispatch={dispatch}/>
+                    </Box>
                 </Toolbar>
             </AppBar>
+            {isMobile && isMobileSearchOpen && (
+                <Box sx={{ p: 1, bgcolor: 'var(--search-bg-mobile)' }}>
+                    <SearchBar
+                        onChange={setSearchQuery}
+                        value={searchQuery}
+                        placeholder={'Search'}
+                        inputProps={{'aria-label': 'search'}}/>
+                </Box>
+            )}
             <DrawersRenderer drawerDataMap={drawerDataMap} drawers={drawers} />
             <MobileMenu
                 mobileMoreAnchorEl={mobileMoreAnchorEl}
@@ -102,6 +143,12 @@ export default function PrimarySearchAppBar() {
                 expandedSubcategories={expandedSubcategories}
                 activeSection={activeSection}
                 anchorEl={burgerRef.current}
+                isMobile={isMobile}
+                navPages={PAGES}
+                mainNumber={MAIN_NUMBER}
+                logoPath={LOGO_PATH_DARK}
+                languages={LANGUAGES}
+                cartData={{ favorites, comparison, cart }}
             />
         </Box>
     );

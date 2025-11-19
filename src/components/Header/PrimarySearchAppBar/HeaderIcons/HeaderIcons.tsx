@@ -16,6 +16,7 @@ interface HeaderIconsProps {
     cartCount: number;
     comparisonCount:number;
     dispatch: AppDispatch;
+    isMobile: boolean;
 }
 
 interface IconConfig {
@@ -26,13 +27,17 @@ interface IconConfig {
     link?: string;
 }
 
-export const HeaderIcons = ({ favoritesCount, cartCount, comparisonCount }: HeaderIconsProps) => {
-    const iconConfigs: IconConfig[] = [
+export const HeaderIcons = ({ favoritesCount, cartCount, comparisonCount,isMobile }: HeaderIconsProps) => {
+    const allIconConfigs: IconConfig[] = [
         { id: 'profile', title: 'profile_login', icon: UserIcon, link: '/profile' },
         { id: 'comparison', title: 'comparison', icon: Balance, badgeContent:comparisonCount, link: '/comparison' },
         { id: 'favorites', title: 'favorites', icon: Like, badgeContent: favoritesCount, link: '/favorites' },
         { id: 'cart', title: 'cart', icon: Shop, badgeContent: cartCount, link: '/cart' },
     ];
+
+    const iconConfigs = isMobile
+        ? allIconConfigs.filter(config => config.id === 'cart')
+        : allIconConfigs;
 
     return (
         <Box className={s.iconSection}>

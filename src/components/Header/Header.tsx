@@ -1,12 +1,15 @@
 import React from 'react';
 import PrimarySearchAppBar from "./PrimarySearchAppBar/PrimarySearchAppBar";
 import {ResponsiveAppBar} from "@/components/Header/ResponsiveAppBar/ResponsiveAppBar";
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const Header = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <div>
-            <ResponsiveAppBar/>
-            <PrimarySearchAppBar/>
+            {!isMobile && <ResponsiveAppBar/>}
+            <PrimarySearchAppBar isMobile={isMobile}/>
 
         </div>
     );
