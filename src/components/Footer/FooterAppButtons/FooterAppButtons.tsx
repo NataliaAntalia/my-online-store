@@ -21,7 +21,7 @@ type FooterAppButtonsType = {
 
 export const FooterAppButtons = ({title, buttons}: FooterAppButtonsType) => {
     return (
-        <Box>
+        <Box className={s.container}>
             <Typography gutterBottom className={stile.footerTitle}>
                 {title}
             </Typography>

@@ -33,3 +33,4 @@ export const footerSections = [
     {title: "Покупателю", links: customerLinks},
     {title: "Полезная информация", links: infoLinks},
 ];
+

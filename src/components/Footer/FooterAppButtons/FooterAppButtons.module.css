@@ -1,3 +1,7 @@
+.container{
+
+}
+
 .footerStoreButtons {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +12,7 @@
 .storeButton {
     background-color: #000000 !important;
     color: white;
-    width: 130px ;
+    width: 130px;
     height: 40px;
     border-radius: 8px;
     padding: 0 5px;
@@ -58,4 +62,23 @@
     line-height: 1.1 !important;
     white-space: nowrap;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+    .storeButton {
+        width: 100px;
+        height: 34px;
+        border-radius: 4px;
+        padding: 0 5px;
+    }
+    .storeIcon{
+        font-size: 18px !important;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        padding: 14px 9px 14px 18px;
+    }
 }
