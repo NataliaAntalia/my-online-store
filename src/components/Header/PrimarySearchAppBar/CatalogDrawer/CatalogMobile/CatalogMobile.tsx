@@ -16,7 +16,6 @@ import {CatalogSubMenu} from "@/components/Header/PrimarySearchAppBar/CatalogDra
 import s from '../CatalogDrawer.module.css'
 import {FooterAppButtons} from "@/components/Footer/FooterAppButtons/FooterAppButtons";
 import {buttons} from "@/components/Footer/constants";
-import Button from "@mui/material/Button";
 
 
 export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
@@ -36,7 +35,6 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
             open={open}
             onClose={onClose}
             className={s.mobilePaper}
-
         >
             <Box className={s.containerMobile}>
                 <Box className={s.logoContainer}>

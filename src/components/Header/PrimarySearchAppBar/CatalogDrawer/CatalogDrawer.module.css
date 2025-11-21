@@ -15,7 +15,8 @@
 
 .mobilePaper {
     width: 280px;
-    max-width: 80vw
+    max-width: 80vw;
+
 }
 
 .containerMobile {
@@ -23,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px;
+
 }
 
 .mirrorIcon {

@@ -2,8 +2,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import AppleIcon from "@mui/icons-material/Apple";
-import AndroidIcon from "@mui/icons-material/Android";
+import {ReactComponent as AndroidIcon} from "../../img/android-icon.svg";
+import {ReactComponent as AppleIcon} from "../../img/apple.svg";
 
 export const socialLinks = [
     {icon: InstagramIcon, url: "https://instagram.com", hoverColor: "#E1306C"},

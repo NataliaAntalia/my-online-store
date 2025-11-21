@@ -5,7 +5,7 @@ import stile from "../Footer.module.css";
 
 
 type AppButton = {
-    icon: React.ElementType,
+    icon: React.ElementType | string,
     link: string,
     subText: string;
     mainText: string;

@@ -19,10 +19,11 @@
     min-width: 130px;
     border: 1px solid #3a3a3a;
     overflow: hidden;
+    gap: 8px;
 }
 
 .storeButton:hover {
-    color: #fb3578 !important;
+    transform: scale(1.06);
 }
 
 .contentWrapper {
@@ -39,12 +40,14 @@
     align-items: center;
 }
 
+
 .storeButtonText {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     line-height: 1;
+    text-transform: none;
 }
 
 .storeButtonSubtext {
@@ -66,8 +69,8 @@
 
 @media screen and (max-width: 900px) {
     .storeButton {
-        width: 100px;
-        height: 34px;
+        width: 112px;
+        height: 38px;
         border-radius: 4px;
         padding: 0 5px;
     }
