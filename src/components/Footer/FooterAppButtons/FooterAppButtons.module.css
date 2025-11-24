@@ -14,12 +14,12 @@
     color: white;
     width: 130px;
     height: 40px;
-    border-radius: 8px;
-    padding: 0 5px;
+    border-radius: 5px;
+    padding: 0 8px;
     min-width: 130px;
     border: 1px solid #3a3a3a;
     overflow: hidden;
-    gap: 8px;
+    gap: 4px;
 }
 
 .storeButton:hover {
@@ -31,11 +31,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 8px;
+    /*gap: 8px;*/
 }
 
 .storeIcon {
-    font-size: 24px !important;
+    font-size: 24px;
     display: flex;
     align-items: center;
 }
@@ -75,7 +75,14 @@
         padding: 0 5px;
     }
     .storeIcon{
-        font-size: 18px !important;
+        width: 20px;
+        height: 20px;
+    }
+    .storeButtonMaintext{
+        font-size: 12px !important;
+    }
+    .storeButtonSubtext{
+        font-size: 9px !important;
     }
 
 }
