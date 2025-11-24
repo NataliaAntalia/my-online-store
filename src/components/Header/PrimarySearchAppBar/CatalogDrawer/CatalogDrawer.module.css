@@ -61,24 +61,12 @@
 }
 
 .logo {
-    height: 30px;
+    height: 70px !important;
     margin-right: 16px;
+    /*width: auto !important;*/
 }
 
-.languagesList {
-    display: flex;
-}
-
-.languageItem {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.activeLanguage {
-    font-weight: bold;
-}
-
-/*ДЕСКТОПНЫЕ*/
+    /*ДЕСКТОПНЫЕ*/
 
 .drawerLeftColumn {
     min-width: 150px;
