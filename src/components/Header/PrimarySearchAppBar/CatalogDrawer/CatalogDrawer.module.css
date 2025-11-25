@@ -55,14 +55,14 @@
 
 .logoContainer {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     margin-right: 10px;
     width: 100%;
 }
 
 .logo {
-    height: 60px !important;
+    height: 50px !important;
     margin-right: 16px;
 
 }

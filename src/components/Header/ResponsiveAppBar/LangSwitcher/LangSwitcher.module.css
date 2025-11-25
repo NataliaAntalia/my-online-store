@@ -1,70 +1,29 @@
-/*.langSwitcher {*/
-/*    display: flex;*/
-/*    !*width: 60px;*!*/
-/*    width: auto;*/
-/*    !*height: 26px;*!*/
-/*    height: auto;*/
-/*    !*border-radius: 16px;*!*/
-/*    border-radius: 50%;*/
-/*    overflow: hidden;*/
-/*    background-color: var(--lang-bg); !* grey.200 *!*/
-/*    position: relative;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.langOption {*/
-/*    flex: 1;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding: 4px; !* px:0.5, py:0.5 -> 4px *!*/
-/*    background-color: transparent;*/
-/*    color: var(--lang-text); !* grey.600 *!*/
-/*    font-weight: bold;*/
-/*    font-size: 1rem;*/
-/*    transition: background-color 0.2s;*/
-/*}*/
-
-/*.langOption.active {*/
-/*    background-color: var(--lang-active-bg) !important;*/
-/*    color: var(--lang-active-text);*/
-/*}*/
-
-/* Файл 2: LangSwitcher.module.css */
-
-/* -------------------------------------- */
-/* 1. КОНТЕЙНЕР (База: "Таблетка") */
-/* -------------------------------------- */
 .langSwitcher {
     display: flex;
     width: 60px !important;
-    height: 30px !important;
-
-    /* !!! ИЗМЕНЯЕМ: border-radius для таблетки !!! */
-    border-radius: 15px; /* Скругление должно быть ровно половиной высоты */
-
-    background-color: rgba(0, 0, 0, 0.09);
-    /*border: 1px solid rgba(0, 0, 0, 0.15);*/
-
+    height: 28px !important;
+    border-radius: 14px;
+    background-color: rgb(234, 239, 246);
+    border: 1px solid rgb(215, 225, 239);
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-
 }
 
 
 .langSwitcher::before {
     content: '';
     position: absolute;
-    top: 0;
-    border: 1px solid rgba(87, 87, 87, 0.65);
-    width: 30px !important;
-    height: 30px !important;
-    background-color: rgba(214, 214, 214, 0.55);
+    top: 50%;
+
+    width: 32px !important;
+    height: 32px !important;
+    transform: translateY(-50%);
+    border: 1px solid rgb(155, 164, 171);
+    background-color: rgb(253, 253, 253);
     border-radius: 50%;
-    /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);*/
     z-index: 1;
     transition: transform 0.3s ease;
+
 }
 
 .langOption {
@@ -81,13 +40,13 @@
 
 
 .langOneActive::before {
-    transform: translateX(0);
+    transform: translate(-1px, -50%);
     left: 0;
 }
 
 .langTwoActive::before {
-    transform: translateX(100%);
-    left: 0;
+    left: 28px;
+    transform: translate(1px, -50%);
 }
 
 .langOneActive .langOption:nth-child(1),
