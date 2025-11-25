@@ -1,33 +1,39 @@
 {
   "files": {
-    "main.css": "/my-online-store/static/css/main.63f85b70.css",
-    "main.js": "/my-online-store/static/js/main.f5dd1217.js",
+    "main.css": "/my-online-store/static/css/main.a80aa957.css",
+    "main.js": "/my-online-store/static/js/main.152e2792.js",
     "static/js/48.92a668ce.chunk.js": "/my-online-store/static/js/48.92a668ce.chunk.js",
     "static/js/453.8f5830d1.chunk.js": "/my-online-store/static/js/453.8f5830d1.chunk.js",
     "static/media/logo.png": "/my-online-store/static/media/logo.7c08e6ef086eff942582.png",
     "static/media/logo_white.png": "/my-online-store/static/media/logo_white.c998a387fc2b6bf483a2.png",
     "static/media/logo_mobile.png": "/my-online-store/static/media/logo_mobile.d82bd93c83e37cca277d.png",
     "static/media/empty_shop.png": "/my-online-store/static/media/empty_shop.5a4205029c0c6227220c.png",
+    "static/media/delivery.svg": "/my-online-store/static/media/delivery.ee7288969b38f8b21a14d354fbe72ce7.svg",
     "static/media/credit-card.svg": "/my-online-store/static/media/credit-card.003f384316688f3c93a2253575eb20a3.svg",
+    "static/media/promotions.svg": "/my-online-store/static/media/promotions.e535568d14154d9ff3a8b9689a040ca1.svg",
+    "static/media/phone.svg": "/my-online-store/static/media/phone.6918af214fd777197c4cac74d3d07776.svg",
     "static/media/compare_header.svg": "/my-online-store/static/media/compare_header.1a5d634b30a353fce4925dae35a43651.svg",
     "static/media/compare.svg": "/my-online-store/static/media/compare.a5e0332db0ef5d02f3fed43896dd28c0.svg",
+    "static/media/bonuses.svg": "/my-online-store/static/media/bonuses.bfb9a0a2ef8099d0b16ea5b308673a79.svg",
+    "static/media/catalog.svg": "/my-online-store/static/media/catalog.7902f978e93e8facd3414dcf2ab9a569.svg",
     "static/media/slick.svg": "/my-online-store/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/my-online-store/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/my-online-store/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/user.svg": "/my-online-store/static/media/user.a9d319080f2c5d036b5792f25feb0b64.svg",
+    "static/media/user.svg": "/my-online-store/static/media/user.7880d1c26919e856a9699598c9a98c0a.svg",
     "static/media/shop.svg": "/my-online-store/static/media/shop.305491072dcb971095778e98868fa6a7.svg",
     "static/media/slick.woff": "/my-online-store/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/location.svg": "/my-online-store/static/media/location.42fa54e718aacd635b96c5dcb6ce4008.svg",
     "static/media/like.svg": "/my-online-store/static/media/like.4790f59303f95a89f35087c5ca1f373f.svg",
     "static/media/apple.svg": "/my-online-store/static/media/apple.3d836605744d804282277f57e5d43819.svg",
     "static/media/android-icon.svg": "/my-online-store/static/media/android-icon.451cd711862a13c8ed9c42eb4af4fcea.svg",
     "index.html": "/my-online-store/index.html",
-    "main.63f85b70.css.map": "/my-online-store/static/css/main.63f85b70.css.map",
-    "main.f5dd1217.js.map": "/my-online-store/static/js/main.f5dd1217.js.map",
+    "main.a80aa957.css.map": "/my-online-store/static/css/main.a80aa957.css.map",
+    "main.152e2792.js.map": "/my-online-store/static/js/main.152e2792.js.map",
     "48.92a668ce.chunk.js.map": "/my-online-store/static/js/48.92a668ce.chunk.js.map",
     "453.8f5830d1.chunk.js.map": "/my-online-store/static/js/453.8f5830d1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63f85b70.css",
-    "static/js/main.f5dd1217.js"
+    "static/css/main.a80aa957.css",
+    "static/js/main.152e2792.js"
   ]
 }
