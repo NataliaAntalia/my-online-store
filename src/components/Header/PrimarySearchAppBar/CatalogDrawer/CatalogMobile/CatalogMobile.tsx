@@ -17,6 +17,7 @@ import {buttons} from "@/components/Footer/constants";
 import {LangSwitcher} from "@/components/Header/ResponsiveAppBar/LangSwitcher/LangSwitcher";
 import i18n from "i18next";
 import logoPath from '../../../../../img/logo.png'
+import {Divider} from "@mui/material";
 
 
 export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
@@ -56,12 +57,13 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                 <List className={s.list}>
                     {mobileNavItems.filter(Boolean).map((item, index) => {
                         if (!item) return null;
-
+                        const shouldAddDivider = index === 1 || index === 5 || index === 9;
                         return (
+                            <React.Fragment key={index}>
                             <ListItem
                                 key={index}
                                 disablePadding
-                                className={index === 0 ? s.authItem : ''}
+                                className={index === 0 ? s.authItem : '' }
                             >
                                 <ListItemButton
                                     component={item.isCatalog ? 'div' : Link}
@@ -74,12 +76,20 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                                         }
                                     }}
                                 >
-                                    {item.icon && <item.icon/>}
+                                    {item.icon &&
+                                        <Box className={s.containerIcon}>
+                                        <item.icon/>
+                                        </Box>
+                                    }
                                     <ListItemText primary={item.text}/>
 
                                     {item.count !== null && item.count > 0 && <span>{item.count}</span>}
                                 </ListItemButton>
                             </ListItem>
+                        {shouldAddDivider && (
+                            <Divider sx={{ margin: '8px 0' }} />
+                        )}
+                            </React.Fragment>
                         );
                     })}
                 </List>

@@ -40,3 +40,9 @@
 .vkButton {
     background-color: #5a78a5 !important;
 }
+
+@media screen and (max-width: 900px) {
+    .socialButton {
+        width: 112px !important;
+    }
+}

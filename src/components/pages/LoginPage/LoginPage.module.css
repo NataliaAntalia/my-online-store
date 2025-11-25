@@ -5,8 +5,14 @@
 }
 
 .formTitle {
-    font-weight: bold;
+    font-weight: bold !important;
     text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+    .formContainer{
+        width: 345px !important;
+    }
 }
 
 

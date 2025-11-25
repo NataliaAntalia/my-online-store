@@ -30,6 +30,7 @@
     --divider-color: #888;
     --drop-down-bg: #e4e3e3;
     --bg-hover: #f5f5f5;
+    --mobile-icon: #272727;
 
 
 }
@@ -123,3 +124,5 @@ a, button, .mainNumberButton, .footerSocialButton, .additionalNumber {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+

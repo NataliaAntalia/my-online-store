@@ -46,7 +46,7 @@ export const CartList = () => {
 
 
     return (
-        <Box>
+        <Box className={stiles.containerBox}>
             <Typography variant="h6" className={s.title}>Корзина</Typography>
             <Box className={stiles.checkboxContainer}>
                 <FormControlLabel

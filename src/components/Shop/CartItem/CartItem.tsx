@@ -43,7 +43,6 @@ export const CartItem: React.FC<CartItemProps> = ({product, checked, onToggleSel
                     <Heart
                         width={24}
                         height={24}
-                        // size={20}
                         fill={isFavorite ? "#fb3578" : "none"}
                         color={isFavorite ? "#f93577" : "#9e9e9e"}
                     />

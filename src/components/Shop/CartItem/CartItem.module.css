@@ -19,9 +19,15 @@
     justify-content: space-between;
     border-radius: 8px;
     padding: 8px 22px 8px 20px;
-    margin: 0 212px ! important;
+    /*margin: 0 212px ! important;*/
     background-color: var(--card-bg-color);
 }
+
+.containerBox{
+    margin: 0 212px ! important;
+}
+
+
 
 
 
@@ -85,4 +91,11 @@
     align-items: center;
     margin: 10px;
     gap: 16px;
+}
+
+
+@media screen and (max-width: 900px){
+    .containerBox{
+        margin: 0 10px !important;
+    }
 }
