@@ -7,6 +7,7 @@
     border: 1px solid rgb(215, 225, 239);
     position: relative;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 
@@ -14,7 +15,6 @@
     content: '';
     position: absolute;
     top: 50%;
-
     width: 32px !important;
     height: 32px !important;
     transform: translateY(-50%);
