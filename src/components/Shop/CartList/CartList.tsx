@@ -46,7 +46,7 @@ export const CartList = () => {
 
 
     return (
-        <Box className={stiles.containerBox}>
+        <Box>
             <Typography variant="h6" className={s.title}>Корзина</Typography>
             <Box className={stiles.checkboxContainer}>
                 <FormControlLabel
@@ -64,22 +64,22 @@ export const CartList = () => {
                 </Button>
             </Box>
             <Box className={s.container}>
-            <Box className={s.containerCheckbox} >
-                {cart.length === 0 ? (
-                    <Typography className={s.emptyText}>Корзина пуста</Typography>
-                ) : (
-                    cart.map((product) => (
-                        <CartItem
-                            key={product.id}
-                            product={product}
-                            checked={selectedIds.includes(product.id)}
-                            onToggleSelect={() => handleToggleSelect(product.id)}
-                        />
-                    ))
-                )}
+                <Box className={s.containerCheckbox} >
+                    {cart.length === 0 ? (
+                        <Typography className={s.emptyText}>Корзина пуста</Typography>
+                    ) : (
+                        cart.map((product) => (
+                            <CartItem
+                                key={product.id}
+                                product={product}
+                                checked={selectedIds.includes(product.id)}
+                                onToggleSelect={() => handleToggleSelect(product.id)}
+                            />
+                        ))
+                    )}
 
 
-            </Box>
+                </Box>
                 {cart.length > 0 && (
                     <Box marginTop={-9.5}>
                         <CartSummary products={cart} checkedItems={selectedIds} />

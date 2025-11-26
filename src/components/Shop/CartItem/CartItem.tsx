@@ -31,13 +31,12 @@ export const CartItem: React.FC<CartItemProps> = ({product, checked, onToggleSel
                 inputProps={{"aria-label": "select product"}}
             />
             <img src={product.image_url} alt={t(product.name)} className={s.image}/>
-
-            <Typography variant="subtitle1" className={s.name}>
-                {t(product.name)}
-            </Typography>
-
-            <QuantityCounter product={product}/>
-
+            <Box className={s.cartSummary}>
+                <Typography variant="subtitle1" className={s.name}>
+                    {t(product.name)}
+                </Typography>
+                <QuantityCounter product={product}/>
+            </Box>
             <Box className={s.actions}>
                 <IconButton onClick={() => toggleFavorite(product)}>
                     <Heart
@@ -50,7 +49,7 @@ export const CartItem: React.FC<CartItemProps> = ({product, checked, onToggleSel
 
                 <IconButton onClick={() => removeFromCart(product.id)}>
                     <Trash2 color={"#9e9e9e"} width={24}
-                            height={24} />
+                            height={24}/>
                 </IconButton>
             </Box>
         </Box>

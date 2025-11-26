@@ -37,4 +37,3 @@ export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton
         </>
     );
 };
-
