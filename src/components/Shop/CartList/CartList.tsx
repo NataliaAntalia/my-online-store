@@ -46,7 +46,7 @@ export const CartList = () => {
 
 
     return (
-        <Box>
+        <Box className={s.box}>
             <Typography variant="h6" className={s.title}>Корзина</Typography>
             <Box className={stiles.checkboxContainer}>
                 <FormControlLabel
@@ -77,11 +77,10 @@ export const CartList = () => {
                             />
                         ))
                     )}
-
-
                 </Box>
+
                 {cart.length > 0 && (
-                    <Box marginTop={-9.5}>
+                    <Box className={s.cartSummaryBox}>
                         <CartSummary products={cart} checkedItems={selectedIds} />
                     </Box>
                 )}

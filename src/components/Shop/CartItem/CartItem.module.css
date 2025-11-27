@@ -5,21 +5,23 @@
     border-radius: 8px;
     margin-bottom: 16px;
     transition: background 0.2s ease;
-    width: 716px;
+
+    /*max-width: 716px;*/
     padding: 7px;
     height: 141px;
 }
 
 
-
 .checkboxContainer {
-    width: 688px;
+    /*max-width: 690px;*/
+    /*width: 100%;*/
+    width: 30%;
     height: 40px;
     display: flex;
     justify-content: space-between;
     border-radius: 8px;
-    padding: 8px 22px 8px 20px;
-    margin: 0 0 0 212px ! important;
+    padding: 8px 22px 8px 18px;
+    /*margin: 0 0 0 212px ! important;*/
     background-color: var(--card-bg-color);
 }
 
@@ -30,11 +32,11 @@
     border-radius: 6px;
 }
 
-.cartSummary{
+.cartSummary {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 716px;
+    /*width: 716px;*/
 }
 
 .name {
@@ -93,29 +95,5 @@
 }
 
 
-@media screen and (max-width: 900px){
-    .checkboxContainer{
-        max-width: 900px;
-        width: 90%;
-        margin: 0 16px ! important;
-    }
-    .image{
-        width: 70px;
-        height: 70px;
-    }
-    .cartItem{
-        width: 90%;
-        max-width: 900px;
-        height: 70px;
-    }
 
 
-}
-
-@media screen and (max-width: 768px){
-    .cartSummary{
-       max-width: 768px;
-        width: 90%;
-        flex-direction: column;
-    }
-}
