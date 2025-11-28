@@ -1,6 +1,8 @@
 .footer {
     background-color: var(--header-footer-bg);
     padding-top: 50px;
+    width: 1400px;
+    margin: 0 auto
 }
 
 .footerTitle {

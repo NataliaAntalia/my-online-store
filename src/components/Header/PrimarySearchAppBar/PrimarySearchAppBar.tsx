@@ -61,6 +61,7 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
 
 
     return (
+        <Box className='headerWrapper'>
         <Box className={s.appBarWrapper}>
             <AppBar position="static" className={s.customAppBar}>
                 <Toolbar className={s.flexCenter}>
@@ -150,6 +151,7 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
                 languages={LANGUAGES}
                 cartData={{ favorites, comparison, cart }}
             />
+        </Box>
         </Box>
     );
 }

@@ -43,6 +43,7 @@ export default function PopularCategories() {
 
 
     return (
+
         <Box className={s.categoriesSection}>
             <Typography variant="h5" gutterBottom>
                 {t('popularCategories')}

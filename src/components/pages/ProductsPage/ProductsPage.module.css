@@ -6,9 +6,8 @@
     display: flex;
     margin: 16px 0;
     min-height: 50vh;
-    width: 78%;
+    width: 100%;
     gap: 20px;
-
 }
 
 .containerCheckbox {
@@ -16,19 +15,15 @@
     flex-direction: column;
     border-radius: 8px;
     box-sizing: border-box;
-
 }
 
 .button {
     color: #fb3578 !important;
     text-transform: none !important;
 }
-
-
-.title {
-
+.title{
+    /*font-weight: bold;*/
 }
-
 
 
 .emptyText {
@@ -38,15 +33,20 @@
     border-radius: 5px;
     width: 1259px;
     height: 48px;
-    display: flex;          /* включаем flex */
+    display: flex;
     align-items: center;
     padding-left: 12px;
 }
 
 .productsList {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
+}
+
+.productsList > * {
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 

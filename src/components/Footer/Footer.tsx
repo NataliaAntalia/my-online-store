@@ -10,6 +10,7 @@ import {buttons, footerSections, images, socialLinks} from "@/components/Footer/
 
 export const Footer: React.FC = () => {
     return (
+        <Box className='headerWrapper'>
         <Box component="footer" className={s.footer}>
             <Container maxWidth="lg">
                 <Grid container spacing={11}>
@@ -30,6 +31,7 @@ export const Footer: React.FC = () => {
                     </Typography>
                 </Box>
             </Container>
+        </Box>
         </Box>
     );
 };

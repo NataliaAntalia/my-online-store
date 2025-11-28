@@ -4,6 +4,8 @@ import {ProductCard} from "@/components/Shop/ProductCard/ProductCard";
 import {Product} from "@/store/types";
 import {useTranslation} from "react-i18next";
 import s from './ProductsPage.module.css'
+import '../../../index.css';
+
 
 
 type ProductsPageProps = {
@@ -17,7 +19,7 @@ export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton
     const {t} = useTranslation();
 
     return (
-        <>
+        <div className="globalContainer">
             <Typography variant="h5" className={s.title}>
                 {t(titleKey)}
             </Typography>
@@ -34,6 +36,7 @@ export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton
                     )}
                 </Box>
             </Box>
-        </>
+
+        </div>
     );
 };

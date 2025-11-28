@@ -41,6 +41,7 @@ export function ResponsiveAppBar() {
     const currentLogo = isDarkMode ? LOGO_PATH_DARK : LOGO_PATH;
 
     return (
+        <Box className='globalContainer'>
         <AppBar position="static" className={s.appBar}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -63,6 +64,7 @@ export function ResponsiveAppBar() {
                 </Toolbar>
             </Container>
         </AppBar>
+        </Box>
     );
 }
 

@@ -5,13 +5,16 @@ import {Footer} from "./components/Footer/Footer";
 
 import {AppRoutes} from "@/routes/AppRoutes";
 import {Providers} from "@/Providers";
+import Box from "@mui/material/Box";
 
 function App() {
 
     return (
         <Providers>
             <Header />
+            <Box className='globalContainer'>
             <AppRoutes />
+            </Box>
             <Footer />
         </Providers>
     );

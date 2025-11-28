@@ -1,5 +1,6 @@
 .appBarWrapper {
-    flex-grow: 1;
+    width: 1400px;
+    margin: 0 auto
 }
 
 .customAppBar {
