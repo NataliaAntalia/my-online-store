@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header/Header";
 import {Footer} from "./components/Footer/Footer";
-
 import {AppRoutes} from "@/routes/AppRoutes";
 import {Providers} from "@/Providers";
 import Box from "@mui/material/Box";
+import {Header} from "@/components/Header/Header";
 
 function App() {
 

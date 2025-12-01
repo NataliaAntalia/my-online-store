@@ -15,6 +15,9 @@ export const RatingStars = ({onClick, onMouseLeave, onMouseEnter, rating, hover}
                 const starValue = i + 1;
                 return (
                     <IconButton
+                        sx={{
+                            padding: '0px',
+                        }}
                         key={i}
                         size="small"
                         onClick={() => onClick(starValue)}

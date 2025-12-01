@@ -21,6 +21,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import logoMobile from '../../../img/logo_mobile.png'
 import {LANGUAGES, LOGO_PATH_DARK, MAIN_NUMBER, PAGES} from "@/components/Header/ResponsiveAppBar/constants";
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -62,7 +64,7 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
 
     return (
         <Box className='headerWrapper'>
-        <Box className={s.appBarWrapper}>
+        <Box className='globalContainer'>
             <AppBar position="static" className={s.customAppBar}>
                 <Toolbar className={s.flexCenter}>
                     <Box className={s.flexCenter}>
@@ -89,7 +91,9 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
                     </Box>
                     {isMobile && (
                         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-                             <img src={logoMobile} alt="Logo" style={{ height: 40, width: 50 }} />
+                            <Link to="/">
+                             <img  src={logoMobile} alt="Logo" style={{ height: 40, width: 50 }} />
+                            </Link>
                         </Box>
                     )}
                     {!isMobile && (

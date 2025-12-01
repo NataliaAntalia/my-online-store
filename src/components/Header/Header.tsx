@@ -4,7 +4,7 @@ import {ResponsiveAppBar} from "@/components/Header/ResponsiveAppBar/ResponsiveA
 import {useMediaQuery, useTheme} from "@mui/material";
 
 
-const Header = () => {
+export const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
@@ -16,4 +16,3 @@ const Header = () => {
     );
 };
 
-export default Header;

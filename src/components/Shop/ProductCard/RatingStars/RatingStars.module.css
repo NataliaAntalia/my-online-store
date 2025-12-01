@@ -5,4 +5,7 @@
 
 .star {
     color: var(--star-color);
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0 !important;
 }

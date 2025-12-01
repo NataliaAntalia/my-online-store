@@ -1,19 +1,21 @@
 .navLinks {
     flex-grow: 1;
     display: flex;
-}
-
-@media (max-width: 900px) {
-    .navLinks {
-        display: none;
-    }
+    align-items: center;
+    justify-content: center;
 }
 
 .navLink {
     text-decoration: none;
     color: var(--text-color);
     display: block;
-    font-size: 1.1rem;
+    font-size: 16px;
     padding: 8px 16px;
     cursor: pointer;
+}
+
+@media (max-width: 991px) {
+.navLink{
+    padding: 4px 8px;
+}
 }

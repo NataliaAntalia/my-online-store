@@ -42,6 +42,7 @@ export function ResponsiveAppBar() {
 
     return (
         <Box className='globalContainer'>
+
         <AppBar position="static" className={s.appBar}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
