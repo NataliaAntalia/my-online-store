@@ -57,11 +57,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
             )}
             <CardMedia
                 component="img"
-                height={isMobile ? "180" : "200"}
+                height={isMobile ? "148" : "200"}
                 image={product.image_url}
                 alt={t(product.name)}
             />
-            <CardContent>
+            <CardContent sx={{position: 'relative'}}>
                 <Typography variant="subtitle1" className={s.text}>{t(product.name)}</Typography>
                 <RatingStars
                     rating={rating}
@@ -69,30 +69,33 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
                     onMouseLeave={setHover}
                     onMouseEnter={() => setHover(0)}
                     hover={hover}/>
-<Box >
-                <ProductInfo
-                    price={product.price}
-                    currency={product.currency}
-                    cashback={product.cashback}
-                    t={t}
+                <Box className={s.container}>
+                    <Box className={s.productInfoBox}>
+                        <ProductInfo
+                            price={product.price}
+                            currency={product.currency}
+                            cashback={product.cashback}
+                            t={t}
 
-                />
-</Box>
-                {isMobile ? (
-                    <MobileProductActions
-                        product={product}
-                        handleAddToCart={handleAddToCart}
-                    />
-                ) : (<ProductActions product={product}
-                                     handleAddToCart={handleAddToCart}
-                                     favorites={favorites}
-                                     toggleFavorite={toggleFavorite}
-                                     toggleComparison={toggleComparison}
-                                     t={t}
-                                     comparison={comparison}
-                />)
-                }
+                        />
+                    </Box>
 
+                    {isMobile ? (
+                        <MobileProductActions
+                            product={product}
+                            handleAddToCart={handleAddToCart}
+                        />
+
+                    ) : (<ProductActions product={product}
+                                         handleAddToCart={handleAddToCart}
+                                         favorites={favorites}
+                                         toggleFavorite={toggleFavorite}
+                                         toggleComparison={toggleComparison}
+                                         t={t}
+                                         comparison={comparison}
+                    />)
+                    }
+                </Box>
             </CardContent>
         </Card>
     );

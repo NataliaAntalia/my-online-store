@@ -22,7 +22,7 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
     const {cart} = useCart();
     const isInCart = cart.some(item => String(item.id) === String(product.id));
 
-    const actions = [
+     const actions = [
         {
             key: 'favorite',
             isActive: favorites.some(f => f.id === product.id),

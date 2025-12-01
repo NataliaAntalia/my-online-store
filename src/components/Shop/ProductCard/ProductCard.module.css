@@ -1,7 +1,6 @@
-
 .card {
     max-width: 260px;
-    margin: 7px;
+    margin: 7px 0;
     background-color: var(--card-bg-color) !important;
 }
 
@@ -9,17 +8,20 @@
     color: var(--text-color);
 }
 
+.container{
+    position: relative;
+    width: 100%;
+}
 
+.productInfoBox{
+    width: auto;
+}
 
-
-
-
-@media screen and (max-width: 450px)  {
+@media screen and(max-width: 900px) {
     .card{
-        /*width: 187px;*/
+        max-width: 130px;
     }
 
 }
-
 
 

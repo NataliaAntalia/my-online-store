@@ -12,43 +12,40 @@ interface MobileCardActionsTopProps {
     comparison: Product[];
 }
 
-export const MobileCardActionsTop: React.FC<MobileCardActionsTopProps> = ({product, favorites, toggleFavorite, toggleComparison, comparison}) => {
-    const isFavorite = favorites.some(fav => fav.id === product.id);
-    const isInComparison = comparison.some(comp => comp.id === product.id);
+export const MobileCardActionsTop: React.FC<MobileCardActionsTopProps> = ({product, toggleFavorite, toggleComparison}) => {
+
 
     return (
         <Box
             sx={{
                 position: 'absolute',
-                top: 8,
-                right: 8,
+                top: 4,
+                right: 4,
                 zIndex: 10,
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '8px',
-                alignItems: 'center',
+
             }}
         >
             <IconButton
                 onClick={() => toggleFavorite(product)}
                 sx={{
-                    bgcolor: 'rgb(235,240,245)',
+                    bgcolor: "var(--icon-bg)",
                     boxShadow: 1,
                     padding: '8px',
-                    '&:hover': { bgcolor: 'rgb(255,255,255)' },
+
                 }}
             >
-                <FavoriteIcon style={{ fill: isFavorite ? 'red' : 'none', stroke: isFavorite ? 'red' : 'currentColor' }} />
+                <FavoriteIcon />
             </IconButton>
 
             <IconButton
                 onClick={() => toggleComparison(product)}
                 sx={{
-                    bgcolor: 'rgb(235,240,245)',
+                    bgcolor:"var(--icon-bg)",
                     boxShadow: 1,
                     padding: '8px',
-                    color: isInComparison ? theme => theme.palette.primary.main : 'currentColor',
-                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 1)' },
                 }}
             >
                 <CompareIcon />
