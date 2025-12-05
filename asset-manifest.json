@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-online-store/static/css/main.83e4782f.css",
-    "main.js": "/my-online-store/static/js/main.24306ce8.js",
+    "main.css": "/my-online-store/static/css/main.78459e1d.css",
+    "main.js": "/my-online-store/static/js/main.a98e7f5c.js",
     "static/js/48.92a668ce.chunk.js": "/my-online-store/static/js/48.92a668ce.chunk.js",
     "static/js/453.8f5830d1.chunk.js": "/my-online-store/static/js/453.8f5830d1.chunk.js",
     "static/media/logo.png": "/my-online-store/static/media/logo.7c08e6ef086eff942582.png",
@@ -23,17 +23,17 @@
     "static/media/shop.svg": "/my-online-store/static/media/shop.305491072dcb971095778e98868fa6a7.svg",
     "static/media/slick.woff": "/my-online-store/static/media/slick.295183786cd8a1389865.woff",
     "static/media/location.svg": "/my-online-store/static/media/location.42fa54e718aacd635b96c5dcb6ce4008.svg",
-    "static/media/like.svg": "/my-online-store/static/media/like.4790f59303f95a89f35087c5ca1f373f.svg",
+    "static/media/like.svg": "/my-online-store/static/media/like.e23794f6ad04722f034c3fcea51711fc.svg",
     "static/media/apple.svg": "/my-online-store/static/media/apple.3d836605744d804282277f57e5d43819.svg",
     "static/media/android-icon.svg": "/my-online-store/static/media/android-icon.451cd711862a13c8ed9c42eb4af4fcea.svg",
     "index.html": "/my-online-store/index.html",
-    "main.83e4782f.css.map": "/my-online-store/static/css/main.83e4782f.css.map",
-    "main.24306ce8.js.map": "/my-online-store/static/js/main.24306ce8.js.map",
+    "main.78459e1d.css.map": "/my-online-store/static/css/main.78459e1d.css.map",
+    "main.a98e7f5c.js.map": "/my-online-store/static/js/main.a98e7f5c.js.map",
     "48.92a668ce.chunk.js.map": "/my-online-store/static/js/48.92a668ce.chunk.js.map",
     "453.8f5830d1.chunk.js.map": "/my-online-store/static/js/453.8f5830d1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83e4782f.css",
-    "static/js/main.24306ce8.js"
+    "static/css/main.78459e1d.css",
+    "static/js/main.a98e7f5c.js"
   ]
 }
