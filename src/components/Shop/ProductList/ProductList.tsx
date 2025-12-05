@@ -15,6 +15,7 @@ export const ProductList: React.FC<ProductListProps> = ({titleKey, products}) =>
             <Typography className={s.categoryTitle} variant="h4">
                 {t(titleKey)}
             </Typography>
+
             <Box className={s.productList}>
                 {Array.isArray(products) && products.map(product => (
                     <ProductCard key={product.id} product={product}/>

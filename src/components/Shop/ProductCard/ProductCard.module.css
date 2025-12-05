@@ -1,3 +1,15 @@
+
+/*.categoryWrapper {*/
+/*    position: relative; !* Обязательно *!*/
+/*    width: 100%;*/
+/*}*/
+
+/*!* Скрываем стрелки по умолчанию (на десктопе) *!*/
+/*.scrollButton {*/
+/*    display: none;*/
+/*}*/
+
+
 .card {
     max-width: 260px;
     margin: 7px 0;

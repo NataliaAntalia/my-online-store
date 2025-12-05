@@ -29,8 +29,31 @@
 
 }
 
-@media screen and (max-width: 768px)  {
-    .productList{
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+    .productList {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+    }
+    .productList::-webkit-scrollbar {
+        height: 8px;
+    }
+    .productList::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 6px;
+    }
+
+    .productList::-webkit-scrollbar-track {
+        background-color: #ffffff;
+    }
+
+    .productList > * {
+        flex: 0 0 calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        scroll-snap-align: start;
     }
 }

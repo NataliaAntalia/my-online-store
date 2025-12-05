@@ -33,7 +33,8 @@
     --mobile-icon: #272727;
     --headerWrapper:#d8d8d8;
     --box-shadow:rgba(191, 191, 191, 0.67);
-    --icon-bg: #e9eef3;
+    --icon-bg: #d7d7d8;
+    --icon-bg-hover: #ffffff
 
 
 
@@ -71,7 +72,7 @@
     --bg-hover: #3a3a3a;
     --headerWrapper: #303030;
     --box-shadow: rgba(97, 97, 97, 0.67);
-    --icon-bg: rgba(131, 131, 131, 0.33);
+    --icon-bg: rgba(131, 131, 131, 0.67);
 
 }
 

@@ -5,7 +5,7 @@
 }
 
 .favorite {
-    color: var(--lang-active-bg);
+    color: var(--lang-active-bg)!important;
 }
 
 .favoriteNon {
@@ -29,6 +29,7 @@
     background-color: var(--button-bg-color) !important;
     color: var(--button-text-color) !important;
 }
+
 
 .inCartActive {
     background-color: #a83f63 !important;
