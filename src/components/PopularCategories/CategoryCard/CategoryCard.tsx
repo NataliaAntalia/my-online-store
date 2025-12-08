@@ -6,13 +6,11 @@ import s from "./CategoryCard.module.css";
 type CategoryCardProps = {
     name: string;
     imageUrl: string;
-    key: number
 }
-export const CategoryCard = ({name, imageUrl, key}: CategoryCardProps) => {
+export const CategoryCard = ({name, imageUrl}: CategoryCardProps) => {
     return (
         <Box className={s.catCard}>
             <Box
-                key={key}
                 component="img"
                 src={imageUrl}
                 alt={name}

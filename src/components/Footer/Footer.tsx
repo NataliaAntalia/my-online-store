@@ -1,16 +1,31 @@
 import React from "react";
-import {Box, Container, Typography, Grid} from "@mui/material";
+import {Box, Container, Typography, Grid, useTheme, useMediaQuery} from "@mui/material";
 import s from '../Footer/Footer.module.css'
 import {FooterColumn} from "@/components/Footer/FooterColumn/FooterColumn";
 import {FooterAppButtons} from "@/components/Footer/FooterAppButtons/FooterAppButtons";
 import {FooterSocials} from "@/components/Footer/FooterSocials/FooterSocials";
 import {FooterPayments} from "@/components/Footer/FooterPayments/FooterPayments";
 import {buttons, footerSections, images, socialLinks} from "@/components/Footer/constants";
+import {FooterMobile} from "@/components/Footer/FooterMobile/FooterMobile";
 
 
 export const Footer: React.FC = () => {
+
+
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down(576));
+if (isMobile) {
+    return <FooterMobile
+            footerSections={footerSections}
+            buttons={buttons}
+            socialLinks={socialLinks}
+            images={images}
+        />;
+
+}
     return (
         <Box className='headerWrapper'>
+            <Box className='globalContainer' sx={{marginTop: '50px'}}>
         <Box component="footer" className={s.footer}>
             <Container maxWidth="lg">
                 <Grid container spacing={11}>
@@ -26,12 +41,13 @@ export const Footer: React.FC = () => {
                 </Grid>
 
                 <Box className={s.footerCopyright}>
-                    <Typography variant="body1">
+                    <Typography className={s.title}>
                         © 2002–{new Date().getFullYear()} Интернет-магазин EasyShop | Превратит покупку в удовольствие
                     </Typography>
                 </Box>
             </Container>
         </Box>
+            </Box>
         </Box>
     );
 };

@@ -41,7 +41,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
     };
 
     const cardSx = {
-        // width: isMobile ? '100%' : 'auto',
         width:'auto',
         position: 'relative',
     };

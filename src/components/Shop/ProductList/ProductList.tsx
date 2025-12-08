@@ -12,7 +12,7 @@ export const ProductList: React.FC<ProductListProps> = ({titleKey, products}) =>
 
     return (
         <Box className={s.categorySection}>
-            <Typography className={s.categoryTitle} variant="h4">
+            <Typography className='sectionTitle'>
                 {t(titleKey)}
             </Typography>
 
