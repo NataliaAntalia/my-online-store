@@ -1,6 +1,7 @@
 .footerPayments {
     display: flex;
     gap: 16px;
+    margin-bottom:10px
 }
 
 .footerPaymentIcons {
@@ -10,4 +11,11 @@
 
 .footerPaymentIcon {
     height: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .footerPaymentIcon {
+        height: 14px;
+    }
+
 }

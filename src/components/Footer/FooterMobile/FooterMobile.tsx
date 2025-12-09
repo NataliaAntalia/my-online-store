@@ -1,10 +1,22 @@
 import React from 'react';
-import {Box, Typography, Accordion, AccordionSummary, AccordionDetails, Container, SvgIconTypeMap} from '@mui/material';
+import {
+    Box,
+    Typography,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Container,
+    SvgIconTypeMap,
+    Grid
+} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FooterAppButtons } from "@/components/Footer/FooterAppButtons/FooterAppButtons";
 import { FooterSocials } from "@/components/Footer/FooterSocials/FooterSocials";
 import { FooterPayments } from "@/components/Footer/FooterPayments/FooterPayments";
 import {OverridableComponent} from "@mui/material/OverridableComponent";
+import {ReactComponent as PhoneIcon} from 'img/phone.svg';
+import Button from "@mui/material/Button";
+import s from './FooterMobile.module.css'
 
 
 export interface SimpleLinkSection {
@@ -44,31 +56,29 @@ const generateSlug = (text: string): string => {
 
 export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, buttons, socialLinks, images }) => {
     return (
-        <Box component="footer" sx={{ backgroundColor: '#f5f5f5', padding: '20px 0'}}>
-            <Container maxWidth="xs" sx={{ padding: '0 16px' }}>
-
+        <Box className={s.container}>
+            <Container >
                 {footerSections.map((section, index) => (
-                    <Accordion key={index} disableGutters sx={{ boxShadow: 'none', borderTop: '1px solid #e0e0e0', '&:last-child': { borderBottom: '1px solid #e0e0e0' } }}>
-
+                    <Accordion key={index} disableGutters className={s.accordion}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls={`panel${index}-content`}
                             id={`panel${index}-header`}
-                            sx={{ padding: 0 }}
+                            className={s.accordionSummary}
                         >
                             <Typography variant="subtitle1" fontWeight="bold">
                                 {section.title}
                             </Typography>
                         </AccordionSummary>
 
-                        <AccordionDetails sx={{ padding: '8px 0 16px 0' }}>
-                            <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
+                        <AccordionDetails className={s.accordionDetails}>
+                            <Box component="ul" className={s.boxListUl}>
                                 {section.links.map((linkName, linkIndex) => {
                                     const linkHref = generateSlug(linkName);
 
                                     return (
-                                        <Box component="li" key={linkIndex} sx={{ marginBottom: '8px' }}>
-                                            <a href={linkHref} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <Box component="li" key={linkIndex} className={s.boxListLi}>
+                                            <a href={linkHref} className={s.link}>
                                                 <Typography variant="body2">{linkName}</Typography>
                                             </a>
                                         </Box>
@@ -80,34 +90,27 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                 ))}
 
 
-                <Box sx={{ margin: '20px 0' }}>
-                    <a href="tel:ВАШ_НОМЕР" style={{ textDecoration: 'none' }}>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '12px',
-                                border: '1px solid #ccc',
-                                borderRadius: '8px',
-                                backgroundColor: 'white'
-                            }}
-                        >
-                            <span role="img" aria-label="phone" style={{ marginRight: '8px' }}>📞</span>
-                            <Typography fontWeight="bold">Позвонить</Typography>
+                <Box className={s.containerButton}>
+                    <a href="tel:022365258" style={{ textDecoration: 'none' }}>
+                        <Box className={s.boxButton}>
+                            <Button><PhoneIcon/></Button>
+                            <Typography className={s.typography}>Позвонить</Typography>
                         </Box>
                     </a>
                 </Box>
 
+                <Box className={s.container}>
+                    <Box>
+                        <FooterAppButtons title={"Загрузите наше приложение"} buttons={buttons} />
+                        <FooterSocials title={"Мы в социальных сетях"} links={socialLinks}  />
+                    </Box>
+                    <Box className={s.footerPayments}>
+                        <FooterPayments title={"Принимаем к оплате"} images={images} />
+                    </Box>
+                </Box>
 
-                <FooterAppButtons title={"Загрузите наше приложение"} buttons={buttons} />
-                <FooterSocials title={"Мы в социальных сетях"} links={socialLinks}  />
-                <FooterPayments title={"Принимаем к оплате"} images={images} />
-
-
-                {/* 4. Копирайт */}
-                <Box sx={{ borderTop: '1px solid #e0e0e0', paddingTop: '10px' }}>
-                    <Typography sx={{ fontSize: '12px', color: 'text.secondary', textAlign: 'center' }}>
+                <Box className={s.boxCopyright}>
+                    <Typography className={s.textCopyright}>
                         © 2002–{new Date().getFullYear()} Интернет-магазин EasyShop | Превратит покупку в удовольствие
                     </Typography>
                 </Box>

@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
 
 
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down(576));
+    const isMobile = useMediaQuery(theme.breakpoints.down(778));
 if (isMobile) {
     return <FooterMobile
             footerSections={footerSections}

@@ -1,0 +1,85 @@
+.container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion {
+    box-shadow: none;
+    border-top: 1px solid #bcb9b9;
+
+    &:last-child {
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+
+.accordionSummary {
+    padding: 0;
+    background-color: #e2e1e1 !important;
+}
+
+.containerButton {
+    margin: 20px 0;
+}
+
+.boxButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+}
+
+.typography {
+    font-size: 18px;
+}
+
+.boxCopyright {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+}
+
+.textCopyright {
+    font-size: 12px;
+    color: #6b6c6e;
+    margin-top: 10px;
+}
+
+.accordionDetails {
+    padding: 8px 0 16px 0;
+}
+
+.boxListUl {
+    list-style: none;
+    padding: 0;
+}
+
+.boxListLi {
+    margin-bottom: 8px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footerPayments{
+    margin-top: 50px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footerPayments{
+        margin: -10px 0 10px 0;
+
+    }
+}
+
