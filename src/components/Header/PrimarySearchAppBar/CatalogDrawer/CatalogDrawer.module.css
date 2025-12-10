@@ -20,14 +20,16 @@
 }
 
 .mobilePaper {
+    /*width: 90% !important;*/
+    /*max-width: 90% !important;*/
     width: calc(100% - 70px);
     max-width: calc(100% - 70px);
 }
 
 .closeIcon{
     position: fixed;
-    top: 35px;
-    right: 16px;
+    top: 25px;
+    right: 12px;
     left: auto;
     margin-left: 0;
     z-index: 1301;

@@ -34,7 +34,7 @@ export default function ElementPage() {
                     src="/my-online-store/img/developer.webp"
                     {...imageAnimation}
                 />
-                <motion.p {...fadeInDelayed}>
+                <motion.p {...fadeInDelayed} className={s.text}>
                     Страница ещё в разработке, возвращайтесь позже 🚧
                 </motion.p>
             </Box>

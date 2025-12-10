@@ -28,5 +28,6 @@ export default function LoginPage() {
             <AuthButtons disabled={isButtonDisabled}/>
             <SocialButtons/>
         </Box>
+
     );
 }

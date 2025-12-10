@@ -21,6 +21,8 @@ export default function FullBorderedGrid() {
     if (!category) return <Typography>Категория не найдена</Typography>;
 
     return (
+        // <Box className='globalContainer'>
+        //     <Box className='headerWrapper'>
         <Box className={s.container}>
             <Typography variant="h4" className={s.title}>
                 {t(category.key)}
@@ -37,5 +39,7 @@ export default function FullBorderedGrid() {
                 ))}
             </Grid>
         </Box>
+        // </Box>
+        // </Box>
     );
 }

@@ -11,7 +11,13 @@ export const inputSX = {
         },
         "& .MuiOutlinedInput-input": {
             color: "var(--input-text-color)",
+        },
+        "@media (max-width:576px)": {
+            "& .MuiInputBase-input": {
+                padding: "14px",
+            },
         }
+
     },
     "& .MuiInputLabel-root": {
         color: "var(--input-text-color)",
@@ -19,4 +25,7 @@ export const inputSX = {
     "& .MuiInputLabel-root.Mui-focused": {
         color: "grey",
     }
+
 };
+
+

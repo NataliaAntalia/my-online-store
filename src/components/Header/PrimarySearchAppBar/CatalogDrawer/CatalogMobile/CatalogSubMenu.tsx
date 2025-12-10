@@ -29,6 +29,12 @@ export const CatalogSubMenu: React.FC<CatalogSubMenuProps> = (props) => {
             open={isCatalogOpen}
             onClose={() => setIsCatalogOpen(false)}
             className={s.desktopPaper}
+            PaperProps={{
+                sx: {
+                    width: '85%',
+                    maxWidth: '85%',
+                }
+            }}
         >
             <Box className={s.containerMobile}>
                 <IconButton onClick={() => setIsCatalogOpen(false)} size="large">

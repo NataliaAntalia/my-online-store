@@ -39,10 +39,11 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                 onClose={onClose}
                 PaperProps={{
                     className: s.mobilePaper,
-                }}
+            }}
                 BackdropProps={{
                     sx: {
-                        backgroundColor: 'rgb(126,126,126)'
+                        backgroundColor: 'rgb(126,126,126)',
+
                     }
                 }}
             >

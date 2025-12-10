@@ -5,23 +5,18 @@
     border-radius: 8px;
     margin-bottom: 16px;
     transition: background 0.2s ease;
-
-    /*max-width: 716px;*/
     padding: 7px;
     height: 141px;
 }
 
 
 .checkboxContainer {
-    /*max-width: 690px;*/
-    /*width: 100%;*/
     width: 30%;
     height: 40px;
     display: flex;
     justify-content: space-between;
     border-radius: 8px;
     padding: 8px 22px 8px 18px;
-    /*margin: 0 0 0 212px ! important;*/
     background-color: var(--card-bg-color);
 }
 
@@ -36,7 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*width: 716px;*/
 }
 
 .name {

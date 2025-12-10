@@ -3,19 +3,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .accordion {
-    box-shadow: none;
-    border-top: 1px solid #bcb9b9;
-
-    &:last-child {
-        border-bottom: 1px solid #e0e0e0;
-    }
+    box-shadow: none !important;
+    background-color: #e2e1e1 !important;
+    border: none !important;
 }
 
+
 .accordionSummary {
-    padding: 0;
+    padding: 0 !important;
     background-color: #e2e1e1 !important;
 }
 
@@ -30,7 +29,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    background-color: #fdfdfd;
+    background-color: #ffffff;
 }
 
 .typography {
@@ -38,7 +37,7 @@
 }
 
 .boxCopyright {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #b5b3b3;
     padding-top: 10px;
 }
 
@@ -49,12 +48,17 @@
 }
 
 .accordionDetails {
-    padding: 8px 0 16px 0;
+    padding: 0 !important;
+    margin: 0 0 !important;
+    background-color: #e2e1e1 !important;
+    border: none !important;
 }
 
 .boxListUl {
+    background-color: #e2e1e1 !important;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .boxListLi {
@@ -66,7 +70,12 @@
     color: inherit;
 }
 
-.footerPayments{
+.link:hover {
+    text-decoration: underline;
+}
+
+
+.footerPayments {
     margin-top: 50px;
 }
 
@@ -77,7 +86,8 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    .footerPayments{
+
+    .footerPayments {
         margin: -10px 0 10px 0;
 
     }

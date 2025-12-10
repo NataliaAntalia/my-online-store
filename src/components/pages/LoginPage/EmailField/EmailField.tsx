@@ -20,6 +20,7 @@ export const EmailField = ({value, onChange}: EmailFieldType) => {
             value={value}
             onChange={handleChange}
             sx={inputSX}
+
         />
     );
 };

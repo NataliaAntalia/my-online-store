@@ -7,7 +7,6 @@ import {
     AccordionDetails,
     Container,
     SvgIconTypeMap,
-    Grid
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FooterAppButtons } from "@/components/Footer/FooterAppButtons/FooterAppButtons";

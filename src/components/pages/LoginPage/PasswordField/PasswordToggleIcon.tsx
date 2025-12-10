@@ -1,7 +1,5 @@
 import React from 'react';
 import {IconButton, InputAdornment} from "@mui/material";
-import s from "@/components/pages/LoginPage/LoginPage.module.css";
-import stile from "@/components/pages/LoginPage/PasswordField/PasswordField.module.css";
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 
 type PasswordToggleIconType = {
@@ -13,7 +11,7 @@ export const PasswordToggleIcon = ({onClick, showPassword}:PasswordToggleIconTyp
     return (
             <InputAdornment
                 position="end"
-                className={`${s.inputField} ${stile.passwordField}`}
+
             >
                 <IconButton
                     onClick={onClick}
