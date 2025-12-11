@@ -8,6 +8,9 @@
     min-height: 50vh;
     width: 100%;
     gap: 20px;
+    background-color: #efff1d;
+
+
 }
 
 .containerCheckbox {
@@ -15,6 +18,7 @@
     flex-direction: column;
     border-radius: 8px;
     box-sizing: border-box;
+    background-color: #cd1b1b;
 }
 
 .button {
@@ -57,13 +61,13 @@
 
 @media screen and (max-width: 900px) {
     .container {
-        width: 100%;
+        /*width: 100%;*/
         flex-direction: column;
     }
     .cartSummaryBox{
         margin-top: 20px;
         align-items: center;
-        width: 100%;
+        /*width: 100%;*/
 
     }
 }

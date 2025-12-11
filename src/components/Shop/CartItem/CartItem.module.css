@@ -1,17 +1,18 @@
 .cartItem {
     display: flex;
     align-items: center;
-    background-color: var(--card-bg-color);
+    /*background-color: var(--card-bg-color);*/
     border-radius: 8px;
     margin-bottom: 16px;
     transition: background 0.2s ease;
     padding: 7px;
     height: 141px;
+    background-color: #cf68fa;
 }
 
 
 .checkboxContainer {
-    width: 30%;
+    width: 494px;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -89,5 +90,9 @@
 }
 
 
-
+@media screen and (max-width: 721px) {
+    .checkboxContainer {
+        width: 100% !important;
+    }
+}
 
