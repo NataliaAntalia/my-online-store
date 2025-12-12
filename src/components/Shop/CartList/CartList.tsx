@@ -48,22 +48,23 @@ export const CartList = () => {
     return (
         <Box className={s.box}>
             <Typography variant="h6" className={s.title}>Корзина</Typography>
-            <Box className={stiles.checkboxContainer}>
-                <FormControlLabel
-                    control={
-                        <PinkCheckbox
-                            checked={isAllSelected}
-                            onChange={handleMasterCheckbox}
-                        />
-
-                    }
-                    label=""
-                />
-                <Button onClick={handleSelectAll} className={s.button}>
-                    {selectedIds.length === cart.length ? "Снять выделение" : "Выбрать всё"}
-                </Button>
-            </Box>
+            <Box className={s.productContainer}>
             <Box className={s.container}>
+                <Box className={stiles.checkboxContainer}>
+                    <FormControlLabel
+                        control={
+                            <PinkCheckbox
+                                checked={isAllSelected}
+                                onChange={handleMasterCheckbox}
+                            />
+
+                        }
+                        label=""
+                    />
+                    <Button onClick={handleSelectAll} className={s.button}>
+                        {selectedIds.length === cart.length ? "Снять выделение" : "Выбрать всё"}
+                    </Button>
+                </Box>
                 <Box className={s.containerCheckbox} >
                     {cart.length === 0 ? (
                         <Typography className={s.emptyText}>Корзина пуста</Typography>
@@ -78,12 +79,12 @@ export const CartList = () => {
                         ))
                     )}
                 </Box>
-
-                {cart.length > 0 && (
-                    <Box className={s.cartSummaryBox}>
-                        <CartSummary products={cart} checkedItems={selectedIds} />
-                    </Box>
-                )}
+            </Box>
+            {cart.length > 0 && (
+                <Box className={s.cartSummaryBox}> {/* Добавим класс cartSummaryBox */}
+                    <CartSummary products={cart} checkedItems={selectedIds} />
+                </Box>
+            )}
             </Box>
         </Box>
     );

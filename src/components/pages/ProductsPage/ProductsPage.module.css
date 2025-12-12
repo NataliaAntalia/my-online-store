@@ -1,16 +1,22 @@
 .box{
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
     display: flex;
-    margin: 16px 0;
-    min-height: 50vh;
-    width: 100%;
+    flex-direction: column;
     gap: 20px;
-    background-color: #efff1d;
+    background-color: #f3ea3b;
+    width: 66%;
+    /*width: 42%;*/
 
 
+    flex-grow: 1;
+    flex-basis: 645px;
+    min-width: 0;
 }
 
 .containerCheckbox {
@@ -18,7 +24,20 @@
     flex-direction: column;
     border-radius: 8px;
     box-sizing: border-box;
-    background-color: #cd1b1b;
+    background-color: #cf0b0b;
+    width: 100%;
+
+
+    min-width: 0;
+}
+
+.productContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #da58ef;
+
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .button {
@@ -54,27 +73,23 @@
 }
 
 
-.cartSummaryBox{
-    margin-top: -76px;
-    display: flex;
-}
 
-@media screen and (max-width: 900px) {
-    .container {
-        /*width: 100%;*/
-        flex-direction: column;
-    }
+
+@media screen and (max-width: 887px) {
     .cartSummaryBox{
+        width: 100%;
+        margin-left: 0;
         margin-top: 20px;
-        align-items: center;
-        /*width: 100%;*/
-
     }
-}
+    .container {
+        width: 100%;
+        min-width: 100%;
+    }
 
-@media screen and (min-width: 900px) and (max-width: 1200px) {
     .cartSummaryBox{
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        flex-basis: 100%;
     }
 }
+
+
