@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-online-store/static/css/main.1e54a563.css",
-    "main.js": "/my-online-store/static/js/main.6aed9b08.js",
+    "main.css": "/my-online-store/static/css/main.a90a3d81.css",
+    "main.js": "/my-online-store/static/js/main.8834245c.js",
     "static/js/48.92a668ce.chunk.js": "/my-online-store/static/js/48.92a668ce.chunk.js",
     "static/js/453.8f5830d1.chunk.js": "/my-online-store/static/js/453.8f5830d1.chunk.js",
     "static/media/logo.png": "/my-online-store/static/media/logo.7c08e6ef086eff942582.png",
@@ -27,13 +27,13 @@
     "static/media/apple.svg": "/my-online-store/static/media/apple.3d836605744d804282277f57e5d43819.svg",
     "static/media/android-icon.svg": "/my-online-store/static/media/android-icon.451cd711862a13c8ed9c42eb4af4fcea.svg",
     "index.html": "/my-online-store/index.html",
-    "main.1e54a563.css.map": "/my-online-store/static/css/main.1e54a563.css.map",
-    "main.6aed9b08.js.map": "/my-online-store/static/js/main.6aed9b08.js.map",
+    "main.a90a3d81.css.map": "/my-online-store/static/css/main.a90a3d81.css.map",
+    "main.8834245c.js.map": "/my-online-store/static/js/main.8834245c.js.map",
     "48.92a668ce.chunk.js.map": "/my-online-store/static/js/48.92a668ce.chunk.js.map",
     "453.8f5830d1.chunk.js.map": "/my-online-store/static/js/453.8f5830d1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e54a563.css",
-    "static/js/main.6aed9b08.js"
+    "static/css/main.a90a3d81.css",
+    "static/js/main.8834245c.js"
   ]
 }
