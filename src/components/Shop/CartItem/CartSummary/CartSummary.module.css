@@ -1,23 +1,23 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     background-color: var(--card-bg-color);
     width: 444px;
     height: 235px;
     border-radius: 8px;
-
 }
 
-.containerPrice{
+.containerPrice {
     display: flex;
     justify-content: space-between;
-    margin: 8px 0 0 ;
+    margin: 8px 0 0;
     padding: 15px 25px;
 }
 
-.text{
+.text {
     color: var(--text-color);
     font-weight: bold !important;
+    font-size: 18px !important;
 }
 
 .divider {
@@ -26,26 +26,56 @@
     margin: 20px;
 }
 
-.button1{
-    background-color: #a93f64!important;
+.button1 {
+    background-color: #a93f64 !important;
     color: white !important;
     width: 403px;
     height: 45px;
 }
 
-.button2{
-    border: 1px solid #cacaca!important;
+.button2 {
+    border: 1px solid #cacaca !important;
     width: 403px;
     height: 45px;
     color: var(--text-color) !important;
 }
 
-.containerButton{
+.containerButton {
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
 
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 768px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .container {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .button1 {
+        width: 100%;
+    }
+
+    .button2 {
+        width: 100%;
+
+    }
+
+    .divider {
+        margin: 15px 0;
+    }
 }
 
 
