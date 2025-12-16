@@ -81,7 +81,7 @@ export const CartList = () => {
                 </Box>
             </Box>
             {cart.length > 0 && (
-                <Box className={s.cartSummaryBox}> {/* Добавим класс cartSummaryBox */}
+                <Box className={s.cartSummaryBox}>
                     <CartSummary products={cart} checkedItems={selectedIds} />
                 </Box>
             )}

@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center !important;
     background-color: var(--card-bg-color);
     width: 444px;
     height: 235px;
@@ -48,14 +49,6 @@
 
 }
 
-
-@media screen and (max-width: 1200px) {
-    .container {
-        width: 768px;
-        box-sizing: border-box;
-    }
-}
-
 @media screen and (max-width: 812px) {
     .container {
         width: 100%;
@@ -77,6 +70,32 @@
         margin: 15px 0;
     }
 }
+
+@media screen and (min-width: 814px) and (max-width: 1200px) {
+    .container {
+        width: 768px !important;
+    }
+
+    .containerButton {
+        padding: 0 25px;
+        align-items: flex-start;
+    }
+
+    .button1 {
+        width: auto;
+    }
+
+    .button2 {
+        width: auto;
+    }
+
+    .divider {
+        margin: 20px 25px;
+    }
+}
+
+
+
 
 
 
