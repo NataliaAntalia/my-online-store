@@ -60,6 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
                 height={isMobile ? "148" : "200"}
                 image={product.image_url}
                 alt={t(product.name)}
+                sx={{padding:"8px", boxSizing:"border-box"}}
             />
             <CardContent sx={{position: 'relative'}}>
                 <Typography variant="subtitle1" className={s.text}>{t(product.name)}</Typography>
