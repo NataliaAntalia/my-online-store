@@ -65,7 +65,7 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                             id={`panel${index}-header`}
                             className={s.accordionSummary}
                         >
-                            <Typography variant="subtitle1" fontWeight="bold">
+                            <Typography variant="subtitle1" fontWeight="bold" className={s.title}>
                                 {section.title}
                             </Typography>
                         </AccordionSummary>

@@ -82,9 +82,9 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                                         <item.icon/>
                                         </Box>
                                     }
-                                    <ListItemText primary={item.text}/>
+                                    <ListItemText primary={item.text} className={s.text}/>
 
-                                    {item.count !== null && item.count > 0 && <span>{item.count}</span>}
+                                    {item.count !== null && item.count > 0 && <span className={s.count}>{item.count}</span>}
                                 </ListItemButton>
                             </ListItem>
                         {shouldAddDivider && (

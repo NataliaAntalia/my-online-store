@@ -4,6 +4,7 @@
     height: auto;
     display: flex;
     color: var(--drawer-text);
+    background-color: var(--header-footer-bg);
 }
 
 .desktopPaper {
@@ -19,11 +20,16 @@
     align-items: flex-start;
 }
 
+.text{
+    color: var(--drawer-text);
+}
+
 .mobilePaper {
-    /*width: 90% !important;*/
-    /*max-width: 90% !important;*/
+
+    background-color: var(--mobile-bg-paper) !important;
     width: calc(100% - 70px);
     max-width: calc(100% - 70px);
+    padding: 0 !important;
 }
 
 .closeIcon{
@@ -49,12 +55,14 @@
 }
 
 .authItem{
-    background-color: #eaeff6;
+    background-color: var(--mobile-h-f-bg-paper);
     height: 54px;
 }
 
 .boxButtons{
-    background-color: #eaeff6;
+    background-color: var(--mobile-h-f-bg-paper);
+
+    padding: 16px;
 }
 
 .mirrorIcon {
@@ -127,6 +135,10 @@
 .linkReset:hover {
     color: #2479f3;
     text-decoration: underline;
+}
+
+.count{
+    color: var(--text-secondary);
 }
 
 

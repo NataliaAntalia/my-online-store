@@ -28,12 +28,16 @@
 .actionButton {
     background-color: var(--button-bg-color) !important;
     color: var(--button-text-color) !important;
+    padding: 8px!important;
 }
 
 
 .inCartActive {
     background-color: #a83f63 !important;
     color: #fff !important;
+    padding: 8px!important;
+
 }
+
 
 

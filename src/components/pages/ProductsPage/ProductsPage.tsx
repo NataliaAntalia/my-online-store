@@ -64,7 +64,7 @@ export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton
 
     return (
         <div className="globalContainer">
-            <Typography variant="h5" className={s.title}>
+            <Typography variant="h5" className={s.title2}>
                 {t(titleKey)}
             </Typography>
             <Box className={s.container}>

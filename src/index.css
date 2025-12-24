@@ -34,7 +34,12 @@
     --headerWrapper:#d8d8d8;
     --box-shadow:rgba(191, 191, 191, 0.67);
     --icon-bg: #d7d7d8;
-    --icon-bg-hover: #ffffff
+    --icon-bg-hover: #ffffff;
+    --mobile-bg-paper: rgb(255, 255, 255);
+    --mobile-h-f-bg-paper: rgb(232, 237, 244);
+    --accordion-bg: rgba(202, 201, 201, 0.93);
+    --list-bg: #d3d2d2;
+    --acc-bg: #d3d2d2;
 
 
 
@@ -73,6 +78,13 @@
     --headerWrapper: #303030;
     --box-shadow: rgba(97, 97, 97, 0.67);
     --icon-bg: rgba(131, 131, 131, 0.67);
+    --mobile-bg-paper: rgb(60, 60, 60);
+    --mobile-h-f-bg-paper: rgb(76, 76, 76);
+    --accordion-bg: rgba(46, 46, 46, 0.87);
+    --list-bg: rgba(62, 62, 62, 0.95);
+    --acc-bg: rgb(70, 69, 69);
+
+
 
 }
 

@@ -1,5 +1,4 @@
 .container {
-    margin: 20px 16px;
     gap: 20px;
 }
 
@@ -18,7 +17,6 @@
     width: 130px;
     height: 40px;
     border-radius: 5px;
-    /*padding: 0 8px;*/
     min-width: 130px;
     border: 1px solid #3a3a3a;
     overflow: hidden;
@@ -81,9 +79,6 @@
     .storeIcon {
         width: 21px;
         height: 21px;
-
-
-
     }
     .storeButtonMaintext {
         font-size: 12px !important;

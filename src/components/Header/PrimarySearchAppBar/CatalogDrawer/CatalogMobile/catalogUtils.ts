@@ -1,4 +1,4 @@
-import {ReactComponent as Balance} from '../../../../../img/compare.svg';
+import {ReactComponent as Balance} from '../../../../../img/сompare_header2.svg';
 import {ReactComponent as Cart} from '../../../../../img/shop.svg';
 import {ReactComponent as Favorites} from '../../../../../img/like.svg';
 import {ReactComponent as Payment} from '../../../../../img/credit-card.svg';

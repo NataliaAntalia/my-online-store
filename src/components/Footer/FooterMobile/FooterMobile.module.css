@@ -4,18 +4,20 @@
     justify-content: space-between;
     align-items: center;
 
+
 }
 
 .accordion {
     box-shadow: none !important;
-    background-color: #e2e1e1 !important;
+    background-color: var(--acc-bg) !important;
     border: none !important;
 }
 
 
 .accordionSummary {
     padding: 0 !important;
-    background-color: #e2e1e1 !important;
+    background-color: var(--accordion-bg) !important;
+
 }
 
 .containerButton {
@@ -27,9 +29,9 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #b5b5b5;
     border-radius: 6px;
-    background-color: #ffffff;
+    background-color: var(--accordion-bg);
 }
 
 .typography {
@@ -55,10 +57,12 @@
 }
 
 .boxListUl {
-    background-color: #e2e1e1 !important;
+    background-color: var(--list-bg) !important;
     list-style: none;
-    padding: 0;
+    /*padding: 0;*/
     margin: 0;
+    color: var(--text-color);
+    padding: 0 4px;
 }
 
 .boxListLi {
@@ -77,6 +81,11 @@
 
 .footerPayments {
     margin-top: 50px;
+}
+
+.title{
+    color: var(--text-color);
+    padding: 0 4px;
 }
 
 

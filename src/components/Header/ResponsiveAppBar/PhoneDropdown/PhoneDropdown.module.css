@@ -93,9 +93,3 @@
 .rotated {
     transform: rotate(180deg) !important;
 }
-
-/*@media (max-width: 991px) {*/
-/*    .userMenuContainer {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
