@@ -56,6 +56,7 @@ export const CartList = () => {
                             <PinkCheckbox
                                 checked={isAllSelected}
                                 onChange={handleMasterCheckbox}
+                                sx={{color: 'var(--icon-color)'}}
                             />
 
                         }

@@ -16,6 +16,8 @@ import {OverridableComponent} from "@mui/material/OverridableComponent";
 import {ReactComponent as PhoneIcon} from 'img/phone.svg';
 import Button from "@mui/material/Button";
 import s from './FooterMobile.module.css'
+import { Link } from 'react-router-dom';
+
 
 
 export interface SimpleLinkSection {
@@ -60,7 +62,7 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                 {footerSections.map((section, index) => (
                     <Accordion key={index} disableGutters className={s.accordion}>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon sx={{ color: 'var(--icon-color)' }}/>}
                             aria-controls={`panel${index}-content`}
                             id={`panel${index}-header`}
                             className={s.accordionSummary}
@@ -73,13 +75,28 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                         <AccordionDetails className={s.accordionDetails}>
                             <Box component="ul" className={s.boxListUl}>
                                 {section.links.map((linkName, linkIndex) => {
-                                    const linkHref = generateSlug(linkName);
+                                    const footerLinkMap: Record<string, string> = {
+                                        'Акции': '/promotion',
+                                        'Доставка': '/delivery',
+                                        'Оплата': '/payment',
+                                        'Бонусы': '/bonuses',
+                                        'О нас': '/about',
+                                        'Контакты': '/contacts',
+                                        'Вакансии': '/careers',
+                                        'Поставщикам': '/suppliers',
+                                        'Политика конфиденциальности': '/privacy-policy',
+                                        'Обмен и возврат товара':'/exchange-and-return-of-goods',
+                                        'Защита прав потребителей': '/consumer-protection',
+                                        'Публичная оферта':'/public-offer'
+
+
+                                    };
 
                                     return (
                                         <Box component="li" key={linkIndex} className={s.boxListLi}>
-                                            <a href={linkHref} className={s.link}>
-                                                <Typography variant="body2">{linkName}</Typography>
-                                            </a>
+                                            <Link to={footerLinkMap[linkName]}>
+                                            <Typography variant="body2">{linkName}</Typography>
+                                            </Link>
                                         </Box>
                                     );
                                 })}
@@ -90,7 +107,7 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
 
 
                 <Box className={s.containerButton}>
-                    <a href="tel:022365258" style={{ textDecoration: 'none' }}>
+                    <a href="tel:000000000" style={{ textDecoration: 'none' }}>
                         <Box className={s.boxButton}>
                             <Button><PhoneIcon/></Button>
                             <Typography className={s.typography}>Позвонить</Typography>

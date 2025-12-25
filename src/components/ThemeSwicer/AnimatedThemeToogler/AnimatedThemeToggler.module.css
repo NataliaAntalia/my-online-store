@@ -11,3 +11,13 @@
     align-items: center;
     justify-content: center;
 }
+
+.boxDemo{
+    padding-right: 30px !important;
+}
+
+@media screen and (max-width: 810px){
+    .boxDemo{
+        padding-right: 0 !important;
+    }
+}

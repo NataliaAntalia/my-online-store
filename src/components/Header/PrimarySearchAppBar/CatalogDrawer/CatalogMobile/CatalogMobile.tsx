@@ -18,6 +18,7 @@ import {LangSwitcher} from "@/components/Header/ResponsiveAppBar/LangSwitcher/La
 import i18n from "i18next";
 import logoPath from '../../../../../img/logo.png'
 import {Divider} from "@mui/material";
+import {AnimatedThemeTogglerDemo} from "@/components/ThemeSwicer/AnimatedThemeTogglerDemo/AnimatedThemeTogglerDemo";
 
 
 export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
@@ -39,7 +40,7 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                 onClose={onClose}
                 PaperProps={{
                     className: s.mobilePaper,
-            }}
+                }}
                 BackdropProps={{
                     sx: {
                         backgroundColor: 'rgb(126,126,126)',
@@ -50,7 +51,10 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                 <Box className={s.containerMobile}>
                     <Box className={s.logoContainer}>
                         <img src={logoPath} alt="Logo" className={s.logo}/>
-                        <LangSwitcher languages={languages} i18n={i18n} />
+                        <Box className={s.container}>
+                            <AnimatedThemeTogglerDemo/>
+                            <LangSwitcher languages={languages} i18n={i18n}/>
+                        </Box>
                     </Box>
                 </Box>
 
@@ -61,35 +65,47 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                         const shouldAddDivider = index === 1 || index === 5 || index === 9;
                         return (
                             <React.Fragment key={index}>
-                            <ListItem
-                                key={index}
-                                disablePadding
-                                className={index === 0 ? s.authItem : '' }
-                            >
-                                <ListItemButton
-                                    component={item.isCatalog ? 'div' : Link}
-                                    to={item.link}
-                                    onClick={() => {
-                                        if (item.isCatalog) {
-                                            setIsCatalogOpen(true);
-                                        } else {
-                                            onClose();
-                                        }
-                                    }}
+                                <ListItem
+                                    key={index}
+                                    disablePadding
+                                    className={index === 0 ? s.authItem : ''}
                                 >
-                                    {item.icon &&
-                                        <Box className={s.containerIcon}>
-                                        <item.icon/>
+                                    <ListItemButton
+                                        component={item.isCatalog ? 'div' : Link}
+                                        to={item.link}
+                                        onClick={() => {
+                                            if (item.isCatalog) {
+                                                setIsCatalogOpen(true);
+                                            } else {
+                                                onClose();
+                                            }
+                                        }}
+                                        className={s.listItemButton}
+                                    >
+                                        <Box className={s.leftIcon}>
+                                            {item.icons ? <item.icons.left /> : item.icon && <item.icon />}
                                         </Box>
-                                    }
-                                    <ListItemText primary={item.text} className={s.text}/>
 
-                                    {item.count !== null && item.count > 0 && <span className={s.count}>{item.count}</span>}
-                                </ListItemButton>
-                            </ListItem>
-                        {shouldAddDivider && (
-                            <Divider sx={{ margin: '8px 0' }} />
-                        )}
+                                        {/* текст */}
+                                        <ListItemText primary={item.text} className={s.text} />
+
+                                        {item.icons && (
+                                            <Box className={s.rightIcon}>
+                                                <item.icons.right />
+                                            </Box>
+                                        )}
+
+                                        {item.count !== null && item.count > 0 && (
+                                            <Box className={s.boxCounter}>
+                                            <span className={s.count}>{item.count}</span>
+                                            </Box>
+                                        )}
+                                    </ListItemButton>
+
+                                </ListItem>
+                                {shouldAddDivider && (
+                                    <Divider sx={{margin: '8px 0'}}/>
+                                )}
                             </React.Fragment>
                         );
                     })}
@@ -108,7 +124,7 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                 <IconButton
                     onClick={onClose}
                     size="large"
-                    className={s.closeIcon}
+                    className={s.closeIconBox}
                 >
                     <CloseIcon className={s.closeIcon}/>
                 </IconButton>

@@ -20,6 +20,12 @@
     align-items: flex-start;
 }
 
+.container{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
 .text{
     color: var(--drawer-text);
 }
@@ -30,6 +36,11 @@
     width: calc(100% - 70px);
     max-width: calc(100% - 70px);
     padding: 0 !important;
+}
+
+
+.closeIconBox{
+    background-color: #bd0a0a;
 }
 
 .closeIcon{
@@ -46,12 +57,29 @@
 
 
 
+.listItemButton {
+    display: flex;
+    align-items: center;
+}
+
+.leftIcon {
+    display: flex;
+    margin-right: 12px;
+}
+
+.text {
+    flex: 1;
+}
+
+.rightIcon {
+    display: flex;
+}
+
 
 .containerMobile {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 4px 0;
 }
 
 .authItem{
@@ -61,12 +89,24 @@
 
 .boxButtons{
     background-color: var(--mobile-h-f-bg-paper);
-
     padding: 16px;
+}
+
+.boxCounter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fb3578;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 2px;
+
 }
 
 .mirrorIcon {
     transform: scaleX(-1);
+    padding: 0 !important;
 }
 
 .logoContainer {
@@ -74,11 +114,15 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding-right: 16px;
 }
 
 .logo {
     height: 50px !important;
 }
+
+
+
 
     /*ДЕСКТОПНЫЕ*/
 
@@ -86,6 +130,7 @@
     min-width: 150px;
     word-break: break-word;
     border-right: 1px solid #ccc;
+
 }
 
 .drawerRightColumn {
@@ -138,7 +183,8 @@
 }
 
 .count{
-    color: var(--text-secondary);
+    color: white;
+    /*color: var(--text-secondary);*/
 }
 
 

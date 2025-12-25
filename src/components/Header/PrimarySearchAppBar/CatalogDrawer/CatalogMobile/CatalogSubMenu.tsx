@@ -2,7 +2,6 @@ import React from 'react';
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
@@ -11,6 +10,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import {Link} from "react-router-dom";
 import ListItemText from "@mui/material/ListItemText";
 import s from '../CatalogDrawer.module.css'
+import {ReactComponent as RightArrow} from "../../../../../img/arrow_right.svg";
 
 
 export type CatalogSubMenuProps = {
@@ -33,14 +33,17 @@ export const CatalogSubMenu: React.FC<CatalogSubMenuProps> = (props) => {
                 sx: {
                     width: '85%',
                     maxWidth: '85%',
+                    backgroundColor: 'var(--mobile-bg-paper)',
+                    color:'var(--text-color)',
                 }
             }}
         >
             <Box className={s.containerMobile}>
-                <IconButton onClick={() => setIsCatalogOpen(false)} size="large">
-                    <MenuIcon className={s.mirrorIcon}/>
+                <IconButton sx={{padding: '4px'}} onClick={() => setIsCatalogOpen(false)} size="large">
+                    <RightArrow className={s.mirrorIcon}/>
                 </IconButton>
-                <Typography variant="h6">{('catalog.title')}</Typography>
+
+                <Typography variant="h6">{('Каталог')}</Typography>
             </Box>
             <Divider/>
 

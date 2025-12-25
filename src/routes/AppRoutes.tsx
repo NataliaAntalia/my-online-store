@@ -10,6 +10,14 @@ import LoginPage from "@/components/pages/LoginPage/LoginPage";
 import {CartPage} from "@/components/pages/CartPage/CartPage";
 import {FavoritesPage} from "@/components/pages/FavoritesPage/FavoritesPage";
 import {ComparisonPage} from "@/components/pages/ComparisonPage/ComparisonPage";
+import {About} from "@/components/Footer/pages/About";
+import {Contacts} from "@/components/Footer/pages/Contacts";
+import {Careers} from "@/components/Footer/pages/Careers";
+import {Suppliers} from "@/components/Footer/pages/Suppliers";
+import {PrivacyPolicy} from "@/components/Footer/pages/PrivacyPolicy";
+import {ReturnsAndExchanges} from "@/components/Footer/pages/ReturnsAndExchanges";
+import {ConsumerProtection} from "@/components/Footer/pages/ConsumerProtection";
+import {PublicOffer} from "@/components/Footer/pages/PublicOffer";
 
 export function AppRoutes() {
     return (
@@ -26,6 +34,14 @@ export function AppRoutes() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="/comparison" element={<ComparisonPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/suppliers" element={<Suppliers />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/exchange-and-return-of-goods" element={<ReturnsAndExchanges/>} />
+            <Route path="/consumer-protection" element={<ConsumerProtection/>} />
+            <Route path="/public-offer" element={<PublicOffer/>} />
         </Routes>
     );
 }

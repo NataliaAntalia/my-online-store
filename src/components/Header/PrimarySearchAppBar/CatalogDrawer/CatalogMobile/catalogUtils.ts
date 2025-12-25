@@ -1,6 +1,6 @@
 import {ReactComponent as Balance} from '../../../../../img/сompare_header2.svg';
 import {ReactComponent as Cart} from '../../../../../img/shop.svg';
-import {ReactComponent as Favorites} from '../../../../../img/like.svg';
+import {ReactComponent as Favorites} from '../../../../../img/like_header.svg';
 import {ReactComponent as Payment} from '../../../../../img/credit-card.svg';
 import {ReactComponent as Delivery} from '../../../../../img/delivery.svg';
 import {ReactComponent as Catalog} from '../../../../../img/catalog.svg';
@@ -9,6 +9,8 @@ import {ReactComponent as PhoneIcon} from '../../../../../img/phone.svg';
 import {ReactComponent as LocationOnIcon} from '../../../../../img/location.svg';
 import {ReactComponent as Promotions} from '../../../../../img/promotions.svg';
 import {ReactComponent as Bonuses} from '../../../../../img/bonuses.svg';
+import {ReactComponent as RightArrow} from "../../../../../img/arrow_right.svg";
+
 
 
 
@@ -23,7 +25,11 @@ export const getMobileNavItems = (navPages: any[], cartData: any, mainNumber: st
 
     return [
         {text: ('Вход | Регистрация'), link: '/profile', icon: PersonIcon, count: null, isAuth: true},
-        {text: ('Каталог'), link: '#', icon: Catalog, isCatalog: true, count: null},
+
+        {text: ('Каталог'), link: '#',  icons: {
+                left: Catalog,
+                right: RightArrow,
+            }, isCatalog: true, count: null},
 
         promotionItem && {text: ('Акции'), link: `/${promotionItem.path}`, icon: Promotions, count: null, isCatalog: false},
         bonusesItem && {text: ('Бонусы'), link: `/${bonusesItem.path}`, icon: Bonuses, count: null, isCatalog: false},

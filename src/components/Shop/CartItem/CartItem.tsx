@@ -27,6 +27,7 @@ export const CartItem: React.FC<CartItemProps> = ({product, checked, onToggleSel
         <Box className={s.cartItem}>
             <PinkCheckbox
                 checked={checked}
+                sx={{color: 'var(--icon-color)'}}
                 onChange={onToggleSelect}
                 inputProps={{"aria-label": "select product"}}
             />
