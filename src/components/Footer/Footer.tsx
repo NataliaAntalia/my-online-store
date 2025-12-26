@@ -7,11 +7,12 @@ import {FooterSocials} from "@/components/Footer/FooterSocials/FooterSocials";
 import {FooterPayments} from "@/components/Footer/FooterPayments/FooterPayments";
 import {buttons, footerSections, images, socialLinks} from "@/components/Footer/constants";
 import {FooterMobile} from "@/components/Footer/FooterMobile/FooterMobile";
+import {useTranslation} from "react-i18next";
 
 
 export const Footer: React.FC = () => {
 
-
+const {t}= useTranslation();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down(778));
 if (isMobile) {
@@ -34,15 +35,15 @@ if (isMobile) {
                     ))}
 
                     <Grid item xs={12} sm={6} md={3} {...({} as any)}>
-                        <FooterAppButtons title={"Загрузите наше приложение"} buttons={buttons}/>
-                        <FooterSocials  title={"Мы в социальных сетях"} links={socialLinks}/>
-                        <FooterPayments title={"Принимаем к оплате"} images={images}/>
+                        <FooterAppButtons title={t("download_app")} buttons={buttons}/>
+                        <FooterSocials  title={t("socials")} links={socialLinks}/>
+                        <FooterPayments title={t("accept_payment")} images={images}/>
                     </Grid>
                 </Grid>
 
                 <Box className={s.footerCopyright}>
                     <Typography className={s.title}>
-                        © 2002–{new Date().getFullYear()} Интернет-магазин EasyShop | Превратит покупку в удовольствие
+                        © 2002–{new Date().getFullYear()} {t("footer_copyright")}
                     </Typography>
                 </Box>
             </Container>

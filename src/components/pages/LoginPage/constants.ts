@@ -1,4 +1,6 @@
 import s from '../LoginPage/SocialButtons/SocialButtons.module.css'
+
+
 export const authButtons=["Забыли пароль?", "Регистрация" ]
 
 export const socialButtons = [

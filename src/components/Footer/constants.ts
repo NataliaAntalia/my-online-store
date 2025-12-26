@@ -13,9 +13,9 @@ export const socialLinks = [
 ];
 
 
-export const customerLinks = ["Акции", "Доставка", "Оплата", "Бонусы"]
-export const infoLinks = ["Обмен и возврат товара", "Защита прав потребителей", "Публичная оферта"]
-export const aboutLinks = ["О нас", "Контакты", "Вакансии", "Поставщикам", "Политика конфиденциальности"]
+export const customerLinks = ["promo", "delivery", "payment", "bonuses"]
+export const infoLinks = ["exchange", "consumer_protection", "public_offer"  ]
+export const aboutLinks = ["about", "contacts", "jobs", "suppliers", "privacy_policy"]
 
 
 export const buttons = [
@@ -30,7 +30,7 @@ export const images = [
 
 export const footerSections = [
     {title: "EasyShop", links: aboutLinks},
-    {title: "Покупателю", links: customerLinks},
-    {title: "Полезная информация", links: infoLinks},
+    {title: "buyer", links: customerLinks},
+    {title: "useful_information", links: infoLinks},
 ];
 

@@ -22,3 +22,4 @@ export const FunPlaceholderBonuses: React.FC<FunPlaceholderProps> = ({title = "Ð
         </div>
     );
 };
+

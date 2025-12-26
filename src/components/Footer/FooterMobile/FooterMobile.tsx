@@ -17,6 +17,7 @@ import {ReactComponent as PhoneIcon} from 'img/phone.svg';
 import Button from "@mui/material/Button";
 import s from './FooterMobile.module.css'
 import { Link } from 'react-router-dom';
+import {FOOTER_ROUTES} from "@/components/Footer/routes";
 
 
 
@@ -75,26 +76,9 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                         <AccordionDetails className={s.accordionDetails}>
                             <Box component="ul" className={s.boxListUl}>
                                 {section.links.map((linkName, linkIndex) => {
-                                    const footerLinkMap: Record<string, string> = {
-                                        'Акции': '/promotion',
-                                        'Доставка': '/delivery',
-                                        'Оплата': '/payment',
-                                        'Бонусы': '/bonuses',
-                                        'О нас': '/about',
-                                        'Контакты': '/contacts',
-                                        'Вакансии': '/careers',
-                                        'Поставщикам': '/suppliers',
-                                        'Политика конфиденциальности': '/privacy-policy',
-                                        'Обмен и возврат товара':'/exchange-and-return-of-goods',
-                                        'Защита прав потребителей': '/consumer-protection',
-                                        'Публичная оферта':'/public-offer'
-
-
-                                    };
-
                                     return (
                                         <Box component="li" key={linkIndex} className={s.boxListLi}>
-                                            <Link to={footerLinkMap[linkName]}>
+                                            <Link to={FOOTER_ROUTES[linkName]}>
                                             <Typography variant="body2">{linkName}</Typography>
                                             </Link>
                                         </Box>

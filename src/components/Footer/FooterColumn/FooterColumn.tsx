@@ -1,7 +1,11 @@
 import React from 'react';
-import {Grid, Link, Typography} from "@mui/material";
+import { Link } from "react-router-dom";
+import {Grid, Typography} from "@mui/material";
 import s from "./FooterColumn.module.css";
 import stile from "../Footer.module.css";
+import {FOOTER_ROUTES} from "@/components/Footer/routes";
+import { useTranslation } from 'react-i18next';
+
 
 type FooterColumnType = {
     title: string,
@@ -9,15 +13,17 @@ type FooterColumnType = {
 }
 
 export const FooterColumn = ({title, links}: FooterColumnType) => {
+
+    const { t } = useTranslation();
     return (
 
         <Grid item xs={12} sm={6} md={3} {...({} as any)}>
             <Typography gutterBottom className={stile.footerTitle}>
-                {title}
+                {t(title)}
             </Typography>
-            {links.map((text) => (
-                <Link key={text} href="#" className={s.footerLink}>
-                    {text}
+            {links.map((link) => (
+                <Link key={link} to={FOOTER_ROUTES[link]} className={s.footerLink}>
+                    {t(link)}
                 </Link>
             ))}
         </Grid>

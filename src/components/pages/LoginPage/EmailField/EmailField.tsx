@@ -1,6 +1,7 @@
 import React, {ChangeEvent} from 'react';
 import {TextField} from "@mui/material";
 import {inputSX} from "@/components/pages/LoginPage/inputStyles";
+import {useTranslation} from "react-i18next";
 
 
 type EmailFieldType = {
@@ -11,9 +12,10 @@ type EmailFieldType = {
 
 export const EmailField = ({value, onChange}: EmailFieldType) => {
     const handleChange = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => onChange(e.target.value)
+    const {t}=useTranslation();
     return (
         <TextField
-            label="Ваш E-mail"
+            label={t("email")}
             type="email"
             fullWidth
             margin="normal"

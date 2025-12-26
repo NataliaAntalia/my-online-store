@@ -1,5 +1,87 @@
-.box{
-    height: 30vh;
-    width: 50%;
-    background-color: #656565;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 70vh;
+    text-align: center;
+    padding: 0 16px;
+
+}
+
+.boxAbout{
+    background-color: #fac8d9;
+}
+.boxCareers{
+    background-color: #c8ccfa;
+}
+.boxContacts{
+    background-color: #c8f8fa;
+}
+.boxPrivacy{
+    background-color: #c8fae5;
+}
+.boxPublic{
+    background-color: #cbfac8;
+}
+.boxReturns{
+    background-color: #f8fac8;
+}
+.boxSuppliers{
+    background-color: #fadbc8;
+}
+.boxConsumer{
+    background-color: #faccc8;
+}
+
+
+.text {
+    font-size: 24px !important;
+    margin: 0 !important;
+    color: #57142b;
+}
+.spinner {
+    height: 60px !important;
+    width: 60px !important;
+    margin-top: 25px !important;
+
+}
+
+.spinnerAbout{
+    color: #a93f64 !important;
+}
+.spinnerCareers{
+    color: #2d2d37 !important;
+}
+.spinnerContacts{
+    color: #283333 !important;
+}
+.spinnerPrivacy{
+    color: #343e39 !important;
+}
+.spinnerPublic{
+    color: #333c32 !important;
+}
+.spinnerReturns{
+    color: #38392f !important;
+}
+.spinnerSuppliers{
+    color: #403a36 !important;
+}
+.spinnerConsumer{
+    color: #39302f !important;
+}
+
+
+@media screen and (max-width: 500px){
+    .text {
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+    .spinner {
+        height: 30px !important;
+        width: 30px !important;
+
+    }
 }
