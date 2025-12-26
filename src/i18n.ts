@@ -110,7 +110,7 @@ i18n
                     password:"Parolă",
                     entrance:"Intrare",
 
-                    
+
                     forgot_password: "Ați uitat parola?",
                     registration:"Înregistrare"
 
