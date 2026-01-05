@@ -1,14 +1,15 @@
 import React from "react";
-import {FunPlaceholderProps} from "../FunPlaceholder/FunPlaceholder";
 import s from './FunPlaceholderDelivery.module.css'
+import {useTranslation} from "react-i18next";
 
-export const FunPlaceholderDelivery: React.FC<FunPlaceholderProps> = ({title = "Доставка"}) => {
+export const FunPlaceholderDelivery: React.FC = () => {
+    const {t} = useTranslation();
     return (
         <div className={s.pageContainer}>
             <div>
-                <h1 className={s.title}>{title}</h1>
+                <h1 className={s.title}>{t("delivery")}</h1>
                 <p className={s.subtitle}>
-                    Страница доставки скоро будет доступна!
+                    {t("delivery_placeholder")}
                 </p>
                 <div className={s.loader}/>
             </div>

@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
 import {Box} from "@mui/material";
 import s from './ElementPage.module.css'
+import {useTranslation} from "react-i18next";
 
 
 const imageAnimation = {
@@ -22,12 +23,14 @@ export const fadeInDelayed = {
 };
 
 export default function ElementPage() {
+
+    const {t} = useTranslation();
     return (
         <Box className={s.container}>
             <Box className={s.inner}>
 
                 <motion.h1 className={s.title}{...fadeInUp}>
-                    В РАЗРАБОТКЕ
+                    {t("in_development")}
                 </motion.h1>
                 <motion.img
                     className={s.image}
@@ -35,7 +38,7 @@ export default function ElementPage() {
                     {...imageAnimation}
                 />
                 <motion.p {...fadeInDelayed} className={s.text}>
-                    Страница ещё в разработке, возвращайтесь позже 🚧
+                    {t("placeholder_text")}
                 </motion.p>
             </Box>
         </Box>

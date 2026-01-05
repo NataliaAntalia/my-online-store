@@ -18,6 +18,7 @@ import Button from "@mui/material/Button";
 import s from './FooterMobile.module.css'
 import { Link } from 'react-router-dom';
 import {FOOTER_ROUTES} from "@/components/Footer/routes";
+import {useTranslation} from "react-i18next";
 
 
 
@@ -51,12 +52,9 @@ export interface FooterMobileProps {
     images: PaymentImage[];
 }
 
-
-const generateSlug = (text: string): string => {
-    return `/${text.toLowerCase().replace(/[^a-zа-яё0-9]+/g, '-').replace(/^-|-$/g, '')}`;
-};
-
 export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, buttons, socialLinks, images }) => {
+
+    const {t} = useTranslation();
     return (
         <Box className={s.container}>
             <Container >
@@ -69,7 +67,7 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                             className={s.accordionSummary}
                         >
                             <Typography variant="subtitle1" fontWeight="bold" className={s.title}>
-                                {section.title}
+                                {t(section.title)}
                             </Typography>
                         </AccordionSummary>
 
@@ -79,7 +77,7 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                                     return (
                                         <Box component="li" key={linkIndex} className={s.boxListLi}>
                                             <Link to={FOOTER_ROUTES[linkName]}>
-                                            <Typography variant="body2">{linkName}</Typography>
+                                            <Typography variant="body2">{t(linkName)}</Typography>
                                             </Link>
                                         </Box>
                                     );
@@ -94,24 +92,24 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
                     <a href="tel:000000000" style={{ textDecoration: 'none' }}>
                         <Box className={s.boxButton}>
                             <Button><PhoneIcon/></Button>
-                            <Typography className={s.typography}>Позвонить</Typography>
+                            <Typography className={s.typography}>{t('call')}</Typography>
                         </Box>
                     </a>
                 </Box>
 
                 <Box className={s.container}>
                     <Box>
-                        <FooterAppButtons title={"Загрузите наше приложение"} buttons={buttons} />
-                        <FooterSocials title={"Мы в социальных сетях"} links={socialLinks}  />
+                        <FooterAppButtons title={t("download_app")} buttons={buttons}/>
+                        <FooterSocials title={t("socials")} links={socialLinks}/>
                     </Box>
                     <Box className={s.footerPayments}>
-                        <FooterPayments title={"Принимаем к оплате"} images={images} />
+                        <FooterPayments title={t("accept_payment")} images={images} />
                     </Box>
                 </Box>
 
                 <Box className={s.boxCopyright}>
                     <Typography className={s.textCopyright}>
-                        © 2002–{new Date().getFullYear()} Интернет-магазин EasyShop | Превратит покупку в удовольствие
+                        © 2002–{new Date().getFullYear()} {t("footer_copyright")}
                     </Typography>
                 </Box>
 

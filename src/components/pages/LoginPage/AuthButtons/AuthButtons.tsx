@@ -18,7 +18,7 @@ export const AuthButtons = ({disabled}:AuthButtonsType) => {
             <Box className={s.forgotContainer}>
 
                 {authButtons.map((button, i) => (
-                    <Button key={i} variant="text" size="small" className={s.forgotButton}>{button}</Button>
+                    <Button key={i} variant="text" size="small" className={s.forgotButton}>{t(button)}</Button>
                 ))}
             </Box>
 

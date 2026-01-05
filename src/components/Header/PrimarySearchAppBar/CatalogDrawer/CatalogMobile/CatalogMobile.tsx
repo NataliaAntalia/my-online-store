@@ -19,6 +19,7 @@ import i18n from "i18next";
 import logoPath from '../../../../../img/logo.png'
 import {Divider} from "@mui/material";
 import {AnimatedThemeTogglerDemo} from "@/components/ThemeSwicer/AnimatedThemeTogglerDemo/AnimatedThemeTogglerDemo";
+import {useTranslation} from "react-i18next";
 
 
 export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
@@ -30,7 +31,7 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
 
     const [isCatalogOpen, setIsCatalogOpen] = useState(false);
     const mobileNavItems = getMobileNavItems(navPages, cartData, mainNumber);
-
+    const {t} = useTranslation();
 
     return (
         <React.Fragment>
@@ -83,21 +84,21 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                                         className={s.listItemButton}
                                     >
                                         <Box className={s.leftIcon}>
-                                            {item.icons ? <item.icons.left /> : item.icon && <item.icon />}
+                                            {item.icons ? <item.icons.left/> : item.icon && <item.icon/>}
                                         </Box>
 
                                         {/* текст */}
-                                        <ListItemText primary={item.text} className={s.text} />
+                                        <ListItemText primary={item.text} className={s.text}/>
 
                                         {item.icons && (
                                             <Box className={s.rightIcon}>
-                                                <item.icons.right />
+                                                <item.icons.right/>
                                             </Box>
                                         )}
 
                                         {item.count !== null && item.count > 0 && (
                                             <Box className={s.boxCounter}>
-                                            <span className={s.count}>{item.count}</span>
+                                                <span className={s.count}>{item.count}</span>
                                             </Box>
                                         )}
                                     </ListItemButton>
@@ -111,7 +112,7 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                     })}
                 </List>
                 <Box className={s.boxButtons}>
-                    <FooterAppButtons title={'Загрузите наше приложение'} buttons={buttons}/>
+                    <FooterAppButtons title={t('download_app')} buttons={buttons}/>
                     <CatalogSubMenu
                         setIsCatalogOpen={setIsCatalogOpen}
                         isCatalogOpen={isCatalogOpen}

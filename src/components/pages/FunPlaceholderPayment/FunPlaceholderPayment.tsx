@@ -1,14 +1,15 @@
 import React from "react";
-import {FunPlaceholderProps} from "../FunPlaceholder/FunPlaceholder";
 import s from './FunPlaceholderPayment.module.css'
+import {useTranslation} from "react-i18next";
 
-export const FunPlaceholderPayment: React.FC<FunPlaceholderProps> = ({title = "Оплата"}) => {
+export const FunPlaceholderPayment: React.FC = () => {
+    const {t} = useTranslation();
     return (
         <div className={s.pageContainer}>
             <div>
-                <h1 className={s.title}>{title}</h1>
+                <h1 className={s.title}>{t("payment")}</h1>
                 <p className={s.subtitle}>
-                    Оплата будет доступна совсем скоро!
+                    {t("payment_placeholder")}
                 </p>
                 <div className={s.bounceBox}/>
             </div>

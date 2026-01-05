@@ -1,17 +1,17 @@
 import React from "react";
-import {FunPlaceholderProps} from "../FunPlaceholder/FunPlaceholder";
 import s from './FunPlaceholderBonuses.module.css'
+import {useTranslation} from "react-i18next";
 
-export const FunPlaceholderBonuses: React.FC<FunPlaceholderProps> = ({title = "Бонусы"}) => {
+export const FunPlaceholderBonuses: React.FC = () => {
 
     const dots = ['dot1', 'dot2', 'dot3'];
-
+    const {t} = useTranslation();
     return (
         <div className={s.pageContainer}>
             <div>
-                <h1 className={s.title}>{title}</h1>
+                <h1 className={s.title}>{t('bonuses')}</h1>
                 <p className={s.subtitle}>
-                    Бонусы скоро будут активны!
+                    {t("bonuses_placeholder")}
                 </p>
                 <div className={s.dotsContainer}>
                     {dots.map((dotClass, index) => (

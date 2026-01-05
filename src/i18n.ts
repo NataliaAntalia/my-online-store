@@ -53,11 +53,74 @@ i18n
                     email:"Ваш E-mail",
                     password:"Пароль",
                     entrance:"Вход",
-
-
+                    call:"Позвонить",
                     forgot_password: "Забыли пароль?",
-                    registration:"Регистрация"
+                    registration:"Регистрация",
+                    entrance_socials:"Вход через соц. сети",
+                    in_development: "В РАЗРАБОТКЕ",
+                    placeholder_text: "Страница ещё в разработке, возвращайтесь позже 🚧",
+                    empty_cart:"Корзина пуста",
+                    empty_cart_placeholder:"Здесь появятся товары, которые вы добавили в корзину.",
+                    add_to_cart:"Добавить товары",
+                    fun_placeholder:"Мы работаем над этой страницей. Она скоро оживёт!",
+                    fun_placeholder_title:"Страница в разработке",
+                    bonuses_placeholder:"Бонусы скоро будут активны!",
+                    delivery_placeholder:"Страница доставки скоро будет доступна!",
+                    payment_placeholder:"Оплата будет доступна совсем скоро!",
 
+
+
+
+
+                    subcategory_A1:"Подкатегория А.1",
+                    subcategory_A2:"Подкатегория А.2",
+                    subcategory_A3:"Подкатегория А.3",
+                    subcategory_A4:"Подкатегория А.4",
+                    subcategory_A5:"Подкатегория А.5",
+                    subcategory_A6:"Подкатегория А.6",
+                    subcategory_A7:"Подкатегория А.7",
+                    subcategory_A8:"Подкатегория А.8",
+
+                    subcategory_B1:"Подкатегория B.1",
+                    subcategory_B2:"Подкатегория B.2",
+                    subcategory_B3:"Подкатегория B.3",
+                    subcategory_B4:"Подкатегория B.4",
+                    subcategory_B5:"Подкатегория B.5",
+                    subcategory_B6:"Подкатегория B.6",
+                    subcategory_B7:"Подкатегория B.7",
+
+                    subcategory_C1:"Подкатегория C.1",
+                    subcategory_C2:"Подкатегория C.2",
+                    subcategory_C3:"Подкатегория C.3",
+                    subcategory_C4:"Подкатегория C.4",
+                    subcategory_C5:"Подкатегория C.5",
+                    subcategory_C6:"Подкатегория C.6",
+                    subcategory_C7:"Подкатегория C.7",
+
+                    subcategory_D1:"Подкатегория D.1",
+                    subcategory_D2:"Подкатегория D.2",
+                    subcategory_D3:"Подкатегория D.3",
+                    subcategory_D4:"Подкатегория D.4",
+                    subcategory_D5:"Подкатегория D.5",
+                    subcategory_D6:"Подкатегория D.6",
+                    subcategory_D7:"Подкатегория D.7",
+
+                    subcategory_E1:"Подкатегория E.1",
+                    subcategory_E2:"Подкатегория E.2",
+                    subcategory_E3:"Подкатегория E.3",
+                    subcategory_E4:"Подкатегория E.4",
+                    subcategory_E5:"Подкатегория E.5",
+
+                    subcategory_F1:"Подкатегория F.1",
+                    subcategory_F2:"Подкатегория F.2",
+                    subcategory_F3:"Подкатегория F.3",
+
+                    sectionA:"Раздел А",
+                    sectionB:"Раздел B",
+                    sectionC:"Раздел C",
+                    sectionD:"Раздел D",
+                    sectionE:"Раздел E",
+                    sectionF:"Раздел F",
 
                 }
             },
@@ -109,16 +172,73 @@ i18n
                     email:"E-mailul dvs",
                     password:"Parolă",
                     entrance:"Intrare",
-
-
+                    call:"Apel",
                     forgot_password: "Ați uitat parola?",
-                    registration:"Înregistrare"
+                    registration:"Înregistrare",
+                    entrance_socials:"Conectați-vă prin rețelele sociale",
+                    in_development: "ÎN DEZVOLTARE",
+                    placeholder_text: "Această pagină este încă în construcție, vă rugăm să reveniți mai târziu. 🚧",
+                    empty_cart:"Coșul este gol",
+                    empty_cart_placeholder:"Produsele pe care le-ați adăugat în coș vor apărea aici.",
+                    add_to_cart:"Adăugați produse",
+                    fun_placeholder:"Lucrăm la această pagină. Va fi disponibilă în curând!",
+                    fun_placeholder_title:"Pagina în construcție",
+                    bonuses_placeholder:"Bonusurile vor fi active în curând!",
+                    delivery_placeholder:"Pagina de livrare va fi disponibilă în curând!",
+                    payment_placeholder:"Plata va fi disponibilă foarte curând!",
 
 
 
+                    subcategory_A1:"Subcategorie A.1",
+                    subcategory_A2:"Subcategorie A.2",
+                    subcategory_A3:"Subcategorie A.3",
+                    subcategory_A4:"Subcategorie A.4",
+                    subcategory_A5:"Subcategorie A.5",
+                    subcategory_A6:"Subcategorie A.6",
+                    subcategory_A7:"Subcategorie A.7",
+                    subcategory_A8:"Subcategorie A.8",
+
+                    subcategory_B1:"Subcategorie A.1",
+                    subcategory_B2:"Subcategorie A.2",
+                    subcategory_B3:"Subcategorie A.3",
+                    subcategory_B4:"Subcategorie A.4",
+                    subcategory_B5:"Subcategorie A.5",
+                    subcategory_B6:"Subcategorie A.6",
+                    subcategory_B7:"Subcategorie A.7",
 
 
+                    subcategory_C1:"Subcategorie C.1",
+                    subcategory_C2:"Subcategorie C.2",
+                    subcategory_C3:"Subcategorie C.3",
+                    subcategory_C4:"Subcategorie C.4",
+                    subcategory_C5:"Subcategorie C.5",
+                    subcategory_C6:"Subcategorie C.6",
+                    subcategory_C7:"Subcategorie C.7",
 
+                    subcategory_D1:"Subcategorie D.1",
+                    subcategory_D2:"Subcategorie D.2",
+                    subcategory_D3:"Subcategorie D.3",
+                    subcategory_D4:"Subcategorie D.4",
+                    subcategory_D5:"Subcategorie D.5",
+                    subcategory_D6:"Subcategorie D.6",
+                    subcategory_D7:"Subcategorie D.7",
+
+                    subcategory_E1:"Subcategorie E.1",
+                    subcategory_E2:"Subcategorie E.2",
+                    subcategory_E3:"Subcategorie E.3",
+                    subcategory_E4:"Subcategorie E.4",
+                    subcategory_E5:"Subcategorie E.5",
+
+                    subcategory_F1:"Subcategorie F.1",
+                    subcategory_F2:"Subcategorie F.2",
+                    subcategory_F3:"Subcategorie F.3",
+
+                    sectionA:"Secțiune А",
+                    sectionB:"Secțiune B",
+                    sectionC:"Secțiune C",
+                    sectionD:"Secțiune D",
+                    sectionE:"Secțiune E",
+                    sectionF:"Secțiune F",
 
                 }
             }

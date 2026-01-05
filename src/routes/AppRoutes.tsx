@@ -26,7 +26,7 @@ export function AppRoutes() {
             <Route path="/delivery" element={<FunPlaceholderDelivery />} />
             <Route path="/payment" element={<FunPlaceholderPayment />} />
             <Route path="/bonuses" element={<FunPlaceholderBonuses />} />
-            <Route path="/promotion" element={<FunPlaceholder title="Акции" />} />
+            <Route path="/promotion" element={<FunPlaceholder />} />
             <Route path="/category/:categoryKey" element={<CategoryPage />} />
             <Route path="/subcategory/:subcategoryName" element={<SubcategoryPage />} />
             <Route path="/profile" element={<LoginPage />} />
