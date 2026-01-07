@@ -8,7 +8,7 @@ export const FavoritesPage = () => {
     return (
     <ProductsPage
         products={favorites}
-        titleKey="favorites"
+        title="favorites"
         emptyTextKey="favorites_empty"
     />
 )

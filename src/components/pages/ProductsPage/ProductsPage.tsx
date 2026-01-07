@@ -13,18 +13,18 @@ import '../../../index.css';
 
 type ProductsPageProps = {
     products: Product[];
-    titleKey: string;
+    title: string;
     emptyTextKey: string;
     showRemoveButton?: boolean;
 }
 
-export const ProductsPage = ({products, titleKey, emptyTextKey, showRemoveButton= false}: ProductsPageProps) => {
+export const ProductsPage = ({products, title, emptyTextKey, showRemoveButton= false}: ProductsPageProps) => {
     const {t} = useTranslation();
 
     return (
         <div className="globalContainer">
             <Typography variant="h5" className={s.title2}>
-                {t(titleKey)}
+                {t(title)}
             </Typography>
             <Box className={s.container}>
                 <Box className={s.textContainer}>

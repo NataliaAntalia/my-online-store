@@ -4,7 +4,7 @@ import {useCart} from "@/hooks/useCart";
 
 export const ComparisonPage = () => {
     const {comparison} = useCart();
-    return <ProductsPage products={comparison} emptyTextKey={'comparison_empty'} titleKey={'comparison'}/>
+    return <ProductsPage products={comparison} emptyTextKey={'comparison_empty'} title={'comparison'}/>
 
 };
 

@@ -87,8 +87,7 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                                             {item.icons ? <item.icons.left/> : item.icon && <item.icon/>}
                                         </Box>
 
-                                        {/* текст */}
-                                        <ListItemText primary={item.text} className={s.text}/>
+                                        <ListItemText primary={t(item.text)} className={s.text}/>
 
                                         {item.icons && (
                                             <Box className={s.rightIcon}>
@@ -111,6 +110,10 @@ export const CatalogMobile: React.FC<CatalogDrawerProps> = (props) => {
                         );
                     })}
                 </List>
+
+
+
+
                 <Box className={s.boxButtons}>
                     <FooterAppButtons title={t('download_app')} buttons={buttons}/>
                     <CatalogSubMenu

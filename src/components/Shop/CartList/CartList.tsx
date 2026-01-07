@@ -7,6 +7,7 @@ import stiles from 'components/Shop/CartItem/CartItem.module.css'
 import {styled} from "@mui/material/styles";
 import {CartSummary} from "@/components/Shop/CartItem/CartSummary/CartSummary";
 import {EmptyCart} from "@/components/Shop/CartList/EmptyCart/EmptyCart";
+import {useTranslation} from "react-i18next";
 
 
 export const PinkCheckbox = styled(Checkbox)({
@@ -19,6 +20,7 @@ export const PinkCheckbox = styled(Checkbox)({
 export const CartList = () => {
     const {cart} = useCart();
     const [selectedIds, setSelectedIds] = useState<string[]>([]);
+    const {t} = useTranslation();
 
     const handleToggleSelect = (productId: string) => {
         setSelectedIds((prev) =>
@@ -47,45 +49,45 @@ export const CartList = () => {
 
     return (
         <Box className={s.box}>
-            <Typography variant="h6" className={s.title}>Корзина</Typography>
+            <Typography variant="h6" className={s.title}>{t("my_cart")}</Typography>
             <Box className={s.productContainer}>
-            <Box className={s.container}>
-                <Box className={stiles.checkboxContainer}>
-                    <FormControlLabel
-                        control={
-                            <PinkCheckbox
-                                checked={isAllSelected}
-                                onChange={handleMasterCheckbox}
-                                sx={{color: 'var(--icon-color)'}}
-                            />
+                <Box className={s.container}>
+                    <Box className={stiles.checkboxContainer}>
+                        <FormControlLabel
+                            control={
+                                <PinkCheckbox
+                                    checked={isAllSelected}
+                                    onChange={handleMasterCheckbox}
+                                    sx={{color: 'var(--icon-color)'}}
+                                />
 
-                        }
-                        label=""
-                    />
-                    <Button onClick={handleSelectAll} className={s.button}>
-                        {selectedIds.length === cart.length ? "Снять выделение" : "Выбрать всё"}
-                    </Button>
+                            }
+                            label=""
+                        />
+                        <Button onClick={handleSelectAll} className={s.button}>
+                            {t(selectedIds.length === cart.length ? "deselect" : "select_all")}
+                        </Button>
+                    </Box>
+                    <Box className={s.containerCheckbox}>
+                        {cart.length === 0 ? (
+                            <Typography className={s.emptyText}>{t("cart_empty")}</Typography>
+                        ) : (
+                            cart.map((product) => (
+                                <CartItem
+                                    key={product.id}
+                                    product={product}
+                                    checked={selectedIds.includes(product.id)}
+                                    onToggleSelect={() => handleToggleSelect(product.id)}
+                                />
+                            ))
+                        )}
+                    </Box>
                 </Box>
-                <Box className={s.containerCheckbox} >
-                    {cart.length === 0 ? (
-                        <Typography className={s.emptyText}>Корзина пуста</Typography>
-                    ) : (
-                        cart.map((product) => (
-                            <CartItem
-                                key={product.id}
-                                product={product}
-                                checked={selectedIds.includes(product.id)}
-                                onToggleSelect={() => handleToggleSelect(product.id)}
-                            />
-                        ))
-                    )}
-                </Box>
-            </Box>
-            {cart.length > 0 && (
-                <Box className={s.cartSummaryBox}>
-                    <CartSummary products={cart} checkedItems={selectedIds} />
-                </Box>
-            )}
+                {cart.length > 0 && (
+                    <Box className={s.cartSummaryBox}>
+                        <CartSummary products={cart} checkedItems={selectedIds}/>
+                    </Box>
+                )}
             </Box>
         </Box>
     );

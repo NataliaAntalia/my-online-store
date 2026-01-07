@@ -18,12 +18,14 @@ i18n
                     my_account: 'Мой аккаунт',
                     cart: 'Корзина',
                     cart_empty: 'Корзина пуста',
+                    my_cart:"Ваша корзина",
                     delete: 'Удалить',
                     favorites: 'Избранное',
                     favorites_empty: 'Список избранного пуст',
                     comparison: 'Сравнение',
                     comparison_empty: 'Список сравнения пуст',
-                    currency: 'лей',
+                    // currency: 'лей',
+                    price_unit: 'лей',
                     addToCart: 'В корзину',
                     cashback: 'Кэшбэк',
                     newProducts: "Новинки",
@@ -34,6 +36,7 @@ i18n
                     catalog: {
                         title: "Каталог товаров",
                     },
+                    mobile_catalog:"Каталог",
                     about: "О нас",
                     contacts:"Контакты",
                     jobs: "Вакансии",
@@ -67,6 +70,14 @@ i18n
                     bonuses_placeholder:"Бонусы скоро будут активны!",
                     delivery_placeholder:"Страница доставки скоро будет доступна!",
                     payment_placeholder:"Оплата будет доступна совсем скоро!",
+                    login_registration: "Вход | Регистрация",
+                    location:"мун. Кишинэу",
+                    deselect:"Снять выделение",
+                    select_all:"Выбрать всё",
+                    price: "Стоимость товаров",
+                    proceed_to_checkout: "Перейти к оформлению",
+                    buy:"Купить в 1 клик",
+
 
 
 
@@ -135,14 +146,16 @@ i18n
                     notifications: 'Notificări',
                     profile: 'Profil',
                     my_account: 'Contul meu',
-                    cart: 'Coș',
+                    cart: 'Coșul',
                     cart_empty: 'Coșul este gol',
+                    my_cart:"Coșul meu",
                     delete: 'Șterge',
                     favorites: 'Favorite',
                     favorites_empty: 'Lista de favorite este goală',
                     comparison: 'Comparare',
                     comparison_empty: 'Lista de comparare este goală',
-                    currency: 'lei',
+                    // currency: 'lei',
+                    price_unit: 'lei',
                     addToCart: 'Adaugă în coș',
                     cashback: 'Cashback',
                     newProducts: "Noutăți",
@@ -154,6 +167,8 @@ i18n
                     catalog: {
                         title: "Catalog de produse",
                     },
+                    mobile_catalog:"Catalog",
+
                     about: "Despre noi",
                     contacts:"Contacte",
                     jobs: "Locuri vacante",
@@ -186,6 +201,11 @@ i18n
                     bonuses_placeholder:"Bonusurile vor fi active în curând!",
                     delivery_placeholder:"Pagina de livrare va fi disponibilă în curând!",
                     payment_placeholder:"Plata va fi disponibilă foarte curând!",
+                    location:"mun. Chișinău",
+                    price: "Costul mărfurilor",
+                    proceed_to_checkout: "Finalizează cumpărăturile",
+                    buy:"Cumpără cu 1 clic",
+
 
 
 
@@ -239,6 +259,9 @@ i18n
                     sectionD:"Secțiune D",
                     sectionE:"Secțiune E",
                     sectionF:"Secțiune F",
+                    login_registration: "Autentificare | Înregistrare",
+                    deselect:"Deselectați",
+                    select_all:"Selectați toate",
 
                 }
             }

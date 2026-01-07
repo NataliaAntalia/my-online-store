@@ -4,6 +4,7 @@ import s from "@/components/Shop/CartItem/CartItem.module.css";
 import {removeFromCart} from "@/store/cartSlice";
 import {Product} from "@/store/types";
 import {useDispatch} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 
 type QuantityCounterProps = {
@@ -25,6 +26,7 @@ export const QuantityCounter = ({product}: QuantityCounterProps) => {
     const handleIncrease = () => {
         setCount(count + 1);
     };
+    const {t}=useTranslation();
     return (
         <>
             <Box className={s.quantity}>
@@ -34,8 +36,10 @@ export const QuantityCounter = ({product}: QuantityCounterProps) => {
             </Box>
 
             <Typography className={s.price}>
-                {product.price * count} {product.currency}
+
+                {product.price * count} {t("price_unit")}
             </Typography>
+
         </>
     );
 };

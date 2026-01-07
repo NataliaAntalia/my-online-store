@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {CatalogSection} from "@/types/catalog";
 import {fetchCatalogFromSupabase} from "@/api/catalogApi";
-import {mapSupabaseToCatalog} from "@/lib/utils";
+import {mapSupabaseToCatalog} from "@/utils/utils";
 
 
 interface CatalogState {

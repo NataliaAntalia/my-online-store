@@ -1,6 +1,6 @@
 "use client";
 import {Moon, SunDim} from "lucide-react";
-import {cn} from "@/lib/utils";
+import {cn} from "@/utils/utils";
 import {useEffect, useRef, useState} from "react";
 import {flushSync} from "react-dom";
 import s from './AnimatedThemeToggler.module.css'

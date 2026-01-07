@@ -24,28 +24,28 @@ export const getMobileNavItems = (navPages: any[], cartData: any, mainNumber: st
     const deliveryItem = getPage('delivery');
 
     return [
-        {text: ('Вход | Регистрация'), link: '/profile', icon: PersonIcon, count: null, isAuth: true},
+        {text: ('login_registration'), link: '/profile', icon: PersonIcon, count: null, isAuth: true},
 
-        {text: ('Каталог'), link: '#',  icons: {
+        {text: ('mobile_catalog'), link: '#',  icons: {
                 left: Catalog,
                 right: RightArrow,
             }, isCatalog: true, count: null},
 
-        promotionItem && {text: ('Акции'), link: `/${promotionItem.path}`, icon: Promotions, count: null, isCatalog: false},
-        bonusesItem && {text: ('Бонусы'), link: `/${bonusesItem.path}`, icon: Bonuses, count: null, isCatalog: false},
-        {text: ('Корзина'), link: '/cart', icon: Cart, count: cartData.cart.length, isCatalog: false},
-        {text: ('Избранное'), link: '/favorites', icon: Favorites, count: cartData.favorites.length, isCatalog: false},
-        {text: ('Сравнение'), link: '/comparison', icon: Balance, count: cartData.comparison.length, isCatalog: false},
-        paymentItem && {text: ('Оплата'), link: `/${paymentItem.path}`, icon: Payment, count: null, isCatalog: false},
+        promotionItem && {text: ('promo'), link: `/${promotionItem.path}`, icon: Promotions, count: null, isCatalog: false},
+        bonusesItem && {text: ('bonuses'), link: `/${bonusesItem.path}`, icon: Bonuses, count: null, isCatalog: false},
+        {text: ('cart'), link: '/cart', icon: Cart, count: cartData.cart.length, isCatalog: false},
+        {text: ('favorites'), link: '/favorites', icon: Favorites, count: cartData.favorites.length, isCatalog: false},
+        {text: ('comparison'), link: '/comparison', icon: Balance, count: cartData.comparison.length, isCatalog: false},
+        paymentItem && {text: ('payment'), link: `/${paymentItem.path}`, icon: Payment, count: null, isCatalog: false},
 
         deliveryItem && {
-            text: ('Доставка'),
+            text: ('delivery'),
             link: `/${deliveryItem.path}`,
             icon: Delivery,
             count: null,
             isCatalog: false
         },
-        {text: ('мун. Кишинэу'), link: '/location', icon: LocationOnIcon, count: null, isCatalog: false},
-        {text: ('Позвонить'), link: `tel:${mainNumber}`, icon: PhoneIcon, count: null, isCatalog: false},
+        {text: ('location'), link: '/location', icon: LocationOnIcon, count: null, isCatalog: false},
+        {text: ('call'), link: `tel:${mainNumber}`, icon: PhoneIcon, count: null, isCatalog: false},
     ].filter(Boolean);
 }

@@ -23,3 +23,4 @@ export function mapSupabaseToCatalog(sections: SupabaseSection[]): CatalogSectio
         })) || []
     }));
 }
+
