@@ -18,7 +18,7 @@ export const PinkCheckbox = styled(Checkbox)({
 });
 
 export const CartList = () => {
-    const {cart} = useCart();
+    const {cart, removeFromCart} = useCart();
     const [selectedIds, setSelectedIds] = useState<string[]>([]);
     const {t} = useTranslation();
 
@@ -46,6 +46,13 @@ export const CartList = () => {
         return <EmptyCart/>;
     }
 
+    const handleDeleteSelected = () => {
+        selectedIds.forEach(id => {
+            removeFromCart(id);
+        });
+        setSelectedIds([]);
+    };
+
 
     return (
         <Box className={s.box}>
@@ -62,11 +69,19 @@ export const CartList = () => {
                                 />
 
                             }
-                            label=""
+                            label={t("select_all")}
+                            slotProps={{
+                                typography: { fontSize: '12px' }
+                            }}
                         />
-                        <Button onClick={handleSelectAll} className={s.button}>
-                            {t(selectedIds.length === cart.length ? "deselect" : "select_all")}
+                        <Button onClick={handleDeleteSelected} className={s.button} sx={{
+                            padding: 0,
+                            fontSize: '12px'
+                        }} >
+                            {t("delete_selected")}
                         </Button>
+
+
                     </Box>
                     <Box className={s.containerCheckbox}>
                         {cart.length === 0 ? (

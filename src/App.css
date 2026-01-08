@@ -1,0 +1,40 @@
+.slick-dots li button:before {
+    font-size: 6px !important;
+    color: #fb3578 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 8px !important;
+    color: #fb3578 !important;
+}
+
+/*!* Общие стили для обеих стрелок *!*/
+/*:global(.slick-prev),*/
+/*:global(.slick-next) {*/
+/*    z-index: 10; !* Чтобы стрелки были над картинками *!*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*}*/
+
+/*!* Сдвигаем стрелки, чтобы они не вылезали за края *!*/
+/*:global(.slick-prev) {*/
+/*    left: 25px;*/
+/*}*/
+/*:global(.slick-next) {*/
+/*    right: 25px;*/
+/*}*/
+
+/*!* Стилизация самих иконок через :before *!*/
+/*:global(.slick-prev:before),*/
+/*:global(.slick-next:before) {*/
+/*    font-size: 40px !important; !* Размер стрелки *!*/
+/*    color: #fb3578 !important;   !* Цвет стрелки *!*/
+/*    opacity: 0.8;*/
+/*    transition: opacity 0.3s ease;*/
+/*}*/
+
+/*!* Эффект при наведении *!*/
+/*:global(.slick-prev:hover:before),*/
+/*:global(.slick-next:hover:before) {*/
+/*    opacity: 1;*/
+/*}*/

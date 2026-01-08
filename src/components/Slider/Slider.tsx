@@ -26,6 +26,7 @@ export const MySlider = () => {
 
     return (
         <Box className={s.sliderWrapper}>
+
             <Slider {...sliderSettings}>
                 {slides.map((src, i) => (
                     <Box key={i}>

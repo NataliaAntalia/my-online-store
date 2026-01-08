@@ -78,6 +78,7 @@ i18n
                     proceed_to_checkout: "Перейти к оформлению",
                     buy:"Купить в 1 клик",
                     working_hours: "Пн–Пт: 9:00–18:00\nСб–Вс: выходной",
+                    delete_selected: "удалить выбранное",
 
 
 
@@ -207,6 +208,7 @@ i18n
                     proceed_to_checkout: "Finalizează cumpărăturile",
                     buy:"Cumpără cu 1 clic",
                     working_hours: "L–V: 9:00–18:00\nS–D: zi liberă",
+                    delete_selected: "ștergeți selectat",
 
 
 

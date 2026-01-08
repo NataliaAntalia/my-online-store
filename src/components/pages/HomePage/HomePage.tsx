@@ -9,12 +9,15 @@ export default function HomePage() {
     const { newProducts, discountedProducts, topProducts } = useProducts();
 
     return (
-        <Box className={s.homeContainer}>
+        <>
             <MySlider />
-            <ProductList titleKey="newProducts" products={newProducts} />
-            <ProductList titleKey="discountedProducts" products={discountedProducts} />
-            <ProductList titleKey="topProducts" products={topProducts} />
-            <PopularCategories />
-        </Box>
+            <Box className={s.homeContainer}>
+                <ProductList titleKey="newProducts" products={newProducts} />
+                <ProductList titleKey="discountedProducts" products={discountedProducts} />
+                <ProductList titleKey="topProducts" products={topProducts} />
+                <PopularCategories />
+            </Box>
+        </>
+
     );
 }
