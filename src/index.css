@@ -148,7 +148,6 @@ code {
 
 .globalContainer{
     max-width: 1400px !important;
-    border: 3px solid red;
     height: 100%;
     margin: 0 auto;
 }
