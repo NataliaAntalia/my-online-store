@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 
 
 export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
-    const {addToCart, favorites, toggleFavorite, comparison, toggleComparison} = useCart();
+    const {cart, addToCart, favorites, toggleFavorite, comparison, toggleComparison} = useCart();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [hover, setHover] = useState(0);
@@ -23,13 +23,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
     const dispatch = useAppDispatch();
     const rating = useAppSelector(state => state.ratings[product.id] || 0);
 
-
     const handleRatingChange = (value: number) => {
         dispatch(setRating({id: product.id, rating: value}));
     };
 
     const handleAddToCart = () => {
-        addToCart({
+        const isInCart = cart.some(item => item.id === product.id);
+        if(isInCart) return;
+
+            addToCart({
             id: product.id,
             image_url: product.image_url,
             name: t(product.name),
@@ -37,7 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
             cashback: product.cashback,
             currency: product.currency,
             rating: product.rating,
-        });
+        })
     };
 
     const cardSx = {

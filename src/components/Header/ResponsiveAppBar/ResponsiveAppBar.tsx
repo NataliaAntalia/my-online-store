@@ -59,7 +59,7 @@ export function ResponsiveAppBar() {
                     <PhoneDropdown
                         mainNumber={MAIN_NUMBER}
                         otherNumbers={OTHER_NUMBERS}
-                        workingHours={WORKING_HOURS}/>
+                        workingHours={t(WORKING_HOURS)}/>
                     <AnimatedThemeTogglerDemo/>
                     <LangSwitcher i18n={i18n} languages={LANGUAGES}/>
                 </Toolbar>

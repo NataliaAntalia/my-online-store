@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import {Grid, Typography} from "@mui/material";
 import s from "./FooterColumn.module.css";
 import stile from "../Footer.module.css";
-import {FOOTER_ROUTES} from "@/components/Footer/routes";
 import { useTranslation } from 'react-i18next';
 
 
 type FooterColumnType = {
     title: string,
-    links: string[],
+    links: { labelKey: string; path: string }[];
 }
 
 export const FooterColumn = ({title, links}: FooterColumnType) => {
@@ -22,8 +21,8 @@ export const FooterColumn = ({title, links}: FooterColumnType) => {
                 {t(title)}
             </Typography>
             {links.map((link) => (
-                <Link key={link} to={FOOTER_ROUTES[link]} className={s.footerLink}>
-                    {t(link)}
+                <Link key={link.path} to={link.path} className={s.footerLink}>
+                    {t(link.labelKey)}
                 </Link>
             ))}
         </Grid>

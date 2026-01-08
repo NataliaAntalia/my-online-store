@@ -24,9 +24,9 @@ i18n
                     favorites_empty: 'Список избранного пуст',
                     comparison: 'Сравнение',
                     comparison_empty: 'Список сравнения пуст',
-                    // currency: 'лей',
                     price_unit: 'лей',
                     addToCart: 'В корзину',
+                    inCart: 'В корзине',
                     cashback: 'Кэшбэк',
                     newProducts: "Новинки",
                     discountedProducts: "Снизилась цена",
@@ -77,6 +77,7 @@ i18n
                     price: "Стоимость товаров",
                     proceed_to_checkout: "Перейти к оформлению",
                     buy:"Купить в 1 клик",
+                    working_hours: "Пн–Пт: 9:00–18:00\nСб–Вс: выходной",
 
 
 
@@ -154,9 +155,9 @@ i18n
                     favorites_empty: 'Lista de favorite este goală',
                     comparison: 'Comparare',
                     comparison_empty: 'Lista de comparare este goală',
-                    // currency: 'lei',
                     price_unit: 'lei',
-                    addToCart: 'Adaugă în coș',
+                    addToCart: 'În coș',
+                    inCart: 'Adăugat',
                     cashback: 'Cashback',
                     newProducts: "Noutăți",
                     discountedProducts: "Reduceri",
@@ -205,6 +206,8 @@ i18n
                     price: "Costul mărfurilor",
                     proceed_to_checkout: "Finalizează cumpărăturile",
                     buy:"Cumpără cu 1 clic",
+                    working_hours: "L–V: 9:00–18:00\nS–D: zi liberă",
+
 
 
 

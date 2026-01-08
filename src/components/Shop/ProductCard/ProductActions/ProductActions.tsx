@@ -46,7 +46,7 @@ export const ProductActions: React.FC<ProductActionsProps> = ({
                 onClick={handleAddToCart}
                 className={`${s.actionButton} ${isInCart ? s.inCartActive : ''}`}
             >
-                {isInCart ? t('В корзине') : t('addToCart')}
+                {isInCart ? t('inCart') : t('addToCart')}
             </Button>
 
 

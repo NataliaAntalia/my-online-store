@@ -17,14 +17,14 @@ import {ReactComponent as PhoneIcon} from 'img/phone.svg';
 import Button from "@mui/material/Button";
 import s from './FooterMobile.module.css'
 import { Link } from 'react-router-dom';
-import {FOOTER_ROUTES} from "@/components/Footer/routes";
 import {useTranslation} from "react-i18next";
 
 
 
 export interface SimpleLinkSection {
     title: string;
-    links: string[];
+    links: { labelKey: string; path: string }[]
+
 }
 
 export interface SocialLink {
@@ -55,6 +55,7 @@ export interface FooterMobileProps {
 export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, buttons, socialLinks, images }) => {
 
     const {t} = useTranslation();
+
     return (
         <Box className={s.container}>
             <Container >
@@ -73,11 +74,11 @@ export const FooterMobile: React.FC<FooterMobileProps> = ({ footerSections, butt
 
                         <AccordionDetails className={s.accordionDetails}>
                             <Box component="ul" className={s.boxListUl}>
-                                {section.links.map((linkName, linkIndex) => {
+                                {section.links.map((link, index) => {
                                     return (
-                                        <Box component="li" key={linkIndex} className={s.boxListLi}>
-                                            <Link to={FOOTER_ROUTES[linkName]}>
-                                            <Typography variant="body2">{t(linkName)}</Typography>
+                                        <Box component="li" key={index} className={s.boxListLi}>
+                                            <Link to={link.path}>
+                                            <Typography variant="body2">{t(link.labelKey)}</Typography>
                                             </Link>
                                         </Box>
                                     );

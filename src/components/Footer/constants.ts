@@ -13,9 +13,27 @@ export const socialLinks = [
 ];
 
 
-export const customerLinks = ["promo", "delivery", "payment", "bonuses"]
-export const infoLinks = ["exchange", "consumer_protection", "public_offer"  ]
-export const aboutLinks = ["about", "contacts", "jobs", "suppliers", "privacy_policy"]
+export const customerLinks = [
+    { labelKey: "promo", path: "/promo" },
+    { labelKey: "delivery", path: "/delivery" },
+    { labelKey: "payment", path: "/payment" },
+    { labelKey: "bonuses", path: "/bonuses" },
+];
+
+export const infoLinks = [
+    { labelKey: "exchange", path: "/exchange" },
+    { labelKey: "consumer_protection", path: "/consumer-protection" },
+    { labelKey: "public_offer", path: "/public-offer" },
+];
+
+export const aboutLinks = [
+    { labelKey: "about", path: "/about" },
+    { labelKey: "contacts", path: "/contacts" },
+    { labelKey: "jobs", path: "/jobs" },
+    { labelKey: "suppliers", path: "/suppliers" },
+    { labelKey: "privacy_policy", path: "/privacy-policy" },
+];
+
 
 
 export const buttons = [
