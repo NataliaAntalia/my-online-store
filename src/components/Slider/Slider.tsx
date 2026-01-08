@@ -29,7 +29,7 @@ export const MySlider = () => {
 
             <Slider {...sliderSettings}>
                 {slides.map((src, i) => (
-                    <Box key={i}>
+                    <Box key={i} className={s.box}>
                         <img
                             src={src}
                             alt={`Slide ${i + 1}`}

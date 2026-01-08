@@ -6,10 +6,17 @@
     width: 100%;
     height: auto;
     align-items: center;
+
+}
+
+.box{
+    margin-bottom: 20px;
 }
 
 
-
+:global(.slick-dots) {
+    bottom: -8px !important;
+}
 
 :global(.slick-prev),
 :global(.slick-next) {
