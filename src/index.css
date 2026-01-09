@@ -161,6 +161,7 @@ code {
 .sectionTitle {
     font-size: 34px !important;
     font-weight: 500 !important;
+    margin-top: 25px !important;
 }
 
 @media screen and (max-width: 900px) {

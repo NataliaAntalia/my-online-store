@@ -22,6 +22,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import logoMobile from '../../../img/logo_mobile.png'
 import {LANGUAGES, LOGO_PATH_DARK, MAIN_NUMBER, PAGES} from "@/components/Header/ResponsiveAppBar/constants";
 import { Link } from 'react-router-dom';
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import { setSearchQuery as setSearchQueryRedux } from '@/store/catalogSlice';
 
 
 
@@ -53,6 +55,10 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
     const sectionsToShow = catalogSections;
     const burgerRef = useRef<HTMLButtonElement | null>(null);
 
+    const handleSearchChange = (value: string) => {
+        setSearchQuery(value);
+        dispatch(setSearchQueryRedux(value));
+    };
 
 
     const drawerDataMap = useMemo(() => ({
@@ -60,6 +66,7 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
         favorites: {items: favorites, onDelete: toggleFavorite},
         comparison: {items: comparison, onDelete: toggleComparison},
     }), [cart, favorites, comparison, removeFromCart, toggleFavorite, toggleComparison]);
+
 
 
     return (
@@ -98,13 +105,12 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
                     )}
                     {!isMobile && (
                     <SearchBar
-                        onChange={setSearchQuery}
+                        onChange={handleSearchChange}
                         value={searchQuery}
                         placeholder={'Search'}
                         inputProps={{'aria-label': 'search'}}/>
                         )}
                     <Box sx={{ display: 'flex' }}>
-                        {/* Иконка поиска для мобильного */}
                         {isMobile && (
                             <IconButton
                                 size="large"
@@ -125,13 +131,15 @@ export default function PrimarySearchAppBar({isMobile}:PrimarySearchAppBarType) 
                 </Toolbar>
             </AppBar>
             {isMobile && isMobileSearchOpen && (
+                <ClickAwayListener onClickAway={() => setIsMobileSearchOpen(false)}>
                 <Box sx={{ p: 1, bgcolor: 'var(--search-bg-mobile)' }}>
                     <SearchBar
-                        onChange={setSearchQuery}
+                        onChange={handleSearchChange}
                         value={searchQuery}
                         placeholder={'Search'}
                         inputProps={{'aria-label': 'search'}}/>
                 </Box>
+                </ClickAwayListener>
             )}
             <DrawersRenderer drawerDataMap={drawerDataMap} drawers={drawers} />
             <MobileMenu

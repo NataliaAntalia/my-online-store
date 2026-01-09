@@ -1,23 +1,27 @@
 .slick-dots li button:before {
-    font-size: 12px !important;
+    font-size: 8px !important;
     color: #fb3578 !important;
     margin-bottom: 20px !important;
 
 }
 
 .slick-dots li.slick-active button:before {
-    font-size: 14px !important;
+    font-size: 12px !important;
     color: #fb3578 !important;
     margin-bottom: 20px !important;
 
 }
 
 
-@media screen and (max-width: 500px) {
-    .slick-dots li button:before {
-        font-size: 6px !important;
+@media screen and (max-width: 768px){
+    .slick-dots li {
+        margin: 0 1px !important; /* Уменьшаем отступы до минимума */
+        width: 15px !important;    /* Сужаем область клика */
     }
-    .slick-dots li.slick-active button:before {
-        font-size: 8px !important;
+
+    .slick-dots li button:before {
+        font-size: 6px !important; /* Делаем сами точки меньше */
     }
 }
+
+

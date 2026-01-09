@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import {styled} from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import s from './SearchBar.module.css'
+import {useTranslation} from "react-i18next";
 
 const Search = styled('div')(({theme}) => ({
     position: 'relative',
@@ -43,7 +44,12 @@ interface SearchBarProps {
     inputProps?:React.InputHTMLAttributes<HTMLInputElement>;
 }
 
-export const SearchBar = ({value, onChange, placeholder = "Search...", inputProps}:SearchBarProps) => {
+export const SearchBar = ({value, onChange, inputProps}:SearchBarProps) => {
+    const {t} = useTranslation();
+
+
+
+
     return (
         <Box className={s.searchContainer}>
             <Search className={s.searchBox}>
@@ -53,7 +59,7 @@ export const SearchBar = ({value, onChange, placeholder = "Search...", inputProp
                 <StyledInputBase
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
-                    placeholder={placeholder}
+                    placeholder={t("search")}
                     inputProps={inputProps}
                 />
             </Search>

@@ -1,4 +1,4 @@
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {CatalogSection} from "@/types/catalog";
 import {fetchCatalogFromSupabase} from "@/api/catalogApi";
 import {mapSupabaseToCatalog} from "@/utils/utils";
@@ -7,11 +7,13 @@ import {mapSupabaseToCatalog} from "@/utils/utils";
 interface CatalogState {
     sections: CatalogSection[];
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
+    searchQuery: string;
 }
 
 const initialState: CatalogState = {
     sections: [],
     status: 'idle',
+    searchQuery: '',
 };
 
 export const fetchCatalog = createAsyncThunk<CatalogSection[]>(
@@ -25,7 +27,11 @@ export const fetchCatalog = createAsyncThunk<CatalogSection[]>(
 const catalogSlice = createSlice({
     name: 'catalog',
     initialState,
-    reducers: {},
+    reducers: {
+        setSearchQuery: (state, action: PayloadAction<string>) => {
+            state.searchQuery = action.payload;
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchCatalog.pending, (state) => {
@@ -41,4 +47,5 @@ const catalogSlice = createSlice({
     },
 });
 
+export const {setSearchQuery} = catalogSlice.actions;
 export default catalogSlice.reducer;

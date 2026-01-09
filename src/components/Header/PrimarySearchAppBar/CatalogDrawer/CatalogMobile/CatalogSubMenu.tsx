@@ -11,6 +11,7 @@ import {Link} from "react-router-dom";
 import ListItemText from "@mui/material/ListItemText";
 import s from '../CatalogDrawer.module.css'
 import {ReactComponent as RightArrow} from "../../../../../img/arrow_right.svg";
+import {useTranslation} from "react-i18next";
 
 
 export type CatalogSubMenuProps = {
@@ -22,6 +23,7 @@ export type CatalogSubMenuProps = {
 
 export const CatalogSubMenu: React.FC<CatalogSubMenuProps> = (props) => {
     const {isCatalogOpen, setIsCatalogOpen, sections, onClose} = props;
+    const {t} = useTranslation();
 
     return (
         <Drawer
@@ -34,7 +36,7 @@ export const CatalogSubMenu: React.FC<CatalogSubMenuProps> = (props) => {
                     width: '85%',
                     maxWidth: '85%',
                     backgroundColor: 'var(--mobile-bg-paper)',
-                    color:'var(--text-color)',
+                    color: 'var(--text-color)',
                 }
             }}
         >
@@ -43,7 +45,7 @@ export const CatalogSubMenu: React.FC<CatalogSubMenuProps> = (props) => {
                     <RightArrow className={s.mirrorIcon}/>
                 </IconButton>
 
-                <Typography variant="h6">{('Каталог')}</Typography>
+                <Typography variant="h6">{t('mobile_catalog')}</Typography>
             </Box>
             <Divider/>
 
