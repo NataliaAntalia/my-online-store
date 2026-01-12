@@ -1,12 +1,20 @@
 .sliderWrapper {
     margin:16px 0;
+    line-height: 0;
 }
 
 .slideImage {
     width: 100%;
     height: auto;
-    align-items: center;
+    display: block;
 
+}
+
+:global(.slick-slide) {
+    height: auto !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .box{
@@ -38,7 +46,7 @@
 :global(.slick-prev:before),
 :global(.slick-next:before) {
     font-size: 50px !important;
-    color: #ffffff !important;
+    color: rgba(255, 255, 255, 0.71) !important;
     opacity: 0.7;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
